@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Contribution registry
+    url: https://github.com/johnjheejin/oss-contributions
+    about: Review tracked contributions and the linking contract before opening a candidate.

@@ -1,0 +1,16 @@
+{
+  "name": "oss-contributions",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Public ledger and status dashboard for open-source contributions.",
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "render": "node scripts/render-readme.mjs",
+    "sync": "node scripts/sync.mjs",
+    "test": "node --test \"test/**/*.test.mjs\""
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

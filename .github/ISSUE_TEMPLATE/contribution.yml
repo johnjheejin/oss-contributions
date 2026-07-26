@@ -1,0 +1,52 @@
+name: Contribution candidate
+description: Propose a public upstream contribution to investigate.
+title: "[candidate] "
+labels:
+  - candidate
+body:
+  - type: input
+    id: upstream
+    attributes:
+      label: Upstream repository
+      description: Public GitHub repository URL.
+      placeholder: https://github.com/owner/repository
+    validations:
+      required: true
+
+  - type: dropdown
+    id: contribution_type
+    attributes:
+      label: Contribution type
+      options:
+        - Fix
+        - Security
+        - Test
+        - Maintenance
+        - Documentation
+        - Feature
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Reproducible problem or opportunity
+      description: Describe observable behavior and supporting evidence.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Proposed contribution scope
+      description: Keep the change reviewable and separate from unrelated work.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: public_boundary
+    attributes:
+      label: Public-data boundary
+      options:
+        - label: This proposal contains no credentials, local paths, private repository names, or unpublished private material.
+          required: true

@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "lastChangedAt": "2026-07-26T03:33:49Z",
+  "repositories": [
+    {
+      "id": "github:companyjupiter/quarkify",
+      "upstream": "companyjupiter/quarkify",
+      "upstreamUrl": "https://github.com/companyjupiter/quarkify",
+      "fork": "johnjheejin/quarkify",
+      "forkUrl": "https://github.com/johnjheejin/quarkify",
+      "projectPage": "projects/companyjupiter/quarkify.md",
+      "visibility": "public"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "github:companyjupiter/quarkify#28",
+      "repository": "github:companyjupiter/quarkify",
+      "type": "fix",
+      "summary": "Interpolate generated artifact paths in completion logs.",
+      "pullRequest": {
+        "number": 28,
+        "url": "https://github.com/companyjupiter/quarkify/pull/28",
+        "title": "fix: interpolate output paths in completion logs",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": true,
+        "base": "main",
+        "createdAt": "2026-07-25T18:08:05Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-07-25T18:08:05Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "npm test (9 tests)",
+          "node --check quarkify.mjs",
+          "git diff --check"
+        ]
+      }
+    },
+    {
+      "id": "github:companyjupiter/quarkify#29",
+      "repository": "github:companyjupiter/quarkify",
+      "type": "security",
+      "summary": "Escape project names before inserting them into generated HTML.",
+      "pullRequest": {
+        "number": 29,
+        "url": "https://github.com/companyjupiter/quarkify/pull/29",
+        "title": "fix: escape project name in generated HTML",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": true,
+        "base": "main",
+        "createdAt": "2026-07-26T03:25:01Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-07-26T03:25:01Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "npm test (10 tests)",
+          "node --check quarkify.mjs",
+          "git diff --check"
+        ]
+      }
+    },
+    {
+      "id": "github:companyjupiter/quarkify#30",
+      "repository": "github:companyjupiter/quarkify",
+      "type": "test",
+      "summary": "Limit test discovery to the actual automated test suite.",
+      "pullRequest": {
+        "number": 30,
+        "url": "https://github.com/companyjupiter/quarkify/pull/30",
+        "title": "test: limit npm test to test files",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": true,
+        "base": "main",
+        "createdAt": "2026-07-26T03:29:39Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-07-26T03:29:39Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "npm test (5 tests)",
+          "node --check quarkify.mjs",
+          "git diff --check"
+        ]
+      }
+    },
+    {
+      "id": "github:companyjupiter/quarkify#31",
+      "repository": "github:companyjupiter/quarkify",
+      "type": "maintenance",
+      "summary": "Remove the unused Puppeteer dependency and prune its lockfile entries.",
+      "pullRequest": {
+        "number": 31,
+        "url": "https://github.com/companyjupiter/quarkify/pull/31",
+        "title": "chore: remove unused Puppeteer dependency",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": true,
+        "base": "main",
+        "createdAt": "2026-07-26T03:33:49Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-07-26T03:33:49Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "npm ci --ignore-scripts --no-audit --no-fund",
+          "npm test (9 tests)",
+          "npm ls --all (empty dependency tree)",
+          "node --check quarkify.mjs",
+          "git diff --check"
+        ]
+      }
+    }
+  ]
+}
