@@ -6,9 +6,10 @@
   "type": "module",
   "scripts": {
     "check": "node scripts/check.mjs",
+    "discover": "node scripts/discover.mjs",
     "render": "node scripts/render-readme.mjs",
     "sync": "node scripts/sync.mjs",
-    "test": "node --test \"test/**/*.test.mjs\""
+    "test": "node --test --test-isolation=none \"test/**/*.test.mjs\""
   },
   "engines": {
     "node": ">=22.12.0"

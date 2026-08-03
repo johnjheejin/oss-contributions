@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-08-03T02:57:50.458Z",
+  "lastChangedAt": "2026-08-03T03:04:22.590Z",
   "repositories": [
     {
       "id": "github:companyjupiter/quarkify",
@@ -9,6 +9,33 @@
       "fork": "johnjheejin/quarkify",
       "forkUrl": "https://github.com/johnjheejin/quarkify",
       "projectPage": "projects/companyjupiter/quarkify.md",
+      "visibility": "public"
+    },
+    {
+      "id": "github:Soju06/codex-lb",
+      "upstream": "Soju06/codex-lb",
+      "upstreamUrl": "https://github.com/Soju06/codex-lb",
+      "fork": "johnjheejin/codex-lb",
+      "forkUrl": "https://github.com/johnjheejin/codex-lb",
+      "projectPage": "projects/Soju06/codex-lb.md",
+      "visibility": "public"
+    },
+    {
+      "id": "github:L1M80/porta",
+      "upstream": "L1M80/porta",
+      "upstreamUrl": "https://github.com/L1M80/porta",
+      "fork": "johnjheejin/porta",
+      "forkUrl": "https://github.com/johnjheejin/porta",
+      "projectPage": "projects/L1M80/porta.md",
+      "visibility": "public"
+    },
+    {
+      "id": "github:dennykim123/claude-codex-battery",
+      "upstream": "dennykim123/claude-codex-battery",
+      "upstreamUrl": "https://github.com/dennykim123/claude-codex-battery",
+      "fork": "johnjheejin/claude-codex-battery",
+      "forkUrl": "https://github.com/johnjheejin/claude-codex-battery",
+      "projectPage": "projects/dennykim123/claude-codex-battery.md",
       "visibility": "public"
     }
   ],
@@ -123,6 +150,227 @@
           "npm ls --all (empty dependency tree)",
           "node --check quarkify.mjs",
           "git diff --check"
+        ]
+      }
+    },
+    {
+      "id": "github:Soju06/codex-lb#1526",
+      "repository": "github:Soju06/codex-lb",
+      "type": "fix",
+      "summary": "Close SQLite connections before Windows backup and recovery file mutations.",
+      "pullRequest": {
+        "number": 1526,
+        "url": "https://github.com/Soju06/codex-lb/pull/1526",
+        "title": "fix(db): release SQLite handles before file mutations",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": true,
+        "base": "main",
+        "createdAt": "2026-07-29T05:43:50Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-08-03T03:04:22.590Z"
+      },
+      "validation": {
+        "status": "partial",
+        "checks": [
+          "uv run --no-sync pytest tests/unit/test_db_sqlite_maintenance.py -q (2 passed)",
+          "uv run --no-sync pytest tests/unit/test_db_sqlite_maintenance.py tests/unit/test_db_migrate.py -q -k not-preserves_source_mode (52 passed, 1 deselected)",
+          "uv run --no-sync pytest tests/unit/test_db_session.py -q (30 passed)",
+          "uv run --no-sync ruff check .",
+          "uv run --no-sync ruff format --check . (848 files formatted)",
+          "uv run --no-sync ty check --python-platform linux",
+          "npx --yes @fission-ai/openspec@latest validate --specs --strict (48 passed)",
+          "Native Windows full-unit smoke (4,992 passed, 66 skipped; 19 pre-existing platform or environment failures)",
+          "Upstream CI and Simplicity budgets are awaiting maintainer workflow approval"
+        ]
+      }
+    },
+    {
+      "id": "github:L1M80/porta#99",
+      "repository": "github:L1M80/porta",
+      "type": "feature",
+      "summary": "Sort workspaces by recency and expose conversations without a workspace.",
+      "pullRequest": {
+        "number": 99,
+        "url": "https://github.com/L1M80/porta/pull/99",
+        "title": "feat(web): sort workspaces by recency and expose workspace-less conversations",
+        "author": "johnjheejin",
+        "state": "merged",
+        "draft": false,
+        "base": "develop",
+        "createdAt": "2026-06-22T01:15:26Z",
+        "mergedAt": "2026-06-27T01:52:17Z",
+        "closedAt": "2026-06-27T01:52:17Z",
+        "lastChangedAt": "2026-08-03T03:04:22.590Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions CI (success)",
+          "tsc -b && vite build",
+          "Manual verification of workspace ordering and workspace-less conversation visibility"
+        ]
+      }
+    },
+    {
+      "id": "github:L1M80/porta#100",
+      "repository": "github:L1M80/porta",
+      "type": "fix",
+      "summary": "Cap recent conversation loading to prevent language-server memory thrashing.",
+      "pullRequest": {
+        "number": 100,
+        "url": "https://github.com/L1M80/porta/pull/100",
+        "title": "fix(proxy): cap recent conversations to prevent LS thrashing",
+        "author": "johnjheejin",
+        "state": "merged",
+        "draft": false,
+        "base": "develop",
+        "createdAt": "2026-06-22T01:19:00Z",
+        "mergedAt": "2026-07-13T01:55:47Z",
+        "closedAt": "2026-07-13T01:55:47Z",
+        "lastChangedAt": "2026-08-03T03:04:22.590Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions CI (success)",
+          "corepack pnpm -r build",
+          "Manual verification of recency ordering and the 100-conversation cap"
+        ]
+      }
+    },
+    {
+      "id": "github:L1M80/porta#102",
+      "repository": "github:L1M80/porta",
+      "type": "feature",
+      "summary": "Group conversations by project name using desktop metadata as a fallback.",
+      "pullRequest": {
+        "number": 102,
+        "url": "https://github.com/L1M80/porta/pull/102",
+        "title": "feat(web): group conversations by project name using desktop metadata fallback",
+        "author": "johnjheejin",
+        "state": "merged",
+        "draft": false,
+        "base": "develop",
+        "createdAt": "2026-06-28T00:22:39Z",
+        "mergedAt": "2026-06-30T01:03:17Z",
+        "closedAt": "2026-06-30T01:03:17Z",
+        "lastChangedAt": "2026-08-03T03:04:22.590Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions CI (success)"
+        ]
+      }
+    },
+    {
+      "id": "github:L1M80/porta#103",
+      "repository": "github:L1M80/porta",
+      "type": "feature",
+      "summary": "Render requested file permissions and distinguish read from write access.",
+      "pullRequest": {
+        "number": 103,
+        "url": "https://github.com/L1M80/porta/pull/103",
+        "title": "feat(web): support permission requests inside requestedInteraction",
+        "author": "johnjheejin",
+        "state": "merged",
+        "draft": false,
+        "base": "develop",
+        "createdAt": "2026-06-28T00:22:40Z",
+        "mergedAt": "2026-07-13T01:48:54Z",
+        "closedAt": "2026-07-13T01:48:54Z",
+        "lastChangedAt": "2026-08-03T03:04:22.590Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions CI (success)"
+        ]
+      }
+    },
+    {
+      "id": "github:L1M80/porta#121",
+      "repository": "github:L1M80/porta",
+      "type": "feature",
+      "summary": "Add subagent status-card rendering; closed and resubmitted as pull request #122.",
+      "pullRequest": {
+        "number": 121,
+        "url": "https://github.com/L1M80/porta/pull/121",
+        "title": "feat(web): add subagent status card UI and message step transform",
+        "author": "johnjheejin",
+        "state": "closed",
+        "draft": false,
+        "base": "develop",
+        "createdAt": "2026-07-29T06:01:50Z",
+        "mergedAt": null,
+        "closedAt": "2026-07-29T13:44:30Z",
+        "lastChangedAt": "2026-08-03T03:04:22.590Z"
+      },
+      "validation": {
+        "status": "partial",
+        "checks": [
+          "Shared head commit 6a15159 later passed GitHub Actions CI and PR Lint on replacement pull request #122"
+        ]
+      }
+    },
+    {
+      "id": "github:L1M80/porta#122",
+      "repository": "github:L1M80/porta",
+      "type": "feature",
+      "summary": "Add dedicated subagent status-card rendering and message transforms.",
+      "pullRequest": {
+        "number": 122,
+        "url": "https://github.com/L1M80/porta/pull/122",
+        "title": "feat(web): add subagent status card UI and message step transform",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "develop",
+        "createdAt": "2026-07-29T13:44:32Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-08-03T03:04:22.590Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions CI (success)",
+          "GitHub Actions PR Lint (success)"
+        ]
+      }
+    },
+    {
+      "id": "github:dennykim123/claude-codex-battery#5",
+      "repository": "github:dennykim123/claude-codex-battery",
+      "type": "feature",
+      "summary": "Add a native Windows tray app for Claude Code, Fable, and Codex usage limits.",
+      "pullRequest": {
+        "number": 5,
+        "url": "https://github.com/dennykim123/claude-codex-battery/pull/5",
+        "title": "feat(windows): add native Claude, Fable, and Codex tray app",
+        "author": "johnjheejin",
+        "state": "merged",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-07-23T13:38:47Z",
+        "mergedAt": "2026-07-24T05:48:10Z",
+        "closedAt": "2026-07-24T05:48:10Z",
+        "lastChangedAt": "2026-08-03T03:04:22.590Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "C# 5 and .NET Framework compilation with warning level 4",
+          "Parser fixtures for normal, partial, reversed, malformed, boundary, unknown-field, and Fable-scoped responses",
+          "Refresh concurrency-gate and atomic-cache replacement tests",
+          "PowerShell syntax checks for install and uninstall scripts",
+          "Live Claude Code, Fable, and Codex account smoke test",
+          "Five simultaneous launches left one process running",
+          "Rapid refresh, corrupt cache, offline fallback, off-screen position, dual-monitor restore, install, uninstall, reinstall, and autostart tests",
+          "Tray animation GDI and USER resource counts remained flat",
+          "Compact UI verified at 150 percent Windows display scaling"
         ]
       }
     }

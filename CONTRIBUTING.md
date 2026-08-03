@@ -16,6 +16,8 @@ This repository tracks public upstream contributions. It does not mirror upstrea
    npm run check
    ```
 
+The scheduled workflow also runs `npm run discover`. It searches public pull requests authored by `johnjheejin`, excludes repositories owned by the same account, and fails when an external pull request has no stable registry record.
+
 ## Public-data boundary
 
 - Use public GitHub URLs and public repository names only.
