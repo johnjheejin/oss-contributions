@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-07-26T03:33:49Z",
+  "lastChangedAt": "2026-08-03T02:56:17.175Z",
   "repositories": [
     {
       "id": "github:companyjupiter/quarkify",
@@ -24,12 +24,12 @@
         "title": "fix: interpolate output paths in completion logs",
         "author": "johnjheejin",
         "state": "open",
-        "draft": true,
+        "draft": false,
         "base": "main",
         "createdAt": "2026-07-25T18:08:05Z",
         "mergedAt": null,
         "closedAt": null,
-        "lastChangedAt": "2026-07-25T18:08:05Z"
+        "lastChangedAt": "2026-08-03T02:56:17.175Z"
       },
       "validation": {
         "status": "passed",
@@ -51,12 +51,12 @@
         "title": "fix: escape project name in generated HTML",
         "author": "johnjheejin",
         "state": "open",
-        "draft": true,
+        "draft": false,
         "base": "main",
         "createdAt": "2026-07-26T03:25:01Z",
         "mergedAt": null,
         "closedAt": null,
-        "lastChangedAt": "2026-07-26T03:25:01Z"
+        "lastChangedAt": "2026-08-03T02:56:17.175Z"
       },
       "validation": {
         "status": "passed",
@@ -78,12 +78,12 @@
         "title": "test: limit npm test to test files",
         "author": "johnjheejin",
         "state": "open",
-        "draft": true,
+        "draft": false,
         "base": "main",
         "createdAt": "2026-07-26T03:29:39Z",
         "mergedAt": null,
         "closedAt": null,
-        "lastChangedAt": "2026-07-26T03:29:39Z"
+        "lastChangedAt": "2026-08-03T02:56:17.175Z"
       },
       "validation": {
         "status": "passed",
@@ -105,12 +105,12 @@
         "title": "chore: remove unused Puppeteer dependency",
         "author": "johnjheejin",
         "state": "open",
-        "draft": true,
+        "draft": false,
         "base": "main",
         "createdAt": "2026-07-26T03:33:49Z",
         "mergedAt": null,
         "closedAt": null,
-        "lastChangedAt": "2026-07-26T03:33:49Z"
+        "lastChangedAt": "2026-08-03T02:56:17.175Z"
       },
       "validation": {
         "status": "passed",
