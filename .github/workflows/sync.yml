@@ -43,3 +43,9 @@ jobs:
           git add README.md data/contributions.json
           git commit -m "chore: sync contribution status"
           git push origin HEAD:main
+
+      - name: Audit untracked external pull requests
+        run: npm run discover
+        env:
+          CONTRIBUTOR_LOGIN: johnjheejin
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {
+  findUntrackedExternalPullRequests,
   mergePullRequest,
   normalizePullRequest,
   renderReadme,
@@ -119,4 +120,49 @@ test('renders a deterministic public dashboard', () => {
   assert.match(readme, /🟡 Draft/u);
   assert.match(readme, /github:companyjupiter\/quarkify#29/u);
   assert.doesNotMatch(readme, /[A-Za-z]:\\/u);
+});
+
+test('finds authored external pull requests that are missing from the registry', () => {
+  const registry = fixture();
+  const missing = findUntrackedExternalPullRequests(
+    registry,
+    [
+      {
+        number: 7,
+        title: 'tracked',
+        state: 'open',
+        html_url: 'https://github.com/example/project/pull/7',
+        repository_url: 'https://api.github.com/repos/example/project',
+        user: { login: 'contributor' },
+      },
+      {
+        number: 9,
+        title: 'missing external contribution',
+        state: 'open',
+        html_url: 'https://github.com/another/project/pull/9',
+        repository_url: 'https://api.github.com/repos/another/project',
+        user: { login: 'Contributor' },
+      },
+      {
+        number: 3,
+        title: 'self-owned work',
+        state: 'open',
+        html_url: 'https://github.com/contributor/private-notes/pull/3',
+        repository_url: 'https://api.github.com/repos/contributor/private-notes',
+        user: { login: 'contributor' },
+      },
+    ],
+    'contributor',
+  );
+
+  assert.deepEqual(missing, [
+    {
+      id: 'github:another/project#9',
+      repository: 'another/project',
+      number: 9,
+      title: 'missing external contribution',
+      url: 'https://github.com/another/project/pull/9',
+      state: 'open',
+    },
+  ]);
 });

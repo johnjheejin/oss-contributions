@@ -19,6 +19,42 @@ function repositoryUrl(repository) {
   return `https://github.com/${repository}`;
 }
 
+function repositoryFromSearchItem(item) {
+  const apiMatch = item?.repository_url?.match(/\/repos\/([^/]+\/[^/]+)$/u);
+  if (apiMatch) return apiMatch[1];
+  const htmlMatch = item?.html_url?.match(/^https:\/\/github\.com\/([^/]+\/[^/]+)\/pull\/\d+(?:[/?#]|$)/u);
+  return htmlMatch?.[1] ?? null;
+}
+
+export function findUntrackedExternalPullRequests(registry, searchItems, contributor) {
+  validateRegistry(registry);
+  if (!Array.isArray(searchItems)) throw new Error('GitHub search items must be an array');
+  if (typeof contributor !== 'string' || contributor.trim() === '') {
+    throw new Error('Contributor login is required');
+  }
+
+  const normalizedContributor = contributor.toLowerCase();
+  const trackedIds = new Set(registry.contributions.map((item) => item.id.toLowerCase()));
+  const missing = [];
+  for (const item of searchItems) {
+    const repository = repositoryFromSearchItem(item);
+    if (!repository || !Number.isInteger(item?.number) || item.number <= 0) continue;
+    if (item.user?.login?.toLowerCase() !== normalizedContributor) continue;
+    if (repository.split('/')[0].toLowerCase() === normalizedContributor) continue;
+    const id = `github:${repository}#${item.number}`;
+    if (trackedIds.has(id.toLowerCase())) continue;
+    missing.push({
+      id,
+      repository,
+      number: item.number,
+      title: item.title,
+      url: item.html_url ?? `https://github.com/${repository}/pull/${item.number}`,
+      state: item.state,
+    });
+  }
+  return missing.sort((left, right) => left.id.localeCompare(right.id));
+}
+
 export function validateRegistry(registry) {
   const errors = [];
 
@@ -248,7 +284,7 @@ export function renderReadme(registry) {
     '- Every contribution has a stable ID such as `github:companyjupiter/quarkify#29`.',
     '- Public repositories may reference those IDs through `.github/oss-contributions.json`.',
     '- Private repositories may keep reverse references internally; private names and paths are never published here.',
-    '- The scheduled workflow checks GitHub and commits only when tracked pull-request state changes.',
+    '- The scheduled workflow checks GitHub, commits tracked lifecycle changes, and fails visibly when an authored external pull request is missing from the registry.',
     '',
     'See [the linking contract](docs/linking-contract.md) and [contribution guide](CONTRIBUTING.md).',
     '',
