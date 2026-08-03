@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-08-03T02:56:17.175Z",
+  "lastChangedAt": "2026-08-03T02:57:50.458Z",
   "repositories": [
     {
       "id": "github:companyjupiter/quarkify",
@@ -34,7 +34,8 @@
       "validation": {
         "status": "passed",
         "checks": [
-          "npm test (9 tests)",
+          "npm ci --ignore-scripts --no-audit --no-fund",
+          "npm test (20 tests: 19 passed, 1 skipped because symlink creation is unavailable on Windows)",
           "node --check quarkify.mjs",
           "git diff --check"
         ]
@@ -61,7 +62,8 @@
       "validation": {
         "status": "passed",
         "checks": [
-          "npm test (10 tests)",
+          "npm ci --ignore-scripts --no-audit --no-fund",
+          "npm test (21 tests: 20 passed, 1 skipped because symlink creation is unavailable on Windows)",
           "node --check quarkify.mjs",
           "git diff --check"
         ]
@@ -88,7 +90,8 @@
       "validation": {
         "status": "passed",
         "checks": [
-          "npm test (5 tests)",
+          "npm ci --ignore-scripts --no-audit --no-fund",
+          "npm test (16 tests: 15 passed, 1 skipped because symlink creation is unavailable on Windows)",
           "node --check quarkify.mjs",
           "git diff --check"
         ]
@@ -116,7 +119,7 @@
         "status": "passed",
         "checks": [
           "npm ci --ignore-scripts --no-audit --no-fund",
-          "npm test (9 tests)",
+          "npm test (20 tests: 19 passed, 1 skipped because symlink creation is unavailable on Windows)",
           "npm ls --all (empty dependency tree)",
           "node --check quarkify.mjs",
           "git diff --check"

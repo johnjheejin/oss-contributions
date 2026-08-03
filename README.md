@@ -13,15 +13,15 @@ A public ledger of upstream contributions, validation evidence, and their curren
 - Open for review: 4
 - Merged: 0
 - Closed without merge: 0
-- Registry last changed: 2026-08-03T02:56:17.175Z
+- Registry last changed: 2026-08-03T02:57:50.458Z
 
 ## Contributions
 
 | Status | Upstream | Pull request | Type | Validation |
 |---|---|---|---|---|
-| 🟢 Open | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#28 fix: interpolate output paths in completion logs](https://github.com/companyjupiter/quarkify/pull/28) | fix | ✅ 3 checks |
-| 🟢 Open | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#29 fix: escape project name in generated HTML](https://github.com/companyjupiter/quarkify/pull/29) | security | ✅ 3 checks |
-| 🟢 Open | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#30 test: limit npm test to test files](https://github.com/companyjupiter/quarkify/pull/30) | test | ✅ 3 checks |
+| 🟢 Open | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#28 fix: interpolate output paths in completion logs](https://github.com/companyjupiter/quarkify/pull/28) | fix | ✅ 4 checks |
+| 🟢 Open | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#29 fix: escape project name in generated HTML](https://github.com/companyjupiter/quarkify/pull/29) | security | ✅ 4 checks |
+| 🟢 Open | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#30 test: limit npm test to test files](https://github.com/companyjupiter/quarkify/pull/30) | test | ✅ 4 checks |
 | 🟢 Open | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#31 chore: remove unused Puppeteer dependency](https://github.com/companyjupiter/quarkify/pull/31) | maintenance | ✅ 5 checks |
 
 ## Connected projects
