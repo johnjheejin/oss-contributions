@@ -9,7 +9,7 @@
     "discover": "node scripts/discover.mjs",
     "render": "node scripts/render-readme.mjs",
     "sync": "node scripts/sync.mjs",
-    "test": "node --test --test-isolation=none \"test/**/*.test.mjs\""
+    "test": "node test/registry.test.mjs"
   },
   "engines": {
     "node": ">=22.12.0"

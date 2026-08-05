@@ -10,10 +10,10 @@ A public ledger of upstream contributions, validation evidence, and their curren
 
 - Tracked contributions: 12
 - Draft: 1
-- Open for review: 5
-- Merged: 5
+- Open for review: 4
+- Merged: 6
 - Closed without merge: 1
-- Registry last changed: 2026-08-03T03:04:22.590Z
+- Registry last changed: 2026-08-05T11:35:05.478Z
 
 ## Contributions
 
@@ -29,7 +29,7 @@ A public ledger of upstream contributions, validation evidence, and their curren
 | 🟣 Merged | [L1M80/porta](https://github.com/L1M80/porta) | [#102 feat(web): group conversations by project name using desktop metadata fallback](https://github.com/L1M80/porta/pull/102) | feature | ✅ 1 checks |
 | 🟣 Merged | [L1M80/porta](https://github.com/L1M80/porta) | [#103 feat(web): support permission requests inside requestedInteraction](https://github.com/L1M80/porta/pull/103) | feature | ✅ 1 checks |
 | ⚫ Closed | [L1M80/porta](https://github.com/L1M80/porta) | [#121 feat(web): add subagent status card UI and message step transform](https://github.com/L1M80/porta/pull/121) | feature | partial · 1 checks |
-| 🟢 Open | [L1M80/porta](https://github.com/L1M80/porta) | [#122 feat(web): add subagent status card UI and message step transform](https://github.com/L1M80/porta/pull/122) | feature | ✅ 2 checks |
+| 🟣 Merged | [L1M80/porta](https://github.com/L1M80/porta) | [#122 feat(web): add subagent status card UI and message step transform](https://github.com/L1M80/porta/pull/122) | feature | ✅ 2 checks |
 | 🟡 Draft | [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [#1526 fix(db): release SQLite handles before file mutations](https://github.com/Soju06/codex-lb/pull/1526) | fix | partial · 9 checks |
 
 ## Connected projects
