@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-08-03T03:04:22.590Z",
+  "lastChangedAt": "2026-08-05T11:35:05.478Z",
   "repositories": [
     {
       "id": "github:companyjupiter/quarkify",
@@ -325,13 +325,13 @@
         "url": "https://github.com/L1M80/porta/pull/122",
         "title": "feat(web): add subagent status card UI and message step transform",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "merged",
         "draft": false,
         "base": "develop",
         "createdAt": "2026-07-29T13:44:32Z",
-        "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-08-03T03:04:22.590Z"
+        "mergedAt": "2026-08-03T11:16:53Z",
+        "closedAt": "2026-08-03T11:16:53Z",
+        "lastChangedAt": "2026-08-05T11:35:05.478Z"
       },
       "validation": {
         "status": "passed",
