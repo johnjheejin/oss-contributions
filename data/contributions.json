@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-08-05T12:02:07.607Z",
+  "lastChangedAt": "2026-08-05T12:03:18.552Z",
   "repositories": [
     {
       "id": "github:companyjupiter/quarkify",
@@ -172,17 +172,18 @@
         "lastChangedAt": "2026-08-05T12:02:07.607Z"
       },
       "validation": {
-        "status": "partial",
+        "status": "passed",
         "checks": [
           "uv run --no-sync pytest tests/unit/test_db_sqlite_maintenance.py -q (2 passed)",
-          "uv run --no-sync pytest tests/unit/test_db_sqlite_maintenance.py tests/unit/test_db_migrate.py -q -k not-preserves_source_mode (52 passed, 1 deselected)",
-          "uv run --no-sync pytest tests/unit/test_db_session.py -q (30 passed)",
+          "uv run --no-sync pytest tests/unit/test_db_sqlite_maintenance.py tests/unit/test_db_migrate.py -q -k not-preserves_source_mode (53 passed, 1 deselected)",
+          "uv run --no-sync pytest tests/unit/test_db_session.py -q (33 passed)",
           "uv run --no-sync ruff check .",
-          "uv run --no-sync ruff format --check . (848 files formatted)",
+          "uv run --no-sync ruff format --check . (869 files formatted)",
           "uv run --no-sync ty check --python-platform linux",
-          "npx --yes @fission-ai/openspec@latest validate --specs --strict (48 passed)",
+          "npx --yes @fission-ai/openspec@latest validate --specs --strict (49 passed)",
           "Native Windows full-unit smoke (4,992 passed, 66 skipped; 19 pre-existing platform or environment failures)",
-          "Upstream CI and Simplicity budgets are awaiting maintainer workflow approval"
+          "GitHub Actions CI Required and Simplicity budgets passed on head 96bb3a3d",
+          "Codex review found no major issues on head 96bb3a3d"
         ]
       }
     },
