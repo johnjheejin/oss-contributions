@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-08-05T11:35:05.478Z",
+  "lastChangedAt": "2026-08-05T12:02:07.607Z",
   "repositories": [
     {
       "id": "github:companyjupiter/quarkify",
@@ -164,12 +164,12 @@
         "title": "fix(db): release SQLite handles before file mutations",
         "author": "johnjheejin",
         "state": "open",
-        "draft": true,
+        "draft": false,
         "base": "main",
         "createdAt": "2026-07-29T05:43:50Z",
         "mergedAt": null,
         "closedAt": null,
-        "lastChangedAt": "2026-08-03T03:04:22.590Z"
+        "lastChangedAt": "2026-08-05T12:02:07.607Z"
       },
       "validation": {
         "status": "partial",
