@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-08-05T12:03:18.552Z",
+  "lastChangedAt": "2026-08-06T05:27:52.490Z",
   "repositories": [
     {
       "id": "github:companyjupiter/quarkify",
@@ -163,13 +163,13 @@
         "url": "https://github.com/Soju06/codex-lb/pull/1526",
         "title": "fix(db): release SQLite handles before file mutations",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "merged",
         "draft": false,
         "base": "main",
         "createdAt": "2026-07-29T05:43:50Z",
-        "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-08-05T12:02:07.607Z"
+        "mergedAt": "2026-08-06T05:20:48Z",
+        "closedAt": "2026-08-06T05:20:48Z",
+        "lastChangedAt": "2026-08-06T05:27:52.490Z"
       },
       "validation": {
         "status": "passed",
