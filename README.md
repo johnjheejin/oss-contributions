@@ -10,16 +10,16 @@ A public ledger of upstream contributions, validation evidence, and their curren
 
 - Tracked contributions: 12
 - Draft: 0
-- Open for review: 4
+- Open for review: 3
 - Merged: 7
-- Closed without merge: 1
-- Registry last changed: 2026-08-06T05:27:52.490Z
+- Closed without merge: 2
+- Registry last changed: 2026-08-11T06:43:31.728Z
 
 ## Contributions
 
 | Status | Upstream | Pull request | Type | Validation |
 |---|---|---|---|---|
-| 🟢 Open | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#28 fix: interpolate output paths in completion logs](https://github.com/companyjupiter/quarkify/pull/28) | fix | ✅ 4 checks |
+| ⚫ Closed | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#28 fix: interpolate output paths in completion logs](https://github.com/companyjupiter/quarkify/pull/28) | fix | ✅ 4 checks |
 | 🟢 Open | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#29 fix: escape project name in generated HTML](https://github.com/companyjupiter/quarkify/pull/29) | security | ✅ 4 checks |
 | 🟢 Open | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#30 test: limit npm test to test files](https://github.com/companyjupiter/quarkify/pull/30) | test | ✅ 4 checks |
 | 🟢 Open | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#31 chore: remove unused Puppeteer dependency](https://github.com/companyjupiter/quarkify/pull/31) | maintenance | ✅ 5 checks |
