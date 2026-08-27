@@ -10,19 +10,19 @@ A public ledger of upstream contributions, validation evidence, and their curren
 
 - Tracked contributions: 12
 - Draft: 0
-- Open for review: 3
-- Merged: 7
+- Open for review: 0
+- Merged: 10
 - Closed without merge: 2
-- Registry last changed: 2026-08-11T06:52:16.234Z
+- Registry last changed: 2026-08-27T12:49:54.087Z
 
 ## Contributions
 
 | Status | Upstream | Pull request | Type | Validation |
 |---|---|---|---|---|
 | ⚫ Closed | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#28 fix: interpolate output paths in completion logs](https://github.com/companyjupiter/quarkify/pull/28) | fix | ✅ 4 checks |
-| 🟢 Open | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#29 fix: escape project name in generated HTML](https://github.com/companyjupiter/quarkify/pull/29) | security | ✅ 4 checks |
-| 🟢 Open | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#30 test: limit npm test to test files](https://github.com/companyjupiter/quarkify/pull/30) | test | ✅ 4 checks |
-| 🟢 Open | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#31 chore: remove unused Puppeteer dependency](https://github.com/companyjupiter/quarkify/pull/31) | maintenance | ✅ 5 checks |
+| 🟣 Merged | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#29 fix: escape project name in generated HTML](https://github.com/companyjupiter/quarkify/pull/29) | security | ✅ 4 checks |
+| 🟣 Merged | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#30 test: limit npm test to test files](https://github.com/companyjupiter/quarkify/pull/30) | test | ✅ 4 checks |
+| 🟣 Merged | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#31 chore: remove unused Puppeteer dependency](https://github.com/companyjupiter/quarkify/pull/31) | maintenance | ✅ 5 checks |
 | 🟣 Merged | [dennykim123/claude-codex-battery](https://github.com/dennykim123/claude-codex-battery) | [#5 feat(windows): add native Claude, Fable, and Codex tray app](https://github.com/dennykim123/claude-codex-battery/pull/5) | feature | ✅ 9 checks |
 | 🟣 Merged | [L1M80/porta](https://github.com/L1M80/porta) | [#99 feat(web): sort workspaces by recency and expose workspace-less conversations](https://github.com/L1M80/porta/pull/99) | feature | ✅ 3 checks |
 | 🟣 Merged | [L1M80/porta](https://github.com/L1M80/porta) | [#100 fix(proxy): cap recent conversations to prevent LS thrashing](https://github.com/L1M80/porta/pull/100) | fix | ✅ 3 checks |

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-08-11T06:52:16.234Z",
+  "lastChangedAt": "2026-08-27T12:49:54.087Z",
   "repositories": [
     {
       "id": "github:companyjupiter/quarkify",
@@ -78,13 +78,13 @@
         "url": "https://github.com/companyjupiter/quarkify/pull/29",
         "title": "fix: escape project name in generated HTML",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "merged",
         "draft": false,
         "base": "main",
         "createdAt": "2026-07-26T03:25:01Z",
-        "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-08-03T02:56:17.175Z"
+        "mergedAt": "2026-08-26T13:25:37Z",
+        "closedAt": "2026-08-26T13:25:37Z",
+        "lastChangedAt": "2026-08-27T12:49:54.087Z"
       },
       "validation": {
         "status": "passed",
@@ -106,13 +106,13 @@
         "url": "https://github.com/companyjupiter/quarkify/pull/30",
         "title": "test: limit npm test to test files",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "merged",
         "draft": false,
         "base": "main",
         "createdAt": "2026-07-26T03:29:39Z",
-        "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-08-03T02:56:17.175Z"
+        "mergedAt": "2026-08-26T13:24:40Z",
+        "closedAt": "2026-08-26T13:24:40Z",
+        "lastChangedAt": "2026-08-27T12:49:54.087Z"
       },
       "validation": {
         "status": "passed",
@@ -134,13 +134,13 @@
         "url": "https://github.com/companyjupiter/quarkify/pull/31",
         "title": "chore: remove unused Puppeteer dependency",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "merged",
         "draft": false,
         "base": "main",
         "createdAt": "2026-07-26T03:33:49Z",
-        "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-08-03T02:56:17.175Z"
+        "mergedAt": "2026-08-26T13:24:57Z",
+        "closedAt": "2026-08-26T13:24:57Z",
+        "lastChangedAt": "2026-08-27T12:49:54.087Z"
       },
       "validation": {
         "status": "passed",
