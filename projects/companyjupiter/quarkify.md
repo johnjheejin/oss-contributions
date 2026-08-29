@@ -12,5 +12,7 @@
 | `github:companyjupiter/quarkify#29` | [#29](https://github.com/companyjupiter/quarkify/pull/29) | Treat project names as text in generated HTML |
 | `github:companyjupiter/quarkify#30` | [#30](https://github.com/companyjupiter/quarkify/pull/30) | Run only the actual automated test suite |
 | `github:companyjupiter/quarkify#31` | [#31](https://github.com/companyjupiter/quarkify/pull/31) | Remove an unused runtime dependency |
+| `github:companyjupiter/quarkify#46` | [#46](https://github.com/companyjupiter/quarkify/pull/46) | Restore package entrypoint and CLI metadata on main |
+| `github:companyjupiter/quarkify#47` | [#47](https://github.com/companyjupiter/quarkify/pull/47) | Keep package and plugin manifest versions aligned during releases |
 
 Current lifecycle status is generated in the repository README. Implementation details and review discussion stay in each pull request.

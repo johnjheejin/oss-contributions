@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-08-27T12:49:54.087Z",
+  "lastChangedAt": "2026-08-29T19:27:58.293Z",
   "repositories": [
     {
       "id": "github:companyjupiter/quarkify",
@@ -84,7 +84,7 @@
         "createdAt": "2026-07-26T03:25:01Z",
         "mergedAt": "2026-08-26T13:25:37Z",
         "closedAt": "2026-08-26T13:25:37Z",
-        "lastChangedAt": "2026-08-27T12:49:54.087Z"
+        "lastChangedAt": "2026-08-29T16:42:11.043Z"
       },
       "validation": {
         "status": "passed",
@@ -112,7 +112,7 @@
         "createdAt": "2026-07-26T03:29:39Z",
         "mergedAt": "2026-08-26T13:24:40Z",
         "closedAt": "2026-08-26T13:24:40Z",
-        "lastChangedAt": "2026-08-27T12:49:54.087Z"
+        "lastChangedAt": "2026-08-29T16:42:11.043Z"
       },
       "validation": {
         "status": "passed",
@@ -140,7 +140,7 @@
         "createdAt": "2026-07-26T03:33:49Z",
         "mergedAt": "2026-08-26T13:24:57Z",
         "closedAt": "2026-08-26T13:24:57Z",
-        "lastChangedAt": "2026-08-27T12:49:54.087Z"
+        "lastChangedAt": "2026-08-29T16:42:11.043Z"
       },
       "validation": {
         "status": "passed",
@@ -149,6 +149,66 @@
           "npm test (40 tests: 39 passed, 1 skipped because symlink creation is unavailable on Windows)",
           "npm ls --all (empty dependency tree)",
           "node --check quarkify.mjs",
+          "git diff --check"
+        ]
+      }
+    },
+    {
+      "id": "github:companyjupiter/quarkify#46",
+      "repository": "github:companyjupiter/quarkify",
+      "type": "fix",
+      "summary": "Restore package entrypoint and CLI metadata on the main branch.",
+      "pullRequest": {
+        "number": 46,
+        "url": "https://github.com/companyjupiter/quarkify/pull/46",
+        "title": "fix: restore package entrypoint metadata on main",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-08-29T02:21:58Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-08-29T16:40:49.421Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "npm test (38 passed, 1 skipped because symlink creation is unavailable on Windows)",
+          "node --check quarkify.mjs",
+          "npm install --package-lock-only",
+          "npm pack and fresh local tarball install/CLI execution",
+          "GitHub Actions CI on Ubuntu, macOS, and Windows with Node.js 22",
+          "git diff --check"
+        ]
+      }
+    },
+    {
+      "id": "github:companyjupiter/quarkify#47",
+      "repository": "github:companyjupiter/quarkify",
+      "type": "test",
+      "summary": "Keep package and plugin manifest versions aligned during releases.",
+      "pullRequest": {
+        "number": 47,
+        "url": "https://github.com/companyjupiter/quarkify/pull/47",
+        "title": "test: keep plugin versions aligned with package",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-08-29T19:06:10Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-08-29T19:09:52.527Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "Plugin manifest tests (3 passed)",
+          "Mutation check rejects a package and plugin version mismatch",
+          "npm test (37 passed, 1 skipped because symlink creation is unavailable on Windows)",
+          "node --check quarkify.mjs and skills/analyze/scripts/analyze.mjs",
+          "GitHub Actions CI on Ubuntu, macOS, and Windows with Node.js 22",
           "git diff --check"
         ]
       }
@@ -343,6 +403,64 @@
       }
     },
     {
+      "id": "github:L1M80/porta#134",
+      "repository": "github:L1M80/porta",
+      "type": "test",
+      "summary": "Cover target selector persistence across reload and mobile resume.",
+      "pullRequest": {
+        "number": 134,
+        "url": "https://github.com/L1M80/porta/pull/134",
+        "title": "test(web): cover target selector persistence",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "develop",
+        "createdAt": "2026-08-29T01:46:37Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-08-29T16:40:49.421Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "pnpm --filter @porta/web test (21 files, 161 tests)",
+          "pnpm lint",
+          "pnpm build",
+          "GitHub Actions CI and PR Lint (success)",
+          "git diff --check"
+        ]
+      }
+    },
+    {
+      "id": "github:L1M80/porta#135",
+      "repository": "github:L1M80/porta",
+      "type": "docs",
+      "summary": "Document named Cloudflare Tunnel ingress routing to the local Porta proxy.",
+      "pullRequest": {
+        "number": 135,
+        "url": "https://github.com/L1M80/porta/pull/135",
+        "title": "docs: document named tunnel ingress config",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "develop",
+        "createdAt": "2026-08-29T19:05:50Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-08-29T19:09:52.527Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "pnpm test (proxy: 20 files and 184 tests; web: 20 files and 159 tests)",
+          "pnpm lint",
+          "pnpm build",
+          "GitHub Actions PR Lint branch naming and title checks",
+          "git diff --check"
+        ]
+      }
+    },
+    {
       "id": "github:dennykim123/claude-codex-battery#5",
       "repository": "github:dennykim123/claude-codex-battery",
       "type": "feature",
@@ -372,6 +490,65 @@
           "Rapid refresh, corrupt cache, offline fallback, off-screen position, dual-monitor restore, install, uninstall, reinstall, and autostart tests",
           "Tray animation GDI and USER resource counts remained flat",
           "Compact UI verified at 150 percent Windows display scaling"
+        ]
+      }
+    },
+    {
+      "id": "github:dennykim123/claude-codex-battery#8",
+      "repository": "github:dennykim123/claude-codex-battery",
+      "type": "fix",
+      "summary": "Preserve connected provider status when all visible usage rows are hidden.",
+      "pullRequest": {
+        "number": 8,
+        "url": "https://github.com/dennykim123/claude-codex-battery/pull/8",
+        "title": "fix(windows): preserve provider status when rows are hidden",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-08-29T01:27:35Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-08-29T16:40:49.421Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "Windows app compilation with the .NET Framework C# compiler",
+          "Full ParserTests suite including dashboard scenarios",
+          "GitHub Actions Windows build (success)",
+          "git diff --check"
+        ]
+      }
+    },
+    {
+      "id": "github:dennykim123/claude-codex-battery#10",
+      "repository": "github:dennykim123/claude-codex-battery",
+      "type": "feature",
+      "summary": "Add six built-in mascots and a keyboard-accessible tray-scale picker for Windows.",
+      "pullRequest": {
+        "number": 10,
+        "url": "https://github.com/dennykim123/claude-codex-battery/pull/10",
+        "title": "feat(windows): add built-in mascot picker",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-08-29T19:25:53Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-08-29T19:27:58.293Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "Windows app compilation (exit code 0)",
+          "ParserTests compilation and execution (exit code 0)",
+          "Mascot state, registry, GDI renderer, and WinForms picker tests",
+          "Keyboard, accessibility, reduced-motion, Classic fallback, and resource regression coverage",
+          "Visual QA for picker, tray previews, keyboard selection, and integrated flyout",
+          "GitHub Actions Windows build (success)",
+          "git diff --check"
         ]
       }
     }

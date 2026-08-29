@@ -14,5 +14,7 @@
 | `github:L1M80/porta#103` | [#103](https://github.com/L1M80/porta/pull/103) | Render requested file permissions |
 | `github:L1M80/porta#121` | [#121](https://github.com/L1M80/porta/pull/121) | Original subagent status-card submission, superseded by #122 |
 | `github:L1M80/porta#122` | [#122](https://github.com/L1M80/porta/pull/122) | Add subagent status cards and message transforms |
+| `github:L1M80/porta#134` | [#134](https://github.com/L1M80/porta/pull/134) | Cover target selector persistence across reload and mobile resume |
+| `github:L1M80/porta#135` | [#135](https://github.com/L1M80/porta/pull/135) | Document named Cloudflare Tunnel ingress routing to the local proxy |
 
 Pull request #121 and #122 share the same implementation commit. The earlier pull request was closed without merge and replaced by #122, so both lifecycle records remain in the public ledger.

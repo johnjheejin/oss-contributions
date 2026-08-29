@@ -9,5 +9,7 @@
 | Stable ID | Pull request | Purpose |
 |---|---|---|
 | `github:dennykim123/claude-codex-battery#5` | [#5](https://github.com/dennykim123/claude-codex-battery/pull/5) | Add the native Windows tray application |
+| `github:dennykim123/claude-codex-battery#8` | [#8](https://github.com/dennykim123/claude-codex-battery/pull/8) | Preserve connected provider status when usage rows are hidden |
+| `github:dennykim123/claude-codex-battery#10` | [#10](https://github.com/dennykim123/claude-codex-battery/pull/10) | Add six built-in mascots and a tray-scale character picker |
 
-The contribution was merged upstream after Windows-specific parser, concurrency, cache, resource, installation, and UI validation. Detailed implementation history stays in the pull request.
+Detailed implementation history and current lifecycle status stay in each pull request and the generated repository README.
