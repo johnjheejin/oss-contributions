@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-08-29T19:27:58.293Z",
+  "lastChangedAt": "2026-09-04T07:15:39.794Z",
   "repositories": [
     {
       "id": "github:companyjupiter/quarkify",
@@ -412,13 +412,13 @@
         "url": "https://github.com/L1M80/porta/pull/134",
         "title": "test(web): cover target selector persistence",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "merged",
         "draft": false,
         "base": "develop",
         "createdAt": "2026-08-29T01:46:37Z",
-        "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-08-29T16:40:49.421Z"
+        "mergedAt": "2026-09-04T01:43:31Z",
+        "closedAt": "2026-09-04T01:43:31Z",
+        "lastChangedAt": "2026-09-04T07:15:39.794Z"
       },
       "validation": {
         "status": "passed",
@@ -441,13 +441,13 @@
         "url": "https://github.com/L1M80/porta/pull/135",
         "title": "docs: document named tunnel ingress config",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "merged",
         "draft": false,
         "base": "develop",
         "createdAt": "2026-08-29T19:05:50Z",
-        "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-08-29T19:09:52.527Z"
+        "mergedAt": "2026-09-04T01:43:18Z",
+        "closedAt": "2026-09-04T01:43:18Z",
+        "lastChangedAt": "2026-09-04T07:15:39.794Z"
       },
       "validation": {
         "status": "passed",
