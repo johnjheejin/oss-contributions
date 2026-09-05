@@ -1,7 +1,16 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-09-04T07:15:39.794Z",
+  "lastChangedAt": "2026-09-05T18:32:45Z",
   "repositories": [
+    {
+      "id": "github:ghostface2232/cleankakao",
+      "upstream": "ghostface2232/cleankakao",
+      "upstreamUrl": "https://github.com/ghostface2232/cleankakao",
+      "fork": "johnjheejin/cleankakao",
+      "forkUrl": "https://github.com/johnjheejin/cleankakao",
+      "projectPage": "projects/ghostface2232/cleankakao.md",
+      "visibility": "public"
+    },
     {
       "id": "github:companyjupiter/quarkify",
       "upstream": "companyjupiter/quarkify",
@@ -40,6 +49,34 @@
     }
   ],
   "contributions": [
+    {
+      "id": "github:ghostface2232/cleankakao#1",
+      "repository": "github:ghostface2232/cleankakao",
+      "type": "feature",
+      "summary": "Support simultaneous normal and Sandboxie KakaoTalk instances with per-window state and process hooks.",
+      "pullRequest": {
+        "number": 1,
+        "url": "https://github.com/ghostface2232/cleankakao/pull/1",
+        "title": "feat: support multiple KakaoTalk instances running under Sandboxie",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-08-28T08:02:14Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-09-05T18:32:45Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "Reported in PR #1: cargo test --locked (21 passed, 3 ignored)",
+          "Reported in PR #1: cargo clippy --all-targets --locked (no new warnings)",
+          "Reported in PR #1: cargo build --release --locked --bin cleankakao (success)",
+          "Reported in PR #1: simultaneous normal and Sandboxie KakaoTalk ad removal, layout restoration and restart checks"
+        ]
+      }
+    },
     {
       "id": "github:companyjupiter/quarkify#28",
       "repository": "github:companyjupiter/quarkify",
@@ -399,6 +436,32 @@
         "checks": [
           "GitHub Actions CI (success)",
           "GitHub Actions PR Lint (success)"
+        ]
+      }
+    },
+    {
+      "id": "github:L1M80/porta#133",
+      "repository": "github:L1M80/porta",
+      "type": "test",
+      "summary": "Original target selector persistence submission, closed and replaced by #134.",
+      "pullRequest": {
+        "number": 133,
+        "url": "https://github.com/L1M80/porta/pull/133",
+        "title": "test(web): cover target selector persistence",
+        "author": "johnjheejin",
+        "state": "closed",
+        "draft": false,
+        "base": "develop",
+        "createdAt": "2026-08-29T01:45:17Z",
+        "mergedAt": null,
+        "closedAt": "2026-08-29T01:46:11Z",
+        "lastChangedAt": "2026-09-05T18:32:45Z"
+      },
+      "validation": {
+        "status": "partial",
+        "checks": [
+          "Reported in PR #133: pnpm --filter @porta/web test, pnpm lint, pnpm build and git diff --check",
+          "Initial PR Lint branch naming check failed; replaced by PR #134"
         ]
       }
     },
