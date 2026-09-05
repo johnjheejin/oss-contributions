@@ -26,7 +26,7 @@ function repositoryFromSearchItem(item) {
   return htmlMatch?.[1] ?? null;
 }
 
-export function findUntrackedExternalPullRequests(registry, searchItems, contributor) {
+export function findUntrackedExternalPullRequests(registry, searchItems, contributor, excludedRepositories = []) {
   validateRegistry(registry);
   if (!Array.isArray(searchItems)) throw new Error('GitHub search items must be an array');
   if (typeof contributor !== 'string' || contributor.trim() === '') {
@@ -34,11 +34,13 @@ export function findUntrackedExternalPullRequests(registry, searchItems, contrib
   }
 
   const normalizedContributor = contributor.toLowerCase();
+  const excluded = new Set(excludedRepositories.map((repository) => repository.toLowerCase()));
   const trackedIds = new Set(registry.contributions.map((item) => item.id.toLowerCase()));
   const missing = [];
   for (const item of searchItems) {
     const repository = repositoryFromSearchItem(item);
     if (!repository || !Number.isInteger(item?.number) || item.number <= 0) continue;
+    if (excluded.has(repository.toLowerCase())) continue;
     if (item.user?.login?.toLowerCase() !== normalizedContributor) continue;
     if (repository.split('/')[0].toLowerCase() === normalizedContributor) continue;
     const id = `github:${repository}#${item.number}`;
@@ -293,7 +295,7 @@ export function renderReadme(registry) {
     '- Every contribution has a stable ID such as `github:companyjupiter/quarkify#29`.',
     '- Public repositories may reference those IDs through `.github/oss-contributions.json`.',
     '- Private repositories may keep reverse references internally; private names and paths are never published here.',
-    '- The scheduled workflow checks GitHub, commits tracked lifecycle changes, and fails visibly when an authored external pull request is missing from the registry.',
+    '- The scheduled workflow checks GitHub, commits tracked lifecycle changes, and flags untracked external pull requests within the public ledger scope.',
     '',
     'See [the linking contract](docs/linking-contract.md) and [contribution guide](CONTRIBUTING.md).',
     '',

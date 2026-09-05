@@ -40,9 +40,12 @@ async function fetchAuthoredPullRequests() {
 }
 
 const searchItems = await fetchAuthoredPullRequests();
-const missing = findUntrackedExternalPullRequests(registry, searchItems, contributor);
+const excludedRepositories = (process.env.DISCOVERY_EXCLUDED_REPOSITORIES || '')
+  .split(/[\s,]+/u)
+  .filter(Boolean);
+const missing = findUntrackedExternalPullRequests(registry, searchItems, contributor, excludedRepositories);
 if (missing.length === 0) {
-  console.log(`Contribution discovery passed: ${contributor} has no untracked external pull requests.`);
+  console.log(`Contribution discovery passed: ${contributor} has no untracked external pull requests within the public ledger scope.`);
 } else {
   console.error(`Untracked external pull requests found (${missing.length}):`);
   for (const item of missing) console.error(`- ${item.id} ${item.url}`);

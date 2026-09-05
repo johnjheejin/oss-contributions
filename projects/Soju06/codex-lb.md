@@ -9,6 +9,7 @@
 | Stable ID | Pull request | Purpose |
 |---|---|---|
 | `github:Soju06/codex-lb#1526` | [#1526](https://github.com/Soju06/codex-lb/pull/1526) | Release SQLite handles before Windows backup and recovery file mutations |
+| `github:Soju06/codex-lb#2114` | [#2114](https://github.com/Soju06/codex-lb/pull/2114) | Filter vendor events from public Responses streams; partial fix for #1934 |
 
 ## Upstream references
 

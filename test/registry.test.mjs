@@ -166,3 +166,16 @@ test('finds authored external pull requests that are missing from the registry',
     },
   ]);
 });
+
+test('omits explicitly excluded repositories without hiding other missing contributions', () => {
+  const items = [
+    { number: 1, repository_url: 'https://api.github.com/repos/Personal/Utility', user: { login: 'contributor' } },
+    { number: 2, repository_url: 'https://api.github.com/repos/Personal/Utility', user: { login: 'contributor' } },
+    { number: 3, repository_url: 'https://api.github.com/repos/another/project', user: { login: 'contributor' } },
+  ];
+  assert.deepEqual(
+    findUntrackedExternalPullRequests(fixture(), items, 'contributor', ['personal/utility']).map((item) => item.id),
+    ['github:another/project#3'],
+  );
+  assert.equal(findUntrackedExternalPullRequests(fixture(), items, 'contributor').length, 3);
+});

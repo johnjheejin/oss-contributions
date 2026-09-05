@@ -16,7 +16,9 @@ This repository tracks public upstream contributions. It does not mirror upstrea
    npm run check
    ```
 
-The scheduled workflow also runs `npm run discover`. It searches public pull requests authored by `johnjheejin`, excludes repositories owned by the same account, and fails when an external pull request has no stable registry record.
+The scheduled workflow also runs `npm run discover`. It searches public pull requests authored by `johnjheejin`, excludes repositories owned by the same account, and fails when an in-scope external pull request has no stable registry record.
+
+Personal work may be excluded from the public ledger with the `DISCOVERY_EXCLUDED_REPOSITORIES` Actions secret (comma- or whitespace-separated upstream `owner/repo` values). Set the same environment variable for local discovery. Excluded names are not stored in the registry or printed by discovery; all other external contributions remain audited.
 
 ## Public-data boundary
 

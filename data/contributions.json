@@ -1,16 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-09-05T18:32:45Z",
+  "lastChangedAt": "2026-09-05T18:42:03Z",
   "repositories": [
-    {
-      "id": "github:ghostface2232/cleankakao",
-      "upstream": "ghostface2232/cleankakao",
-      "upstreamUrl": "https://github.com/ghostface2232/cleankakao",
-      "fork": "johnjheejin/cleankakao",
-      "forkUrl": "https://github.com/johnjheejin/cleankakao",
-      "projectPage": "projects/ghostface2232/cleankakao.md",
-      "visibility": "public"
-    },
     {
       "id": "github:companyjupiter/quarkify",
       "upstream": "companyjupiter/quarkify",
@@ -50,30 +41,29 @@
   ],
   "contributions": [
     {
-      "id": "github:ghostface2232/cleankakao#1",
-      "repository": "github:ghostface2232/cleankakao",
-      "type": "feature",
-      "summary": "Support simultaneous normal and Sandboxie KakaoTalk instances with per-window state and process hooks.",
+      "id": "github:Soju06/codex-lb#2114",
+      "repository": "github:Soju06/codex-lb",
+      "type": "fix",
+      "summary": "Filter vendor events from public Responses streams while preserving native Codex streams; partial follow-up to #1934.",
       "pullRequest": {
-        "number": 1,
-        "url": "https://github.com/ghostface2232/cleankakao/pull/1",
-        "title": "feat: support multiple KakaoTalk instances running under Sandboxie",
+        "number": 2114,
+        "url": "https://github.com/Soju06/codex-lb/pull/2114",
+        "title": "fix(proxy): filter vendor events from public Responses streams",
         "author": "johnjheejin",
         "state": "open",
         "draft": false,
         "base": "main",
-        "createdAt": "2026-08-28T08:02:14Z",
+        "createdAt": "2026-09-05T18:37:58Z",
         "mergedAt": null,
         "closedAt": null,
-        "lastChangedAt": "2026-09-05T18:32:45Z"
+        "lastChangedAt": "2026-09-05T18:42:03Z"
       },
       "validation": {
-        "status": "passed",
+        "status": "partial",
         "checks": [
-          "Reported in PR #1: cargo test --locked (21 passed, 3 ignored)",
-          "Reported in PR #1: cargo clippy --all-targets --locked (no new warnings)",
-          "Reported in PR #1: cargo build --release --locked --bin cleankakao (success)",
-          "Reported in PR #1: simultaneous normal and Sandboxie KakaoTalk ad removal, layout restoration and restart checks"
+          "Reported in PR #2114: Responses unit and integration suites (171 passed)",
+          "Reported in PR #2114: SDK and routing tests (35 passed, 73 deselected)",
+          "Reported in PR #2114: scoped Ruff, format, type and OpenSpec validation passed; full cloud CI and review pending"
         ]
       }
     },

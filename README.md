@@ -13,7 +13,7 @@ A public ledger of upstream contributions, validation evidence, and their curren
 - Open for review: 5
 - Merged: 12
 - Closed without merge: 3
-- Registry last changed: 2026-09-05T18:32:45Z
+- Registry last changed: 2026-09-05T18:42:03Z
 
 ## Selected work
 
@@ -37,7 +37,6 @@ A public ledger of upstream contributions, validation evidence, and their curren
 | 🟣 Merged | [dennykim123/claude-codex-battery](https://github.com/dennykim123/claude-codex-battery) | [#5 feat(windows): add native Claude, Fable, and Codex tray app](https://github.com/dennykim123/claude-codex-battery/pull/5) | feature | ✅ 9 checks |
 | 🟢 Open | [dennykim123/claude-codex-battery](https://github.com/dennykim123/claude-codex-battery) | [#8 fix(windows): preserve provider status when rows are hidden](https://github.com/dennykim123/claude-codex-battery/pull/8) | fix | ✅ 4 checks |
 | 🟢 Open | [dennykim123/claude-codex-battery](https://github.com/dennykim123/claude-codex-battery) | [#10 feat(windows): add built-in mascot picker](https://github.com/dennykim123/claude-codex-battery/pull/10) | feature | ✅ 7 checks |
-| 🟢 Open | [ghostface2232/cleankakao](https://github.com/ghostface2232/cleankakao) | [#1 feat: support multiple KakaoTalk instances running under Sandboxie](https://github.com/ghostface2232/cleankakao/pull/1) | feature | ✅ 4 checks |
 | 🟣 Merged | [L1M80/porta](https://github.com/L1M80/porta) | [#99 feat(web): sort workspaces by recency and expose workspace-less conversations](https://github.com/L1M80/porta/pull/99) | feature | ✅ 3 checks |
 | 🟣 Merged | [L1M80/porta](https://github.com/L1M80/porta) | [#100 fix(proxy): cap recent conversations to prevent LS thrashing](https://github.com/L1M80/porta/pull/100) | fix | ✅ 3 checks |
 | 🟣 Merged | [L1M80/porta](https://github.com/L1M80/porta) | [#102 feat(web): group conversations by project name using desktop metadata fallback](https://github.com/L1M80/porta/pull/102) | feature | ✅ 1 checks |
@@ -48,14 +47,14 @@ A public ledger of upstream contributions, validation evidence, and their curren
 | 🟣 Merged | [L1M80/porta](https://github.com/L1M80/porta) | [#134 test(web): cover target selector persistence](https://github.com/L1M80/porta/pull/134) | test | ✅ 5 checks |
 | 🟣 Merged | [L1M80/porta](https://github.com/L1M80/porta) | [#135 docs: document named tunnel ingress config](https://github.com/L1M80/porta/pull/135) | docs | ✅ 5 checks |
 | 🟣 Merged | [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [#1526 fix(db): release SQLite handles before file mutations](https://github.com/Soju06/codex-lb/pull/1526) | fix | ✅ 10 checks |
+| 🟢 Open | [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [#2114 fix(proxy): filter vendor events from public Responses streams](https://github.com/Soju06/codex-lb/pull/2114) | fix | partial · 3 checks |
 
 ## Connected projects
 
 | Upstream | Contribution fork | Records |
 |---|---|---|
-| [ghostface2232/cleankakao](https://github.com/ghostface2232/cleankakao) | [johnjheejin/cleankakao](https://github.com/johnjheejin/cleankakao) | [1](projects/ghostface2232/cleankakao.md) |
 | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [johnjheejin/quarkify](https://github.com/johnjheejin/quarkify) | [6](projects/companyjupiter/quarkify.md) |
-| [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [johnjheejin/codex-lb](https://github.com/johnjheejin/codex-lb) | [1](projects/Soju06/codex-lb.md) |
+| [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [johnjheejin/codex-lb](https://github.com/johnjheejin/codex-lb) | [2](projects/Soju06/codex-lb.md) |
 | [L1M80/porta](https://github.com/L1M80/porta) | [johnjheejin/porta](https://github.com/johnjheejin/porta) | [9](projects/L1M80/porta.md) |
 | [dennykim123/claude-codex-battery](https://github.com/dennykim123/claude-codex-battery) | [johnjheejin/claude-codex-battery](https://github.com/johnjheejin/claude-codex-battery) | [3](projects/dennykim123/claude-codex-battery.md) |
 
@@ -64,7 +63,7 @@ A public ledger of upstream contributions, validation evidence, and their curren
 - Every contribution has a stable ID such as `github:companyjupiter/quarkify#29`.
 - Public repositories may reference those IDs through `.github/oss-contributions.json`.
 - Private repositories may keep reverse references internally; private names and paths are never published here.
-- The scheduled workflow checks GitHub, commits tracked lifecycle changes, and fails visibly when an authored external pull request is missing from the registry.
+- The scheduled workflow checks GitHub, commits tracked lifecycle changes, and flags untracked external pull requests within the public ledger scope.
 
 See [the linking contract](docs/linking-contract.md) and [contribution guide](CONTRIBUTING.md).
 

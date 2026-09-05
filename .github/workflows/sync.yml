@@ -48,4 +48,5 @@ jobs:
         run: npm run discover
         env:
           CONTRIBUTOR_LOGIN: johnjheejin
+          DISCOVERY_EXCLUDED_REPOSITORIES: ${{ secrets.DISCOVERY_EXCLUDED_REPOSITORIES }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
