@@ -18,3 +18,9 @@
 | `github:L1M80/porta#135` | [#135](https://github.com/L1M80/porta/pull/135) | Document named Cloudflare Tunnel ingress routing to the local proxy |
 
 Pull request #121 and #122 share the same implementation commit. The earlier pull request was closed without merge and replaced by #122, so both lifecycle records remain in the public ledger.
+
+## Upstream references
+
+The [v0.16.1 release notes](https://github.com/L1M80/porta/releases/tag/v0.16.1) describe the named tunnel documentation (#135) and target-selector regression coverage (#134), and thank `@johnjheejin` for those contributions.
+
+Reference checked on 2026-09-06.

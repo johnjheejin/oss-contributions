@@ -16,3 +16,9 @@
 | `github:companyjupiter/quarkify#47` | [#47](https://github.com/companyjupiter/quarkify/pull/47) | Keep package and plugin manifest versions aligned during releases |
 
 Current lifecycle status is generated in the repository README. Implementation details and review discussion stay in each pull request.
+
+## Upstream references
+
+The [GitHub contributor history](https://github.com/companyjupiter/quarkify/graphs/contributors) lists `@johnjheejin`. The merged work covers safe handling of project names in generated HTML (#29), test discovery (#30) and removal of an unused dependency (#31).
+
+Reference checked on 2026-09-06.
