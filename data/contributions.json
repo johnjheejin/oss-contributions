@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-09-05T18:42:03Z",
+  "lastChangedAt": "2026-09-09T07:24:50.308Z",
   "repositories": [
     {
       "id": "github:companyjupiter/quarkify",
@@ -50,13 +50,13 @@
         "url": "https://github.com/Soju06/codex-lb/pull/2114",
         "title": "fix(proxy): filter vendor events from public Responses streams",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "merged",
         "draft": false,
         "base": "main",
         "createdAt": "2026-09-05T18:37:58Z",
-        "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-09-05T18:42:03Z"
+        "mergedAt": "2026-09-08T10:51:32Z",
+        "closedAt": "2026-09-08T10:51:32Z",
+        "lastChangedAt": "2026-09-09T07:24:50.308Z"
       },
       "validation": {
         "status": "partial",

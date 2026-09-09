@@ -10,10 +10,10 @@ A public ledger of upstream contributions, validation evidence, and their curren
 
 - Tracked contributions: 20
 - Draft: 0
-- Open for review: 5
-- Merged: 12
+- Open for review: 4
+- Merged: 13
 - Closed without merge: 3
-- Registry last changed: 2026-09-05T18:42:03Z
+- Registry last changed: 2026-09-09T07:24:50.308Z
 
 ## Selected work
 
@@ -47,7 +47,7 @@ A public ledger of upstream contributions, validation evidence, and their curren
 | 🟣 Merged | [L1M80/porta](https://github.com/L1M80/porta) | [#134 test(web): cover target selector persistence](https://github.com/L1M80/porta/pull/134) | test | ✅ 5 checks |
 | 🟣 Merged | [L1M80/porta](https://github.com/L1M80/porta) | [#135 docs: document named tunnel ingress config](https://github.com/L1M80/porta/pull/135) | docs | ✅ 5 checks |
 | 🟣 Merged | [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [#1526 fix(db): release SQLite handles before file mutations](https://github.com/Soju06/codex-lb/pull/1526) | fix | ✅ 10 checks |
-| 🟢 Open | [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [#2114 fix(proxy): filter vendor events from public Responses streams](https://github.com/Soju06/codex-lb/pull/2114) | fix | partial · 3 checks |
+| 🟣 Merged | [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [#2114 fix(proxy): filter vendor events from public Responses streams](https://github.com/Soju06/codex-lb/pull/2114) | fix | partial · 3 checks |
 
 ## Connected projects
 
