@@ -255,7 +255,7 @@ export function renderReadme(registry) {
     '|---|---|---|',
     '| [Battery](projects/dennykim123/claude-codex-battery.md) | Native Windows tray app, production port and stabilization | [Windows contributor credit in README](https://github.com/dennykim123/claude-codex-battery#readme) |',
     '| [Porta](projects/L1M80/porta.md) | Conversation and subagent UI, tunnel documentation, regression coverage | [Acknowledgment in v0.16.1](https://github.com/L1M80/porta/releases/tag/v0.16.1) |',
-    '| [Codex-lb](projects/Soju06/codex-lb.md) | SQLite handle cleanup before Windows file operations | [README contributor listing](https://github.com/Soju06/codex-lb#contributors-) · [v1.23.0 release](https://github.com/Soju06/codex-lb/releases/tag/v1.23.0) |',
+    '| [Codex-lb](projects/Soju06/codex-lb.md) | SQLite handle safety and public Responses stream compatibility | [README contributor listing](https://github.com/Soju06/codex-lb#contributors-) · [v1.23.0 release](https://github.com/Soju06/codex-lb/releases/tag/v1.23.0) · [v1.25.0-beta.6 release](https://github.com/Soju06/codex-lb/releases/tag/v1.25.0-beta.6) |',
     '| [Quarkify](projects/companyjupiter/quarkify.md) | Safe HTML generation, test scope and dependency cleanup | [Contributor history](https://github.com/companyjupiter/quarkify/graphs/contributors) |',
     '',
     '## Contributions',

@@ -15,5 +15,6 @@
 
 - The [README Contributors section](https://github.com/Soju06/codex-lb#contributors-) lists `daydreamer.jin` (`@johnjheejin`) with a profile image and code, tests and documentation credits.
 - The [v1.23.0 release notes](https://github.com/Soju06/codex-lb/releases/tag/v1.23.0) include #1526 and introduce `@johnjheejin` under New Contributors.
+- The [v1.25.0-beta.6 release notes](https://github.com/Soju06/codex-lb/releases/tag/v1.25.0-beta.6) credit `@johnjheejin` for #2114, which filters vendor events from public Responses streams while preserving native Codex streams.
 
-References checked on 2026-09-06. Implementation details, review discussion and current workflow status stay in the pull request.
+References checked on 2026-09-15. Implementation details, review discussion and current workflow status stay in the pull request.

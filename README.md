@@ -13,7 +13,7 @@ A public ledger of upstream contributions, validation evidence, and their curren
 - Open for review: 4
 - Merged: 13
 - Closed without merge: 3
-- Registry last changed: 2026-09-09T07:24:50.308Z
+- Registry last changed: 2026-09-15T06:19:43.934Z
 
 ## Selected work
 
@@ -21,7 +21,7 @@ A public ledger of upstream contributions, validation evidence, and their curren
 |---|---|---|
 | [Battery](projects/dennykim123/claude-codex-battery.md) | Native Windows tray app, production port and stabilization | [Windows contributor credit in README](https://github.com/dennykim123/claude-codex-battery#readme) |
 | [Porta](projects/L1M80/porta.md) | Conversation and subagent UI, tunnel documentation, regression coverage | [Acknowledgment in v0.16.1](https://github.com/L1M80/porta/releases/tag/v0.16.1) |
-| [Codex-lb](projects/Soju06/codex-lb.md) | SQLite handle cleanup before Windows file operations | [README contributor listing](https://github.com/Soju06/codex-lb#contributors-) · [v1.23.0 release](https://github.com/Soju06/codex-lb/releases/tag/v1.23.0) |
+| [Codex-lb](projects/Soju06/codex-lb.md) | SQLite handle safety and public Responses stream compatibility | [README contributor listing](https://github.com/Soju06/codex-lb#contributors-) · [v1.23.0 release](https://github.com/Soju06/codex-lb/releases/tag/v1.23.0) · [v1.25.0-beta.6 release](https://github.com/Soju06/codex-lb/releases/tag/v1.25.0-beta.6) |
 | [Quarkify](projects/companyjupiter/quarkify.md) | Safe HTML generation, test scope and dependency cleanup | [Contributor history](https://github.com/companyjupiter/quarkify/graphs/contributors) |
 
 ## Contributions
@@ -47,7 +47,7 @@ A public ledger of upstream contributions, validation evidence, and their curren
 | 🟣 Merged | [L1M80/porta](https://github.com/L1M80/porta) | [#134 test(web): cover target selector persistence](https://github.com/L1M80/porta/pull/134) | test | ✅ 5 checks |
 | 🟣 Merged | [L1M80/porta](https://github.com/L1M80/porta) | [#135 docs: document named tunnel ingress config](https://github.com/L1M80/porta/pull/135) | docs | ✅ 5 checks |
 | 🟣 Merged | [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [#1526 fix(db): release SQLite handles before file mutations](https://github.com/Soju06/codex-lb/pull/1526) | fix | ✅ 10 checks |
-| 🟣 Merged | [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [#2114 fix(proxy): filter vendor events from public Responses streams](https://github.com/Soju06/codex-lb/pull/2114) | fix | partial · 3 checks |
+| 🟣 Merged | [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [#2114 fix(proxy): filter vendor events from public Responses streams](https://github.com/Soju06/codex-lb/pull/2114) | fix | ✅ 5 checks |
 
 ## Connected projects
 

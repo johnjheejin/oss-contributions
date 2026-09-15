@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-09-09T07:24:50.308Z",
+  "lastChangedAt": "2026-09-15T06:19:43.934Z",
   "repositories": [
     {
       "id": "github:companyjupiter/quarkify",
@@ -59,11 +59,13 @@
         "lastChangedAt": "2026-09-09T07:24:50.308Z"
       },
       "validation": {
-        "status": "partial",
+        "status": "passed",
         "checks": [
-          "Reported in PR #2114: Responses unit and integration suites (171 passed)",
-          "Reported in PR #2114: SDK and routing tests (35 passed, 73 deselected)",
-          "Reported in PR #2114: scoped Ruff, format, type and OpenSpec validation passed; full cloud CI and review pending"
+          "Responses unit and integration suites (171 passed)",
+          "SDK and routing tests (35 passed, 73 deselected)",
+          "Scoped Ruff, format, type and OpenSpec validation passed",
+          "GitHub Actions CI Required and applicable test, migration, build, lint and type-check jobs passed on head 91d29da",
+          "Simplicity budgets passed before maintainer merge"
         ]
       }
     },

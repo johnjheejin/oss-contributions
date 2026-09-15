@@ -119,6 +119,7 @@ test('renders a deterministic public dashboard', () => {
   assert.match(readme, /Tracked contributions: 1/u);
   assert.match(readme, /🟡 Draft/u);
   assert.match(readme, /github:companyjupiter\/quarkify#29/u);
+  assert.match(readme, /v1\.25\.0-beta\.6/u);
   assert.doesNotMatch(readme, /[A-Za-z]:\\/u);
 });
 
