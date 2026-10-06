@@ -1,5 +1,7 @@
 # companyjupiter/quarkify
 
+Quarkify analyzes source code locally and materializes its structure as a directory tree, with a standalone visual code map. It helps developers and AI coding agents explore files, symbols and relationships using familiar filesystem tools.
+
 - Upstream: [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify)
 - Contribution fork: [johnjheejin/quarkify](https://github.com/johnjheejin/quarkify)
 - Public registry: [`data/contributions.json`](../../data/contributions.json)
@@ -16,6 +18,8 @@
 | `github:companyjupiter/quarkify#47` | [#47](https://github.com/companyjupiter/quarkify/pull/47) | Keep package and plugin manifest versions aligned during releases |
 
 Current lifecycle status is generated in the repository README. Implementation details and review discussion stay in each pull request.
+
+Status checked 2026-10-06 09:42 UTC: [#46](https://github.com/companyjupiter/quarkify/pull/46) and [#47](https://github.com/companyjupiter/quarkify/pull/47) remain open and mergeable. Both head commits have successful upstream [CI runs](https://github.com/companyjupiter/quarkify/actions); neither PR has a submitted review or inline review thread. The contributor's 2026-09-21 validation follow-ups remain the latest comments, with no revision requested.
 
 ## Upstream references
 

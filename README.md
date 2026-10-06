@@ -15,6 +15,13 @@ A public ledger of upstream contributions, validation evidence, and their curren
 - Closed without merge: 3
 - Registry last changed: 2026-09-15T06:19:43.934Z
 
+## Projects
+
+- [Battery](projects/dennykim123/claude-codex-battery.md): A menu-bar and system-tray widget for remaining Claude Code and Codex usage limits.
+- [Porta](projects/L1M80/porta.md): A mobile-friendly web interface for accessing local Antigravity agent sessions remotely.
+- [Codex-lb](projects/Soju06/codex-lb.md): A proxy and load balancer for multiple ChatGPT accounts, with usage tracking and a management dashboard.
+- [Quarkify](projects/companyjupiter/quarkify.md): A local static-analysis tool that turns source-code structure into navigable directories and a visual code map.
+
 ## Selected work
 
 | Project | Contribution | Upstream reference |

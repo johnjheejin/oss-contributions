@@ -1,5 +1,7 @@
 # L1M80/porta
 
+Porta is a self-hosted web interface for local Antigravity Agent Manager sessions, accessible from a phone, tablet or remote browser. A lightweight language-server bridge and mobile-friendly PWA let developers follow and interact with agent conversations away from their desktop.
+
 - Upstream: [L1M80/porta](https://github.com/L1M80/porta)
 - Contribution fork: [johnjheejin/porta](https://github.com/johnjheejin/porta)
 - Public registry: [`data/contributions.json`](../../data/contributions.json)

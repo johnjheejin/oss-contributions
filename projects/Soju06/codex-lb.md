@@ -1,5 +1,7 @@
 # Soju06/codex-lb
 
+Codex-lb is a proxy and load balancer that pools multiple ChatGPT accounts behind endpoints for Codex and OpenAI-compatible clients. Its dashboard provides account management, usage tracking and API-key controls for developers operating that shared account pool.
+
 - Upstream: [Soju06/codex-lb](https://github.com/Soju06/codex-lb)
 - Contribution fork: [johnjheejin/codex-lb](https://github.com/johnjheejin/codex-lb)
 - Public registry: [`data/contributions.json`](../../data/contributions.json)
