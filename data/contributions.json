@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-10-09T02:50:45Z",
+  "lastChangedAt": "2026-10-09T14:59:46Z",
   "repositories": [
     {
       "id": "github:cjpais/Handy",
@@ -49,6 +49,87 @@
     }
   ],
   "contributions": [
+    {
+      "id": "github:cjpais/Handy#2247",
+      "repository": "github:cjpais/Handy",
+      "type": "fix",
+      "summary": "Preserve the current playback position when starting a seek.",
+      "pullRequest": {
+        "number": 2247,
+        "url": "https://github.com/cjpais/Handy/pull/2247",
+        "title": "fix: preserve playback position when starting a seek",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-10-09T03:20:56Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-10-09T14:59:46Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions nix build check passed on head b425616 (run 37878864463)",
+          "GitHub Actions code quality passed on head b425616 (run 37878864464)",
+          "GitHub Actions Playwright passed on head b425616 (run 37878864526)"
+        ]
+      }
+    },
+    {
+      "id": "github:cjpais/Handy#2248",
+      "repository": "github:cjpais/Handy",
+      "type": "fix",
+      "summary": "Ignore IME confirmation Enter in text inputs.",
+      "pullRequest": {
+        "number": 2248,
+        "url": "https://github.com/cjpais/Handy/pull/2248",
+        "title": "fix: ignore IME confirmation Enter in text inputs",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-10-09T03:21:18Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-10-09T14:59:46Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions code quality passed on head 7b0157c (run 37880902760)",
+          "GitHub Actions nix build check passed on head 7b0157c (run 37880902755)",
+          "GitHub Actions Playwright passed on head 7b0157c (run 37880902783)"
+        ]
+      }
+    },
+    {
+      "id": "github:cjpais/Handy#2251",
+      "repository": "github:cjpais/Handy",
+      "type": "fix",
+      "summary": "Dismiss focused setting tooltips with Escape.",
+      "pullRequest": {
+        "number": 2251,
+        "url": "https://github.com/cjpais/Handy/pull/2251",
+        "title": "fix: dismiss focused setting tooltips with Escape",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-10-09T14:53:27Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-10-09T14:59:46Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions code quality passed on head 99fa16e (run 37947571689)",
+          "GitHub Actions Playwright passed on head 99fa16e (run 37947571661)",
+          "GitHub Actions nix build check passed on head 99fa16e (run 37947571468)"
+        ]
+      }
+    },
     {
       "id": "github:cjpais/Handy#2246",
       "repository": "github:cjpais/Handy",
