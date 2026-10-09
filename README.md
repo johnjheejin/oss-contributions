@@ -8,15 +8,16 @@ A public ledger of upstream contributions, validation evidence, and their curren
 
 ## Snapshot
 
-- Tracked contributions: 20
+- Tracked contributions: 23
 - Draft: 0
-- Open for review: 4
-- Merged: 13
+- Open for review: 6
+- Merged: 14
 - Closed without merge: 3
-- Registry last changed: 2026-09-15T06:19:43.934Z
+- Registry last changed: 2026-10-09T02:50:45Z
 
 ## Projects
 
+- [Handy](projects/cjpais/Handy.md): An offline speech-to-text desktop app that transcribes speech locally and pastes text into other applications.
 - [Battery](projects/dennykim123/claude-codex-battery.md): A menu-bar and system-tray widget for remaining Claude Code and Codex usage limits.
 - [Porta](projects/L1M80/porta.md): A mobile-friendly web interface for accessing local Antigravity agent sessions remotely.
 - [Codex-lb](projects/Soju06/codex-lb.md): A proxy and load balancer for multiple ChatGPT accounts, with usage tracking and a management dashboard.
@@ -26,6 +27,7 @@ A public ledger of upstream contributions, validation evidence, and their curren
 
 | Project | Contribution | Upstream reference |
 |---|---|---|
+| [Handy](projects/cjpais/Handy.md) | Translation contribution guidance aligned with supported locales | [Merged documentation PR #2235](https://github.com/cjpais/Handy/pull/2235) |
 | [Battery](projects/dennykim123/claude-codex-battery.md) | Native Windows tray app, production port and stabilization | [Windows contributor credit in README](https://github.com/dennykim123/claude-codex-battery#readme) |
 | [Porta](projects/L1M80/porta.md) | Conversation and subagent UI, tunnel documentation, regression coverage | [Acknowledgment in v0.16.1](https://github.com/L1M80/porta/releases/tag/v0.16.1) |
 | [Codex-lb](projects/Soju06/codex-lb.md) | SQLite handle safety and public Responses stream compatibility | [README contributor listing](https://github.com/Soju06/codex-lb#contributors-) · [v1.23.0 release](https://github.com/Soju06/codex-lb/releases/tag/v1.23.0) · [v1.25.0-beta.6 release](https://github.com/Soju06/codex-lb/releases/tag/v1.25.0-beta.6) |
@@ -35,6 +37,9 @@ A public ledger of upstream contributions, validation evidence, and their curren
 
 | Status | Upstream | Pull request | Type | Validation |
 |---|---|---|---|---|
+| 🟣 Merged | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2235 docs: keep translation contribution guidance aligned with supported locales](https://github.com/cjpais/Handy/pull/2235) | docs | partial · 1 checks |
+| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2238 fix: expose setting names to screen readers](https://github.com/cjpais/Handy/pull/2238) | fix | ✅ 3 checks |
+| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2246 fix: let Escape dismiss dropdown menus](https://github.com/cjpais/Handy/pull/2246) | fix | ✅ 3 checks |
 | ⚫ Closed | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#28 fix: interpolate output paths in completion logs](https://github.com/companyjupiter/quarkify/pull/28) | fix | ✅ 4 checks |
 | 🟣 Merged | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#29 fix: escape project name in generated HTML](https://github.com/companyjupiter/quarkify/pull/29) | security | ✅ 4 checks |
 | 🟣 Merged | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#30 test: limit npm test to test files](https://github.com/companyjupiter/quarkify/pull/30) | test | ✅ 4 checks |
@@ -60,6 +65,7 @@ A public ledger of upstream contributions, validation evidence, and their curren
 
 | Upstream | Contribution fork | Records |
 |---|---|---|
+| [cjpais/Handy](https://github.com/cjpais/Handy) | [johnjheejin/Handy](https://github.com/johnjheejin/Handy) | [3](projects/cjpais/Handy.md) |
 | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [johnjheejin/quarkify](https://github.com/johnjheejin/quarkify) | [6](projects/companyjupiter/quarkify.md) |
 | [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [johnjheejin/codex-lb](https://github.com/johnjheejin/codex-lb) | [2](projects/Soju06/codex-lb.md) |
 | [L1M80/porta](https://github.com/L1M80/porta) | [johnjheejin/porta](https://github.com/johnjheejin/porta) | [9](projects/L1M80/porta.md) |

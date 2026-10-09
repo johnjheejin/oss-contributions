@@ -1,7 +1,16 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-09-15T06:19:43.934Z",
+  "lastChangedAt": "2026-10-09T02:50:45Z",
   "repositories": [
+    {
+      "id": "github:cjpais/Handy",
+      "upstream": "cjpais/Handy",
+      "upstreamUrl": "https://github.com/cjpais/Handy",
+      "fork": "johnjheejin/Handy",
+      "forkUrl": "https://github.com/johnjheejin/Handy",
+      "projectPage": "projects/cjpais/Handy.md",
+      "visibility": "public"
+    },
     {
       "id": "github:companyjupiter/quarkify",
       "upstream": "companyjupiter/quarkify",
@@ -40,6 +49,85 @@
     }
   ],
   "contributions": [
+    {
+      "id": "github:cjpais/Handy#2246",
+      "repository": "github:cjpais/Handy",
+      "type": "fix",
+      "summary": "Dismiss dropdown menus with Escape and restore focus to the trigger.",
+      "pullRequest": {
+        "number": 2246,
+        "url": "https://github.com/cjpais/Handy/pull/2246",
+        "title": "fix: let Escape dismiss dropdown menus",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-10-09T02:48:29Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-10-09T02:50:45Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions code quality passed on head 517c671 (run 37876315825)",
+          "GitHub Actions Playwright passed on head 517c671 (run 37876315828)",
+          "GitHub Actions nix build check passed on head 517c671 (run 37876315831)"
+        ]
+      }
+    },
+    {
+      "id": "github:cjpais/Handy#2235",
+      "repository": "github:cjpais/Handy",
+      "type": "docs",
+      "summary": "Align translation contribution guidance with supported locales.",
+      "pullRequest": {
+        "number": 2235,
+        "url": "https://github.com/cjpais/Handy/pull/2235",
+        "title": "docs: keep translation contribution guidance aligned with supported locales",
+        "author": "johnjheejin",
+        "state": "merged",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-10-08T02:22:20Z",
+        "mergedAt": "2026-10-08T06:04:43Z",
+        "closedAt": "2026-10-08T06:04:43Z",
+        "lastChangedAt": "2026-10-09T02:50:45Z"
+      },
+      "validation": {
+        "status": "partial",
+        "checks": [
+          "Maintainer merged PR #2235 on 2026-10-08; no pull-request-triggered workflow runs returned for head 858d371."
+        ]
+      }
+    },
+    {
+      "id": "github:cjpais/Handy#2238",
+      "repository": "github:cjpais/Handy",
+      "type": "fix",
+      "summary": "Expose setting names to screen readers, including slider controls.",
+      "pullRequest": {
+        "number": 2238,
+        "url": "https://github.com/cjpais/Handy/pull/2238",
+        "title": "fix: expose setting names to screen readers",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-10-08T08:23:27Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-10-09T02:50:45Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions Playwright passed on head 458988d (run 37754594533)",
+          "GitHub Actions code quality passed on head 458988d (run 37754594578)",
+          "GitHub Actions nix build check passed on head 458988d (run 37754594541)"
+        ]
+      }
+    },
     {
       "id": "github:Soju06/codex-lb#2114",
       "repository": "github:Soju06/codex-lb",
