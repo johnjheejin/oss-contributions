@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-10-09T14:59:46Z",
+  "lastChangedAt": "2026-10-09T23:58:26Z",
   "repositories": [
     {
       "id": "github:cjpais/Handy",
@@ -49,6 +49,192 @@
     }
   ],
   "contributions": [
+    {
+      "id": "github:dennykim123/claude-codex-battery#15",
+      "repository": "github:dennykim123/claude-codex-battery",
+      "type": "fix",
+      "summary": "Skip expired Codex fallback windows on Windows.",
+      "pullRequest": {
+        "number": 15,
+        "url": "https://github.com/dennykim123/claude-codex-battery/pull/15",
+        "title": "fix(windows): skip expired Codex fallback windows",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-10-09T19:49:19Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-10-09T23:58:26Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions Windows build: success on head fbaa9b7 (run 37982837716)"
+        ]
+      }
+    },
+    {
+      "id": "github:companyjupiter/quarkify#59",
+      "repository": "github:companyjupiter/quarkify",
+      "type": "fix",
+      "summary": "Include JSX and TSX in symbol coverage audits.",
+      "pullRequest": {
+        "number": 59,
+        "url": "https://github.com/companyjupiter/quarkify/pull/59",
+        "title": "fix: include JSX and TSX in symbol coverage audits",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-10-09T19:49:23Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-10-09T23:58:26Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions CI: success on head a39b031 (run 37982843591)"
+        ]
+      }
+    },
+    {
+      "id": "github:Soju06/codex-lb#2595",
+      "repository": "github:Soju06/codex-lb",
+      "type": "docs",
+      "summary": "Restore the stream normalizer docstring and clarify native mode.",
+      "pullRequest": {
+        "number": 2595,
+        "url": "https://github.com/Soju06/codex-lb/pull/2595",
+        "title": "docs(proxy): restore the stream normalizer docstring and clarify native mode",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-10-09T19:48:54Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-10-09T23:58:26Z"
+      },
+      "validation": {
+        "status": "failed",
+        "checks": [
+          "GitHub Actions Release guards: success on head bf0f3af (run 37982791067)",
+          "GitHub Actions Simplicity budgets: success on head bf0f3af (run 37982791064)",
+          "GitHub Actions CI: failure on head bf0f3af (run 37982791097)",
+          "CI Required failed at the Docker Trivy gate: urllib3 2.7.0, CVE-2026-97687 and CVE-2026-97689; no dependency fix included in this docstring-only PR."
+        ]
+      }
+    },
+    {
+      "id": "github:cjpais/Handy#2253",
+      "repository": "github:cjpais/Handy",
+      "type": "fix",
+      "summary": "Identify the setting affected by each reset button.",
+      "pullRequest": {
+        "number": 2253,
+        "url": "https://github.com/cjpais/Handy/pull/2253",
+        "title": "fix: identify the setting each reset button affects",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-10-09T16:10:29Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-10-09T23:58:26Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions nix build check: success on head a366ac5 (run 37964109682)",
+          "GitHub Actions Playwright: success on head a366ac5 (run 37964109696)",
+          "GitHub Actions code quality: success on head a366ac5 (run 37964109687)"
+        ]
+      }
+    },
+    {
+      "id": "github:cjpais/Handy#2254",
+      "repository": "github:cjpais/Handy",
+      "type": "fix",
+      "summary": "Name the audio playback position control.",
+      "pullRequest": {
+        "number": 2254,
+        "url": "https://github.com/cjpais/Handy/pull/2254",
+        "title": "fix: name the audio playback position control",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-10-09T17:34:15Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-10-09T23:58:26Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions Playwright: success on head 52d7b85 (run 37967222505)",
+          "GitHub Actions code quality: success on head 52d7b85 (run 37967222483)",
+          "GitHub Actions nix build check: success on head 52d7b85 (run 37967222548)"
+        ]
+      }
+    },
+    {
+      "id": "github:cjpais/Handy#2255",
+      "repository": "github:cjpais/Handy",
+      "type": "fix",
+      "summary": "Report failed history deletions to users.",
+      "pullRequest": {
+        "number": 2255,
+        "url": "https://github.com/cjpais/Handy/pull/2255",
+        "title": "fix: report failed history deletions to users",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-10-09T18:34:15Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-10-09T23:58:26Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions code quality: success on head c4edd6f (run 37974213487)",
+          "GitHub Actions Playwright: success on head c4edd6f (run 37974213580)",
+          "GitHub Actions nix build check: success on head c4edd6f (run 37974213469)"
+        ]
+      }
+    },
+    {
+      "id": "github:cjpais/Handy#2256",
+      "repository": "github:cjpais/Handy",
+      "type": "fix",
+      "summary": "Avoid duplicate history rows during live updates.",
+      "pullRequest": {
+        "number": 2256,
+        "url": "https://github.com/cjpais/Handy/pull/2256",
+        "title": "fix: avoid duplicate history rows during live updates",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-10-09T19:10:37Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-10-09T23:58:26Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions code quality: success on head 50bdcf0 (run 37978430207)",
+          "GitHub Actions nix build check: success on head 50bdcf0 (run 37978430244)",
+          "GitHub Actions Playwright: success on head 50bdcf0 (run 37978430260)"
+        ]
+      }
+    },
     {
       "id": "github:cjpais/Handy#2247",
       "repository": "github:cjpais/Handy",

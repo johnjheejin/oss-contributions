@@ -10,6 +10,10 @@ Handy is an offline speech-to-text desktop app. It runs transcription models loc
 
 | Stable ID | Pull request | Purpose |
 |---|---|---|
+| `github:cjpais/Handy#2253` | [#2253](https://github.com/cjpais/Handy/pull/2253) | Identify the setting affected by reset buttons |
+| `github:cjpais/Handy#2254` | [#2254](https://github.com/cjpais/Handy/pull/2254) | Name the audio playback position control |
+| `github:cjpais/Handy#2255` | [#2255](https://github.com/cjpais/Handy/pull/2255) | Report failed history deletions to users |
+| `github:cjpais/Handy#2256` | [#2256](https://github.com/cjpais/Handy/pull/2256) | Avoid duplicate history rows during live updates |
 | `github:cjpais/Handy#2235` | [#2235](https://github.com/cjpais/Handy/pull/2235) | Align translation contribution guidance with supported locales |
 | `github:cjpais/Handy#2238` | [#2238](https://github.com/cjpais/Handy/pull/2238) | Expose setting names, including slider controls, to screen readers |
 | `github:cjpais/Handy#2246` | [#2246](https://github.com/cjpais/Handy/pull/2246) | Dismiss dropdown menus with Escape and restore focus to the trigger |
@@ -24,5 +28,7 @@ No pull-request-triggered workflow runs were returned for the documentation PR h
 The Escape follow-up was submitted as #2246 on 2026-10-09. Its head 517c671 passed the upstream code quality, Playwright, and nix build check workflows; actual desktop-app and assistive-technology testing is not established by those checks.
 
 Current lifecycle status is generated in the repository README. Implementation details and review discussion stay in each pull request. Only submitted public PRs are counted in this ledger.
+
+Status checked 2026-10-10: #2253, #2254, #2255, and #2256 are submitted and open; their current heads each passed Playwright, code quality, and nix build check workflows. This is automated evidence, not a claim of live desktop or screen-reader verification.
 
 Status checked 2026-10-09 15:00 UTC: #2247, #2248, and #2251 are submitted and open. Their respective heads b425616, 7b0157c, and 99fa16e each passed code quality, Playwright, and nix build check workflows. This records automated evidence without claiming actual desktop-app or assistive-technology testing.

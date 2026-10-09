@@ -10,11 +10,14 @@ Battery displays remaining Claude Code and Codex usage limits as battery icons i
 
 | Stable ID | Pull request | Purpose |
 |---|---|---|
+| `github:dennykim123/claude-codex-battery#15` | [#15](https://github.com/dennykim123/claude-codex-battery/pull/15) | Skip expired Codex fallback windows on Windows |
 | `github:dennykim123/claude-codex-battery#5` | [#5](https://github.com/dennykim123/claude-codex-battery/pull/5) | Add the native Windows tray application |
 | `github:dennykim123/claude-codex-battery#8` | [#8](https://github.com/dennykim123/claude-codex-battery/pull/8) | Preserve connected provider status when usage rows are hidden |
 | `github:dennykim123/claude-codex-battery#10` | [#10](https://github.com/dennykim123/claude-codex-battery/pull/10) | Add six built-in mascots and a tray-scale character picker |
 
 Detailed implementation history and current lifecycle status stay in each pull request and the generated repository README.
+
+Status checked 2026-10-10: #15 is open and mergeable; Windows CI passed on head fbaa9b7. This is a Windows fallback fix, not macOS issue #11 or OAuth refresh. Missing/invalid reset values retain existing behavior; installed-app and live API verification are not established here.
 
 Status checked 2026-10-06 09:42 UTC: [#8](https://github.com/dennykim123/claude-codex-battery/pull/8) and [#10](https://github.com/dennykim123/claude-codex-battery/pull/10) remain open and mergeable. Both head commits have successful upstream [Windows build runs](https://github.com/dennykim123/claude-codex-battery/actions); neither PR has a submitted review or inline review thread. The contributor's 2026-09-21 validation follow-ups remain the latest comments, with no revision requested.
 

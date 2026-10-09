@@ -8,12 +8,12 @@ A public ledger of upstream contributions, validation evidence, and their curren
 
 ## Snapshot
 
-- Tracked contributions: 26
+- Tracked contributions: 33
 - Draft: 0
-- Open for review: 9
+- Open for review: 16
 - Merged: 14
 - Closed without merge: 3
-- Registry last changed: 2026-10-09T14:59:46Z
+- Registry last changed: 2026-10-09T23:58:26Z
 
 ## Projects
 
@@ -43,15 +43,21 @@ A public ledger of upstream contributions, validation evidence, and their curren
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2247 fix: preserve playback position when starting a seek](https://github.com/cjpais/Handy/pull/2247) | fix | ✅ 3 checks |
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2248 fix: ignore IME confirmation Enter in text inputs](https://github.com/cjpais/Handy/pull/2248) | fix | ✅ 3 checks |
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2251 fix: dismiss focused setting tooltips with Escape](https://github.com/cjpais/Handy/pull/2251) | fix | ✅ 3 checks |
+| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2253 fix: identify the setting each reset button affects](https://github.com/cjpais/Handy/pull/2253) | fix | ✅ 3 checks |
+| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2254 fix: name the audio playback position control](https://github.com/cjpais/Handy/pull/2254) | fix | ✅ 3 checks |
+| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2255 fix: report failed history deletions to users](https://github.com/cjpais/Handy/pull/2255) | fix | ✅ 3 checks |
+| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2256 fix: avoid duplicate history rows during live updates](https://github.com/cjpais/Handy/pull/2256) | fix | ✅ 3 checks |
 | ⚫ Closed | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#28 fix: interpolate output paths in completion logs](https://github.com/companyjupiter/quarkify/pull/28) | fix | ✅ 4 checks |
 | 🟣 Merged | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#29 fix: escape project name in generated HTML](https://github.com/companyjupiter/quarkify/pull/29) | security | ✅ 4 checks |
 | 🟣 Merged | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#30 test: limit npm test to test files](https://github.com/companyjupiter/quarkify/pull/30) | test | ✅ 4 checks |
 | 🟣 Merged | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#31 chore: remove unused Puppeteer dependency](https://github.com/companyjupiter/quarkify/pull/31) | maintenance | ✅ 5 checks |
 | 🟢 Open | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#46 fix: restore package entrypoint metadata on main](https://github.com/companyjupiter/quarkify/pull/46) | fix | ✅ 6 checks |
 | 🟢 Open | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#47 test: keep plugin versions aligned with package](https://github.com/companyjupiter/quarkify/pull/47) | test | ✅ 6 checks |
+| 🟢 Open | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#59 fix: include JSX and TSX in symbol coverage audits](https://github.com/companyjupiter/quarkify/pull/59) | fix | ✅ 1 checks |
 | 🟣 Merged | [dennykim123/claude-codex-battery](https://github.com/dennykim123/claude-codex-battery) | [#5 feat(windows): add native Claude, Fable, and Codex tray app](https://github.com/dennykim123/claude-codex-battery/pull/5) | feature | ✅ 9 checks |
 | 🟢 Open | [dennykim123/claude-codex-battery](https://github.com/dennykim123/claude-codex-battery) | [#8 fix(windows): preserve provider status when rows are hidden](https://github.com/dennykim123/claude-codex-battery/pull/8) | fix | ✅ 4 checks |
 | 🟢 Open | [dennykim123/claude-codex-battery](https://github.com/dennykim123/claude-codex-battery) | [#10 feat(windows): add built-in mascot picker](https://github.com/dennykim123/claude-codex-battery/pull/10) | feature | ✅ 7 checks |
+| 🟢 Open | [dennykim123/claude-codex-battery](https://github.com/dennykim123/claude-codex-battery) | [#15 fix(windows): skip expired Codex fallback windows](https://github.com/dennykim123/claude-codex-battery/pull/15) | fix | ✅ 1 checks |
 | 🟣 Merged | [L1M80/porta](https://github.com/L1M80/porta) | [#99 feat(web): sort workspaces by recency and expose workspace-less conversations](https://github.com/L1M80/porta/pull/99) | feature | ✅ 3 checks |
 | 🟣 Merged | [L1M80/porta](https://github.com/L1M80/porta) | [#100 fix(proxy): cap recent conversations to prevent LS thrashing](https://github.com/L1M80/porta/pull/100) | fix | ✅ 3 checks |
 | 🟣 Merged | [L1M80/porta](https://github.com/L1M80/porta) | [#102 feat(web): group conversations by project name using desktop metadata fallback](https://github.com/L1M80/porta/pull/102) | feature | ✅ 1 checks |
@@ -63,16 +69,17 @@ A public ledger of upstream contributions, validation evidence, and their curren
 | 🟣 Merged | [L1M80/porta](https://github.com/L1M80/porta) | [#135 docs: document named tunnel ingress config](https://github.com/L1M80/porta/pull/135) | docs | ✅ 5 checks |
 | 🟣 Merged | [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [#1526 fix(db): release SQLite handles before file mutations](https://github.com/Soju06/codex-lb/pull/1526) | fix | ✅ 10 checks |
 | 🟣 Merged | [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [#2114 fix(proxy): filter vendor events from public Responses streams](https://github.com/Soju06/codex-lb/pull/2114) | fix | ✅ 5 checks |
+| 🟢 Open | [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [#2595 docs(proxy): restore the stream normalizer docstring and clarify native mode](https://github.com/Soju06/codex-lb/pull/2595) | docs | failed · 4 checks |
 
 ## Connected projects
 
 | Upstream | Contribution fork | Records |
 |---|---|---|
-| [cjpais/Handy](https://github.com/cjpais/Handy) | [johnjheejin/Handy](https://github.com/johnjheejin/Handy) | [6](projects/cjpais/Handy.md) |
-| [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [johnjheejin/quarkify](https://github.com/johnjheejin/quarkify) | [6](projects/companyjupiter/quarkify.md) |
-| [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [johnjheejin/codex-lb](https://github.com/johnjheejin/codex-lb) | [2](projects/Soju06/codex-lb.md) |
+| [cjpais/Handy](https://github.com/cjpais/Handy) | [johnjheejin/Handy](https://github.com/johnjheejin/Handy) | [10](projects/cjpais/Handy.md) |
+| [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [johnjheejin/quarkify](https://github.com/johnjheejin/quarkify) | [7](projects/companyjupiter/quarkify.md) |
+| [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [johnjheejin/codex-lb](https://github.com/johnjheejin/codex-lb) | [3](projects/Soju06/codex-lb.md) |
 | [L1M80/porta](https://github.com/L1M80/porta) | [johnjheejin/porta](https://github.com/johnjheejin/porta) | [9](projects/L1M80/porta.md) |
-| [dennykim123/claude-codex-battery](https://github.com/dennykim123/claude-codex-battery) | [johnjheejin/claude-codex-battery](https://github.com/johnjheejin/claude-codex-battery) | [3](projects/dennykim123/claude-codex-battery.md) |
+| [dennykim123/claude-codex-battery](https://github.com/dennykim123/claude-codex-battery) | [johnjheejin/claude-codex-battery](https://github.com/johnjheejin/claude-codex-battery) | [4](projects/dennykim123/claude-codex-battery.md) |
 
 ## Linking model
 
