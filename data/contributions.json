@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-10-09T23:58:26Z",
+  "lastChangedAt": "2026-10-11T08:23:30Z",
   "repositories": [
     {
       "id": "github:cjpais/Handy",
@@ -103,11 +103,11 @@
       "id": "github:Soju06/codex-lb#2595",
       "repository": "github:Soju06/codex-lb",
       "type": "docs",
-      "summary": "Restore the stream normalizer docstring and clarify native mode.",
+      "summary": "Restore native stream documentation and require patched urllib3 2.8.0.",
       "pullRequest": {
         "number": 2595,
         "url": "https://github.com/Soju06/codex-lb/pull/2595",
-        "title": "docs(proxy): restore the stream normalizer docstring and clarify native mode",
+        "title": "docs(proxy): restore native stream documentation with patched urllib3",
         "author": "johnjheejin",
         "state": "open",
         "draft": false,
@@ -115,15 +115,16 @@
         "createdAt": "2026-10-09T19:48:54Z",
         "mergedAt": null,
         "closedAt": null,
-        "lastChangedAt": "2026-10-09T23:58:26Z"
+        "lastChangedAt": "2026-10-11T08:23:30Z"
       },
       "validation": {
-        "status": "failed",
+        "status": "passed",
         "checks": [
-          "GitHub Actions Release guards: success on head bf0f3af (run 37982791067)",
-          "GitHub Actions Simplicity budgets: success on head bf0f3af (run 37982791064)",
-          "GitHub Actions CI: failure on head bf0f3af (run 37982791097)",
-          "CI Required failed at the Docker Trivy gate: urllib3 2.7.0, CVE-2026-97687 and CVE-2026-97689; no dependency fix included in this docstring-only PR."
+          "GitHub Actions Release guards: success on head 1b55e5b (run 38045484745)",
+          "GitHub Actions Simplicity budgets: success on head 1b55e5b (run 38045484841)",
+          "GitHub Actions Docs: success on head 1b55e5b (run 38045484794)",
+          "GitHub Actions CI: success on head 1b55e5b (run 38045484809); Docker Trivy high-severity gate and CI Required passed. Frontend and Helm jobs were skipped by change detection.",
+          "Includes urllib3 >=2.8.0 and the 2.8.0 lock update alongside the documentation change; existing dependency PRs #2588 and #2573 remain open."
         ]
       }
     },

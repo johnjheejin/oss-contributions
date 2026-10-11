@@ -13,7 +13,7 @@ A public ledger of upstream contributions, validation evidence, and their curren
 - Open for review: 16
 - Merged: 14
 - Closed without merge: 3
-- Registry last changed: 2026-10-09T23:58:26Z
+- Registry last changed: 2026-10-11T08:23:30Z
 
 ## Projects
 
@@ -69,7 +69,7 @@ A public ledger of upstream contributions, validation evidence, and their curren
 | 🟣 Merged | [L1M80/porta](https://github.com/L1M80/porta) | [#135 docs: document named tunnel ingress config](https://github.com/L1M80/porta/pull/135) | docs | ✅ 5 checks |
 | 🟣 Merged | [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [#1526 fix(db): release SQLite handles before file mutations](https://github.com/Soju06/codex-lb/pull/1526) | fix | ✅ 10 checks |
 | 🟣 Merged | [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [#2114 fix(proxy): filter vendor events from public Responses streams](https://github.com/Soju06/codex-lb/pull/2114) | fix | ✅ 5 checks |
-| 🟢 Open | [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [#2595 docs(proxy): restore the stream normalizer docstring and clarify native mode](https://github.com/Soju06/codex-lb/pull/2595) | docs | failed · 4 checks |
+| 🟢 Open | [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [#2595 docs(proxy): restore native stream documentation with patched urllib3](https://github.com/Soju06/codex-lb/pull/2595) | docs | ✅ 5 checks |
 
 ## Connected projects
 
