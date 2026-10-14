@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-10-11T08:23:30Z",
+  "lastChangedAt": "2026-10-14T07:40:57.128Z",
   "repositories": [
     {
       "id": "github:cjpais/Handy",
@@ -219,13 +219,13 @@
         "url": "https://github.com/cjpais/Handy/pull/2256",
         "title": "fix: avoid duplicate history rows during live updates",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "merged",
         "draft": false,
         "base": "main",
         "createdAt": "2026-10-09T19:10:37Z",
-        "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-10-09T23:58:26Z"
+        "mergedAt": "2026-10-13T23:59:19Z",
+        "closedAt": "2026-10-13T23:59:19Z",
+        "lastChangedAt": "2026-10-14T07:40:57.128Z"
       },
       "validation": {
         "status": "passed",
@@ -379,13 +379,13 @@
         "url": "https://github.com/cjpais/Handy/pull/2238",
         "title": "fix: expose setting names to screen readers",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "merged",
         "draft": false,
         "base": "main",
         "createdAt": "2026-10-08T08:23:27Z",
-        "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-10-09T02:50:45Z"
+        "mergedAt": "2026-10-14T00:36:53Z",
+        "closedAt": "2026-10-14T00:36:53Z",
+        "lastChangedAt": "2026-10-14T07:40:57.128Z"
       },
       "validation": {
         "status": "passed",
