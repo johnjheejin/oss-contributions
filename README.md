@@ -13,7 +13,7 @@ A public ledger of upstream contributions, validation evidence, and their curren
 - Open for review: 14
 - Merged: 16
 - Closed without merge: 3
-- Registry last changed: 2026-10-14T07:40:57.128Z
+- Registry last changed: 2026-10-15T06:23:17Z
 
 ## Projects
 
@@ -43,8 +43,8 @@ A public ledger of upstream contributions, validation evidence, and their curren
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2247 fix: preserve playback position when starting a seek](https://github.com/cjpais/Handy/pull/2247) | fix | ✅ 3 checks |
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2248 fix: ignore IME confirmation Enter in text inputs](https://github.com/cjpais/Handy/pull/2248) | fix | ✅ 3 checks |
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2251 fix: dismiss focused setting tooltips with Escape](https://github.com/cjpais/Handy/pull/2251) | fix | ✅ 3 checks |
-| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2253 fix: identify the setting each reset button affects](https://github.com/cjpais/Handy/pull/2253) | fix | ✅ 3 checks |
-| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2254 fix: name the audio playback position control](https://github.com/cjpais/Handy/pull/2254) | fix | ✅ 3 checks |
+| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2253 fix: identify the setting each reset button affects](https://github.com/cjpais/Handy/pull/2253) | fix | partial · 4 checks |
+| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2254 fix: name the audio playback position control](https://github.com/cjpais/Handy/pull/2254) | fix | partial · 4 checks |
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2255 fix: report failed history deletions to users](https://github.com/cjpais/Handy/pull/2255) | fix | ✅ 3 checks |
 | 🟣 Merged | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2256 fix: avoid duplicate history rows during live updates](https://github.com/cjpais/Handy/pull/2256) | fix | ✅ 3 checks |
 | ⚫ Closed | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#28 fix: interpolate output paths in completion logs](https://github.com/companyjupiter/quarkify/pull/28) | fix | ✅ 4 checks |

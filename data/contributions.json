@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-10-14T07:40:57.128Z",
+  "lastChangedAt": "2026-10-15T06:23:17Z",
   "repositories": [
     {
       "id": "github:cjpais/Handy",
@@ -147,11 +147,12 @@
         "lastChangedAt": "2026-10-09T23:58:26Z"
       },
       "validation": {
-        "status": "passed",
+        "status": "partial",
         "checks": [
-          "GitHub Actions nix build check: success on head a366ac5 (run 37964109682)",
-          "GitHub Actions Playwright: success on head a366ac5 (run 37964109696)",
-          "GitHub Actions code quality: success on head a366ac5 (run 37964109687)"
+          "GitHub Actions nix build check: success on head 1655fe4: https://github.com/cjpais/Handy/actions/runs/38691817093",
+          "GitHub Actions Playwright: success on head 1655fe4: https://github.com/cjpais/Handy/actions/runs/38691817047",
+          "GitHub Actions code quality: success on head 1655fe4: https://github.com/cjpais/Handy/actions/runs/38691817111",
+          "Published translation correction 1655fe49203af29fe8b930c3ec238cb7c25aa10d on 2026-10-15 in response to https://github.com/cjpais/Handy/pull/2253#issuecomment-6157768896: 24 locale values; local key, interpolation, component-name and format checks passed. Maintainer acceptance and native-speaker review remain pending, particularly Hindi/Nepali phrasing; live desktop/screen-reader behavior is unverified."
         ]
       }
     },
@@ -174,11 +175,12 @@
         "lastChangedAt": "2026-10-09T23:58:26Z"
       },
       "validation": {
-        "status": "passed",
+        "status": "partial",
         "checks": [
-          "GitHub Actions Playwright: success on head 52d7b85 (run 37967222505)",
-          "GitHub Actions code quality: success on head 52d7b85 (run 37967222483)",
-          "GitHub Actions nix build check: success on head 52d7b85 (run 37967222548)"
+          "GitHub Actions Playwright: success on head 07de12c: https://github.com/cjpais/Handy/actions/runs/38691830943",
+          "GitHub Actions code quality: success on head 07de12c: https://github.com/cjpais/Handy/actions/runs/38691830960",
+          "GitHub Actions nix build check: success on head 07de12c: https://github.com/cjpais/Handy/actions/runs/38691830845",
+          "Published translation correction 07de12ce035e7eb329bacc1c77d4049cc8651be4 on 2026-10-15 in response to https://github.com/cjpais/Handy/pull/2254#issuecomment-6157763002: 24 locale values; local key, component-name and format checks passed. Maintainer acceptance and native-speaker review remain pending, particularly Hindi/Nepali phrasing; live desktop/screen-reader behavior is unverified."
         ]
       }
     },
