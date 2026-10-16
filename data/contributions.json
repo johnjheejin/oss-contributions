@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-10-15T06:23:17Z",
+  "lastChangedAt": "2026-10-16T07:13:37.397Z",
   "repositories": [
     {
       "id": "github:cjpais/Handy",
@@ -109,13 +109,13 @@
         "url": "https://github.com/Soju06/codex-lb/pull/2595",
         "title": "docs(proxy): restore native stream documentation with patched urllib3",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "merged",
         "draft": false,
         "base": "main",
         "createdAt": "2026-10-09T19:48:54Z",
-        "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-10-11T08:23:30Z"
+        "mergedAt": "2026-10-15T18:53:02Z",
+        "closedAt": "2026-10-15T18:53:02Z",
+        "lastChangedAt": "2026-10-16T07:13:37.397Z"
       },
       "validation": {
         "status": "passed",
