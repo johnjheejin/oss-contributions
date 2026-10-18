@@ -8,12 +8,12 @@ A public ledger of upstream contributions, validation evidence, and their curren
 
 ## Snapshot
 
-- Tracked contributions: 33
+- Tracked contributions: 34
 - Draft: 0
-- Open for review: 13
+- Open for review: 14
 - Merged: 17
 - Closed without merge: 3
-- Registry last changed: 2026-10-16T07:13:37.397Z
+- Registry last changed: 2026-10-18T07:28:15.354960+00:00
 
 ## Projects
 
@@ -47,6 +47,7 @@ A public ledger of upstream contributions, validation evidence, and their curren
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2254 fix: name the audio playback position control](https://github.com/cjpais/Handy/pull/2254) | fix | partial · 4 checks |
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2255 fix: report failed history deletions to users](https://github.com/cjpais/Handy/pull/2255) | fix | ✅ 3 checks |
 | 🟣 Merged | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2256 fix: avoid duplicate history rows during live updates](https://github.com/cjpais/Handy/pull/2256) | fix | ✅ 3 checks |
+| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2290 fix: preserve dictation when post-processing returns blank text](https://github.com/cjpais/Handy/pull/2290) | fix | ✅ 2 checks |
 | ⚫ Closed | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#28 fix: interpolate output paths in completion logs](https://github.com/companyjupiter/quarkify/pull/28) | fix | ✅ 4 checks |
 | 🟣 Merged | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#29 fix: escape project name in generated HTML](https://github.com/companyjupiter/quarkify/pull/29) | security | ✅ 4 checks |
 | 🟣 Merged | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#30 test: limit npm test to test files](https://github.com/companyjupiter/quarkify/pull/30) | test | ✅ 4 checks |
@@ -75,7 +76,7 @@ A public ledger of upstream contributions, validation evidence, and their curren
 
 | Upstream | Contribution fork | Records |
 |---|---|---|
-| [cjpais/Handy](https://github.com/cjpais/Handy) | [johnjheejin/Handy](https://github.com/johnjheejin/Handy) | [10](projects/cjpais/Handy.md) |
+| [cjpais/Handy](https://github.com/cjpais/Handy) | [johnjheejin/Handy](https://github.com/johnjheejin/Handy) | [11](projects/cjpais/Handy.md) |
 | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [johnjheejin/quarkify](https://github.com/johnjheejin/quarkify) | [7](projects/companyjupiter/quarkify.md) |
 | [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [johnjheejin/codex-lb](https://github.com/johnjheejin/codex-lb) | [3](projects/Soju06/codex-lb.md) |
 | [L1M80/porta](https://github.com/L1M80/porta) | [johnjheejin/porta](https://github.com/johnjheejin/porta) | [9](projects/L1M80/porta.md) |

@@ -10,6 +10,7 @@ Handy is an offline speech-to-text desktop app. It runs transcription models loc
 
 | Stable ID | Pull request | Purpose |
 |---|---|---|
+| `github:cjpais/Handy#2290` | [#2290](https://github.com/cjpais/Handy/pull/2290) | Preserve the original transcript when post-processing returns blank output |
 | `github:cjpais/Handy#2253` | [#2253](https://github.com/cjpais/Handy/pull/2253) | Identify the setting affected by reset buttons |
 | `github:cjpais/Handy#2254` | [#2254](https://github.com/cjpais/Handy/pull/2254) | Name the audio playback position control |
 | `github:cjpais/Handy#2255` | [#2255](https://github.com/cjpais/Handy/pull/2255) | Report failed history deletions to users |
@@ -43,3 +44,9 @@ Local checks passed for translation keys, interpolation, component accessibility
 #2256 was merged on 2026-10-13 at 23:59:19 UTC. #2255 remains open with successful Playwright, code quality and nix build checks on its submitted head, as observed on 2026-10-14.
 
 Status checked 2026-10-09 15:00 UTC: #2247, #2248, and #2251 are submitted and open. Their respective heads b425616, 7b0157c, and 99fa16e each passed code quality, Playwright, and nix build check workflows. This records automated evidence without claiming actual desktop-app or assistive-technology testing.
+
+### Blank post-processing result
+
+Status checked 2026-10-18: [#2290](https://github.com/cjpais/Handy/pull/2290) is open on head `3ed4bdb63848508fbee30358a335359ea6c77418`. It preserves the original transcript when post-processing returns empty or whitespace-only output. The current head passed [Rust tests](https://github.com/cjpais/Handy/actions/runs/38871944786) and the [Nix build](https://github.com/cjpais/Handy/actions/runs/38871944802). No submitted review was returned by the GitHub reviews API at this check; maintainer acceptance and live desktop behavior remain unverified.
+
+The same check confirmed #2235, #2238 and #2256 as merged, and #2246, #2247, #2248, #2251, #2253, #2254 and #2255 as open. #2253 and #2254 still use the published translation heads documented above, each with three successful current-head checks. Native-speaker review and maintainer acceptance remain unverified.

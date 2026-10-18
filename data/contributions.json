@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-10-16T07:13:37.397Z",
+  "lastChangedAt": "2026-10-18T07:28:15.354960+00:00",
   "repositories": [
     {
       "id": "github:cjpais/Handy",
@@ -962,6 +962,32 @@
           "Visual QA for picker, tray previews, keyboard selection, and integrated flyout",
           "GitHub Actions Windows build (success)",
           "git diff --check"
+        ]
+      }
+    },
+    {
+      "id": "github:cjpais/Handy#2290",
+      "repository": "github:cjpais/Handy",
+      "type": "fix",
+      "summary": "Preserve the original transcript when post-processing returns blank output.",
+      "pullRequest": {
+        "number": 2290,
+        "url": "https://github.com/cjpais/Handy/pull/2290",
+        "title": "fix: preserve dictation when post-processing returns blank text",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-10-16T08:10:26Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "author": "johnjheejin",
+        "lastChangedAt": "2026-10-18T07:28:15.354960+00:00"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions nix-build: success on head 3ed4bdb63848508fbee30358a335359ea6c77418: https://github.com/cjpais/Handy/actions/runs/38871944802/job/116877848079",
+          "GitHub Actions rust-tests: success on head 3ed4bdb63848508fbee30358a335359ea6c77418: https://github.com/cjpais/Handy/actions/runs/38871944786/job/116877847815"
         ]
       }
     }
