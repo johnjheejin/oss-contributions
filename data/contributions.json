@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-10-18T07:28:15.354960+00:00",
+  "lastChangedAt": "2026-10-21T12:18:14.587Z",
   "repositories": [
     {
       "id": "github:cjpais/Handy",
@@ -149,10 +149,9 @@
       "validation": {
         "status": "partial",
         "checks": [
-          "GitHub Actions nix build check: success on head 1655fe4: https://github.com/cjpais/Handy/actions/runs/38691817093",
-          "GitHub Actions Playwright: success on head 1655fe4: https://github.com/cjpais/Handy/actions/runs/38691817047",
-          "GitHub Actions code quality: success on head 1655fe4: https://github.com/cjpais/Handy/actions/runs/38691817111",
-          "Published translation correction 1655fe49203af29fe8b930c3ec238cb7c25aa10d on 2026-10-15 in response to https://github.com/cjpais/Handy/pull/2253#issuecomment-6157768896: 24 locale values; local key, interpolation, component-name and format checks passed. Maintainer acceptance and native-speaker review remain pending, particularly Hindi/Nepali phrasing; live desktop/screen-reader behavior is unverified."
+          "GitHub Actions playwright: success on head 16b7918e7c8cf338af5612fa3885a09489406d81: https://github.com/cjpais/Handy/actions/runs/39275417507/job/118138341810",
+          "GitHub Actions code-quality: success on head 16b7918e7c8cf338af5612fa3885a09489406d81: https://github.com/cjpais/Handy/actions/runs/39275417506/job/118138339383",
+          "GitHub Actions nix-build: success on head 16b7918e7c8cf338af5612fa3885a09489406d81: https://github.com/cjpais/Handy/actions/runs/39275417639/job/118138339120"
         ]
       }
     },
@@ -988,6 +987,113 @@
         "checks": [
           "GitHub Actions nix-build: success on head 3ed4bdb63848508fbee30358a335359ea6c77418: https://github.com/cjpais/Handy/actions/runs/38871944802/job/116877848079",
           "GitHub Actions rust-tests: success on head 3ed4bdb63848508fbee30358a335359ea6c77418: https://github.com/cjpais/Handy/actions/runs/38871944786/job/116877847815"
+        ]
+      }
+    },
+    {
+      "id": "github:cjpais/Handy#2300",
+      "repository": "github:cjpais/Handy",
+      "type": "fix",
+      "summary": "Require parameter support for OpenRouter structured-output requests.",
+      "pullRequest": {
+        "number": 2300,
+        "url": "https://github.com/cjpais/Handy/pull/2300",
+        "title": "fix: require parameter support for OpenRouter structured output",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-10-20T08:52:06Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-10-21T12:18:14.587Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions rust-tests: success on head e95cf16aa7140b84d77ec4d7840f7694e9ef8a59: https://github.com/cjpais/Handy/actions/runs/39396514091/job/118540484551",
+          "GitHub Actions nix-build: success on head e95cf16aa7140b84d77ec4d7840f7694e9ef8a59: https://github.com/cjpais/Handy/actions/runs/39396514086/job/118540484823"
+        ]
+      }
+    },
+    {
+      "id": "github:cjpais/Handy#2307",
+      "repository": "github:cjpais/Handy",
+      "type": "fix",
+      "summary": "Preserve unrelated settings when a setting update fails.",
+      "pullRequest": {
+        "number": 2307,
+        "url": "https://github.com/cjpais/Handy/pull/2307",
+        "title": "fix: preserve unrelated settings when an update fails",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-10-21T05:50:41Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-10-21T12:18:14.587Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions playwright: success on head bc9173a75606f14d0bef8781b49833e39ad4a24b: https://github.com/cjpais/Handy/actions/runs/39551872638/job/119062662706",
+          "GitHub Actions code-quality: success on head bc9173a75606f14d0bef8781b49833e39ad4a24b: https://github.com/cjpais/Handy/actions/runs/39551872663/job/119062662811",
+          "GitHub Actions nix-build: success on head bc9173a75606f14d0bef8781b49833e39ad4a24b: https://github.com/cjpais/Handy/actions/runs/39551872640/job/119062662935"
+        ]
+      }
+    },
+    {
+      "id": "github:cjpais/Handy#2308",
+      "repository": "github:cjpais/Handy",
+      "type": "fix",
+      "summary": "Ignore stale post-processing model lists after connection changes.",
+      "pullRequest": {
+        "number": 2308,
+        "url": "https://github.com/cjpais/Handy/pull/2308",
+        "title": "fix: ignore stale post-processing model lists",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-10-21T07:56:30Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-10-21T12:18:14.587Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions playwright: success on head a60944b9f907c68751009c93fa9cc186a7f26ee4: https://github.com/cjpais/Handy/actions/runs/39565567986/job/119106886777",
+          "GitHub Actions code-quality: success on head a60944b9f907c68751009c93fa9cc186a7f26ee4: https://github.com/cjpais/Handy/actions/runs/39565568013/job/119106886832",
+          "GitHub Actions nix-build: success on head a60944b9f907c68751009c93fa9cc186a7f26ee4: https://github.com/cjpais/Handy/actions/runs/39565567987/job/119106886493"
+        ]
+      }
+    },
+    {
+      "id": "github:cjpais/Handy#2309",
+      "repository": "github:cjpais/Handy",
+      "type": "fix",
+      "summary": "Release late-loaded audio sources after leaving history.",
+      "pullRequest": {
+        "number": 2309,
+        "url": "https://github.com/cjpais/Handy/pull/2309",
+        "title": "fix: release late audio sources after leaving history",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-10-21T10:16:40Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-10-21T12:18:14.587Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions playwright: success on head 51e19a1c2f50ef012de59831e6c8ace2536b8740: https://github.com/cjpais/Handy/actions/runs/39583412846/job/119166302475",
+          "GitHub Actions code-quality: success on head 51e19a1c2f50ef012de59831e6c8ace2536b8740: https://github.com/cjpais/Handy/actions/runs/39583413035/job/119166302276",
+          "GitHub Actions nix-build: success on head 51e19a1c2f50ef012de59831e6c8ace2536b8740: https://github.com/cjpais/Handy/actions/runs/39583412991/job/119166302666"
         ]
       }
     }

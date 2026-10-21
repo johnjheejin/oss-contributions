@@ -10,6 +10,10 @@ Handy is an offline speech-to-text desktop app. It runs transcription models loc
 
 | Stable ID | Pull request | Purpose |
 |---|---|---|
+| `github:cjpais/Handy#2309` | [#2309](https://github.com/cjpais/Handy/pull/2309) | Release late-loaded audio sources after leaving history |
+| `github:cjpais/Handy#2308` | [#2308](https://github.com/cjpais/Handy/pull/2308) | Ignore stale post-processing model lists after connection changes |
+| `github:cjpais/Handy#2307` | [#2307](https://github.com/cjpais/Handy/pull/2307) | Preserve unrelated settings when a setting update fails |
+| `github:cjpais/Handy#2300` | [#2300](https://github.com/cjpais/Handy/pull/2300) | Require parameter support for OpenRouter structured-output requests |
 | `github:cjpais/Handy#2290` | [#2290](https://github.com/cjpais/Handy/pull/2290) | Preserve the original transcript when post-processing returns blank output |
 | `github:cjpais/Handy#2253` | [#2253](https://github.com/cjpais/Handy/pull/2253) | Identify the setting affected by reset buttons |
 | `github:cjpais/Handy#2254` | [#2254](https://github.com/cjpais/Handy/pull/2254) | Name the audio playback position control |
@@ -34,12 +38,12 @@ Current lifecycle status is generated in the repository README. Implementation d
 
 The maintainer requested translations for [#2253](https://github.com/cjpais/Handy/pull/2253#issuecomment-6157768896) and [#2254](https://github.com/cjpais/Handy/pull/2254#issuecomment-6157763002). Corrections were published to both existing PRs on 2026-10-15, replacing English fallback text in 24 locales per PR.
 
-| PR | Published commit | Successful current-head checks |
+| PR | Published commit | Successful checks on heads verified 2026-10-21 |
 |---|---|---|
-| #2253: setting-reset labels | [1655fe4](https://github.com/johnjheejin/Handy/commit/1655fe49203af29fe8b930c3ec238cb7c25aa10d) | [Playwright](https://github.com/cjpais/Handy/actions/runs/38691817047), [code quality](https://github.com/cjpais/Handy/actions/runs/38691817111), [nix build](https://github.com/cjpais/Handy/actions/runs/38691817093) |
+| #2253: setting-reset labels | [16b7918](https://github.com/johnjheejin/Handy/commit/16b7918e7c8cf338af5612fa3885a09489406d81) | [Playwright](https://github.com/cjpais/Handy/actions/runs/39275417507), [code quality](https://github.com/cjpais/Handy/actions/runs/39275417506), [nix build](https://github.com/cjpais/Handy/actions/runs/39275417639) |
 | #2254: playback-position label | [07de12c](https://github.com/johnjheejin/Handy/commit/07de12ce035e7eb329bacc1c77d4049cc8651be4) | [Playwright](https://github.com/cjpais/Handy/actions/runs/38691830943), [code quality](https://github.com/cjpais/Handy/actions/runs/38691830960), [nix build](https://github.com/cjpais/Handy/actions/runs/38691830845) |
 
-Local checks passed for translation keys, interpolation, component accessibility names and formatting. Native-speaker review remains unverified, particularly Hindi and Nepali phrasing; automated checks do not establish live desktop or screen-reader behavior. Maintainer acceptance remains pending.
+The initial #2253 translation correction remains in [1655fe4](https://github.com/johnjheejin/Handy/commit/1655fe49203af29fe8b930c3ec238cb7c25aa10d). The later Hindi correction [16b7918](https://github.com/johnjheejin/Handy/commit/16b7918e7c8cf338af5612fa3885a09489406d81) separates the setting name from the reset action with a colon, so existing setting names can be reused without grammatical case changes. The `{{setting}}` placeholder is preserved. Local translation-key and placeholder checks, eight Hindi setting-name interpolation checks, lint, formatting and the TypeScript/Vite build passed; the updated head also passed all three upstream checks linked above. Native-speaker review remains unverified, particularly Hindi and Nepali phrasing; automated checks do not establish live desktop or screen-reader behavior. Maintainer acceptance remains pending.
 
 #2256 was merged on 2026-10-13 at 23:59:19 UTC. #2255 remains open with successful Playwright, code quality and nix build checks on its submitted head, as observed on 2026-10-14.
 
@@ -49,4 +53,17 @@ Status checked 2026-10-09 15:00 UTC: #2247, #2248, and #2251 are submitted and o
 
 Status checked 2026-10-18: [#2290](https://github.com/cjpais/Handy/pull/2290) is open on head `3ed4bdb63848508fbee30358a335359ea6c77418`. It preserves the original transcript when post-processing returns empty or whitespace-only output. The current head passed [Rust tests](https://github.com/cjpais/Handy/actions/runs/38871944786) and the [Nix build](https://github.com/cjpais/Handy/actions/runs/38871944802). No submitted review was returned by the GitHub reviews API at this check; maintainer acceptance and live desktop behavior remain unverified.
 
-The same check confirmed #2235, #2238 and #2256 as merged, and #2246, #2247, #2248, #2251, #2253, #2254 and #2255 as open. #2253 and #2254 still use the published translation heads documented above, each with three successful current-head checks. Native-speaker review and maintainer acceptance remain unverified.
+That 2026-10-18 check confirmed #2235, #2238 and #2256 as merged, and #2246, #2247, #2248, #2251, #2253, #2254 and #2255 as open. At that check, #2253 used 1655fe4 and #2254 used 07de12c, each with three successful current-head checks. The newer #2253 head and evidence are documented in the translation follow-up above. Native-speaker review and maintainer acceptance remain unverified.
+
+### Request routing and asynchronous settings/history fixes
+
+Status checked 2026-10-21: the following submitted public PRs are open. No submitted reviews were returned for these heads by the GitHub reviews API. CI success records automated evidence; maintainer acceptance remains pending.
+
+| PR | Purpose and published head | Successful current-head checks |
+|---|---|---|
+| [#2300](https://github.com/cjpais/Handy/pull/2300) | Require parameter support when the built-in OpenRouter provider requests a JSON schema; omit the routing object for other requests. [e95cf16](https://github.com/johnjheejin/Handy/commit/e95cf16aa7140b84d77ec4d7840f7694e9ef8a59) | [Rust tests](https://github.com/cjpais/Handy/actions/runs/39396514091), [nix-build](https://github.com/cjpais/Handy/actions/runs/39396514086) |
+| [#2307](https://github.com/cjpais/Handy/pull/2307) | Restore only the failed setting using current state, preserving unrelated updates. [bc9173a](https://github.com/johnjheejin/Handy/commit/bc9173a75606f14d0bef8781b49833e39ad4a24b) | [Playwright](https://github.com/cjpais/Handy/actions/runs/39551872638), [code quality](https://github.com/cjpais/Handy/actions/runs/39551872663), [nix-build](https://github.com/cjpais/Handy/actions/runs/39551872640) |
+| [#2308](https://github.com/cjpais/Handy/pull/2308) | Discard obsolete post-processing model-list completions after connection changes and preserve current loading ownership. [a60944b](https://github.com/johnjheejin/Handy/commit/a60944b9f907c68751009c93fa9cc186a7f26ee4) | [Playwright](https://github.com/cjpais/Handy/actions/runs/39565567986), [code quality](https://github.com/cjpais/Handy/actions/runs/39565568013), [nix-build](https://github.com/cjpais/Handy/actions/runs/39565567987) |
+| [#2309](https://github.com/cjpais/Handy/pull/2309) | Release audio Blob URLs that finish loading after their History player is removed. [51e19a1](https://github.com/johnjheejin/Handy/commit/51e19a1c2f50ef012de59831e6c8ace2536b8740) | [Playwright](https://github.com/cjpais/Handy/actions/runs/39583412846), [code quality](https://github.com/cjpais/Handy/actions/runs/39583413035), [nix-build](https://github.com/cjpais/Handy/actions/runs/39583412991) |
+
+The submitted changes include request-serialization regression tests (#2300), settings-store rollback coverage (#2307), model-list request-race coverage (#2308), and browser AudioPlayer lifecycle coverage (#2309). These checks do not establish live OpenRouter/provider routing, native desktop behavior, Linux WebKit memory measurements, or assistive-technology testing. The `nix-build` results above identify successful CI jobs; they do not independently establish that a full native compilation ran.
