@@ -8,12 +8,12 @@ A public ledger of upstream contributions, validation evidence, and their curren
 
 ## Snapshot
 
-- Tracked contributions: 38
+- Tracked contributions: 39
 - Draft: 0
-- Open for review: 18
+- Open for review: 19
 - Merged: 17
 - Closed without merge: 3
-- Registry last changed: 2026-10-21T12:18:14.587Z
+- Registry last changed: 2026-10-26T11:39:46Z
 
 ## Projects
 
@@ -41,9 +41,9 @@ A public ledger of upstream contributions, validation evidence, and their curren
 | 🟣 Merged | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2238 fix: expose setting names to screen readers](https://github.com/cjpais/Handy/pull/2238) | fix | ✅ 3 checks |
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2246 fix: let Escape dismiss dropdown menus](https://github.com/cjpais/Handy/pull/2246) | fix | ✅ 3 checks |
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2247 fix: preserve playback position when starting a seek](https://github.com/cjpais/Handy/pull/2247) | fix | ✅ 3 checks |
-| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2248 fix: ignore IME confirmation Enter in text inputs](https://github.com/cjpais/Handy/pull/2248) | fix | ✅ 3 checks |
+| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2248 fix: ignore IME confirmation Enter in text inputs](https://github.com/cjpais/Handy/pull/2248) | fix | ✅ 4 checks |
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2251 fix: dismiss focused setting tooltips with Escape](https://github.com/cjpais/Handy/pull/2251) | fix | ✅ 3 checks |
-| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2253 fix: identify the setting each reset button affects](https://github.com/cjpais/Handy/pull/2253) | fix | partial · 3 checks |
+| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2253 fix: identify the setting each reset button affects](https://github.com/cjpais/Handy/pull/2253) | fix | partial · 4 checks |
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2254 fix: name the audio playback position control](https://github.com/cjpais/Handy/pull/2254) | fix | partial · 4 checks |
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2255 fix: report failed history deletions to users](https://github.com/cjpais/Handy/pull/2255) | fix | ✅ 3 checks |
 | 🟣 Merged | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2256 fix: avoid duplicate history rows during live updates](https://github.com/cjpais/Handy/pull/2256) | fix | ✅ 3 checks |
@@ -52,6 +52,7 @@ A public ledger of upstream contributions, validation evidence, and their curren
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2307 fix: preserve unrelated settings when an update fails](https://github.com/cjpais/Handy/pull/2307) | fix | ✅ 3 checks |
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2308 fix: ignore stale post-processing model lists](https://github.com/cjpais/Handy/pull/2308) | fix | ✅ 3 checks |
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2309 fix: release late audio sources after leaving history](https://github.com/cjpais/Handy/pull/2309) | fix | ✅ 3 checks |
+| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2318 fix: stop oversized Hugging Face downloads](https://github.com/cjpais/Handy/pull/2318) | fix | ✅ 3 checks |
 | ⚫ Closed | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#28 fix: interpolate output paths in completion logs](https://github.com/companyjupiter/quarkify/pull/28) | fix | ✅ 4 checks |
 | 🟣 Merged | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#29 fix: escape project name in generated HTML](https://github.com/companyjupiter/quarkify/pull/29) | security | ✅ 4 checks |
 | 🟣 Merged | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#30 test: limit npm test to test files](https://github.com/companyjupiter/quarkify/pull/30) | test | ✅ 4 checks |
@@ -80,7 +81,7 @@ A public ledger of upstream contributions, validation evidence, and their curren
 
 | Upstream | Contribution fork | Records |
 |---|---|---|
-| [cjpais/Handy](https://github.com/cjpais/Handy) | [johnjheejin/Handy](https://github.com/johnjheejin/Handy) | [15](projects/cjpais/Handy.md) |
+| [cjpais/Handy](https://github.com/cjpais/Handy) | [johnjheejin/Handy](https://github.com/johnjheejin/Handy) | [16](projects/cjpais/Handy.md) |
 | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [johnjheejin/quarkify](https://github.com/johnjheejin/quarkify) | [7](projects/companyjupiter/quarkify.md) |
 | [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [johnjheejin/codex-lb](https://github.com/johnjheejin/codex-lb) | [3](projects/Soju06/codex-lb.md) |
 | [L1M80/porta](https://github.com/L1M80/porta) | [johnjheejin/porta](https://github.com/johnjheejin/porta) | [9](projects/L1M80/porta.md) |

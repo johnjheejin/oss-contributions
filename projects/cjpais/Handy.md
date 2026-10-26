@@ -10,6 +10,7 @@ Handy is an offline speech-to-text desktop app. It runs transcription models loc
 
 | Stable ID | Pull request | Purpose |
 |---|---|---|
+| `github:cjpais/Handy#2318` | [#2318](https://github.com/cjpais/Handy/pull/2318) | Stop oversized Hugging Face downloads while preserving transfer-rate reporting |
 | `github:cjpais/Handy#2309` | [#2309](https://github.com/cjpais/Handy/pull/2309) | Release late-loaded audio sources after leaving history |
 | `github:cjpais/Handy#2308` | [#2308](https://github.com/cjpais/Handy/pull/2308) | Ignore stale post-processing model lists after connection changes |
 | `github:cjpais/Handy#2307` | [#2307](https://github.com/cjpais/Handy/pull/2307) | Preserve unrelated settings when a setting update fails |
@@ -38,12 +39,14 @@ Current lifecycle status is generated in the repository README. Implementation d
 
 The maintainer requested translations for [#2253](https://github.com/cjpais/Handy/pull/2253#issuecomment-6157768896) and [#2254](https://github.com/cjpais/Handy/pull/2254#issuecomment-6157763002). Corrections were published to both existing PRs on 2026-10-15, replacing English fallback text in 24 locales per PR.
 
-| PR | Published commit | Successful checks on heads verified 2026-10-21 |
+| PR | Published commit | Successful checks on heads verified 2026-10-26 |
 |---|---|---|
-| #2253: setting-reset labels | [16b7918](https://github.com/johnjheejin/Handy/commit/16b7918e7c8cf338af5612fa3885a09489406d81) | [Playwright](https://github.com/cjpais/Handy/actions/runs/39275417507), [code quality](https://github.com/cjpais/Handy/actions/runs/39275417506), [nix build](https://github.com/cjpais/Handy/actions/runs/39275417639) |
+| #2253: setting-reset labels | [7e758f4](https://github.com/johnjheejin/Handy/commit/7e758f4bc6cbbcfc512fefb539c53161fc744d89) | [Playwright: 9 passed](https://github.com/cjpais/Handy/actions/runs/40290255856), [code quality](https://github.com/cjpais/Handy/actions/runs/40290255825), [Nix quick checks](https://github.com/cjpais/Handy/actions/runs/40290255840) |
 | #2254: playback-position label | [07de12c](https://github.com/johnjheejin/Handy/commit/07de12ce035e7eb329bacc1c77d4049cc8651be4) | [Playwright](https://github.com/cjpais/Handy/actions/runs/38691830943), [code quality](https://github.com/cjpais/Handy/actions/runs/38691830960), [nix build](https://github.com/cjpais/Handy/actions/runs/38691830845) |
 
-The initial #2253 translation correction remains in [1655fe4](https://github.com/johnjheejin/Handy/commit/1655fe49203af29fe8b930c3ec238cb7c25aa10d). The later Hindi correction [16b7918](https://github.com/johnjheejin/Handy/commit/16b7918e7c8cf338af5612fa3885a09489406d81) separates the setting name from the reset action with a colon, so existing setting names can be reused without grammatical case changes. The `{{setting}}` placeholder is preserved. Local translation-key and placeholder checks, eight Hindi setting-name interpolation checks, lint, formatting and the TypeScript/Vite build passed; the updated head also passed all three upstream checks linked above. Native-speaker review remains unverified, particularly Hindi and Nepali phrasing; automated checks do not establish live desktop or screen-reader behavior. Maintainer acceptance remains pending.
+The initial #2253 translation correction remains in [1655fe4](https://github.com/johnjheejin/Handy/commit/1655fe49203af29fe8b930c3ec238cb7c25aa10d). The later Hindi correction [16b7918](https://github.com/johnjheejin/Handy/commit/16b7918e7c8cf338af5612fa3885a09489406d81) separates the setting name from the reset action with a colon, so existing setting names can be reused without grammatical case changes. The `{{setting}}` placeholder is preserved. Those earlier checks included translation keys, placeholders, eight Hindi interpolations, lint, formatting and the TypeScript/Vite build.
+
+The published maintenance head `7e758f4` ports the labels to main `73c0958` and its unified `ShortcutInput`, retaining the Hindi wording. The updated PR body records all 26 locale/placeholder checks, application and fixture TypeScript, lint and formatting. Its Playwright CI passed seven new browser regressions and two existing smoke tests. Native services are replaced in the browser fixture; native-speaker review, native shortcut capture and real screen-reader behavior remain unverified. Nix quick checks passed but skipped the full native build. The separate Windows production-bundle termination also reproduces on unchanged main; this record does not claim a current production or installed-app build. Maintainer acceptance remains pending.
 
 #2256 was merged on 2026-10-13 at 23:59:19 UTC. #2255 remains open with successful Playwright, code quality and nix build checks on its submitted head, as observed on 2026-10-14.
 
@@ -67,3 +70,15 @@ Status checked 2026-10-21: the following submitted public PRs are open. No submi
 | [#2309](https://github.com/cjpais/Handy/pull/2309) | Release audio Blob URLs that finish loading after their History player is removed. [51e19a1](https://github.com/johnjheejin/Handy/commit/51e19a1c2f50ef012de59831e6c8ace2536b8740) | [Playwright](https://github.com/cjpais/Handy/actions/runs/39583412846), [code quality](https://github.com/cjpais/Handy/actions/runs/39583413035), [nix-build](https://github.com/cjpais/Handy/actions/runs/39583412991) |
 
 The submitted changes include request-serialization regression tests (#2300), settings-store rollback coverage (#2307), model-list request-race coverage (#2308), and browser AudioPlayer lifecycle coverage (#2309). These checks do not establish live OpenRouter/provider routing, native desktop behavior, Linux WebKit memory measurements, or assistive-technology testing. The `nix-build` results above identify successful CI jobs; they do not independently establish that a full native compilation ran.
+
+### IME maintenance after the UI refresh
+
+Status checked 2026-10-26: [#2248](https://github.com/cjpais/Handy/pull/2248) is published at [3ab3482](https://github.com/johnjheejin/Handy/commit/3ab34828a3b587be56225fc866df1a166bc62447), including main `73c0958`. The updated PR body documents custom words, recognition/preferred-language pickers and the model table using a shared composition-event guard. [Playwright CI](https://github.com/cjpais/Handy/actions/runs/40306514880) passed 19 committed regressions plus two existing smoke tests (21 total); [code quality](https://github.com/cjpais/Handy/actions/runs/40306515067) and [Nix quick checks](https://github.com/cjpais/Handy/actions/runs/40306514930) also passed. This is existing published evidence, not a new product test run by the ledger.
+
+The browser tests use synthetic composition/keyboard events and a replaced native settings service. Real Windows IME, Tauri WebView2/installed-app behavior, Mac execution and a current production/native build are unverified. The independently reproduced Windows production-bundle termination remains separate from these passing browser checks. Maintainer acceptance is pending.
+
+### Bounded model-download fallback
+
+Status checked 2026-10-26: [#2318](https://github.com/cjpais/Handy/pull/2318) is open at published maintenance head [837cbc7](https://github.com/johnjheejin/Handy/commit/837cbc73596f5a07023ddb46eb0587f601c8b17a). It addresses oversized Hugging Face responses reported in [#2100](https://github.com/cjpais/Handy/issues/2100): stop the current attempt and use the existing bounded, SHA-256-verified mirror, preserving explicit cancellation and main's transfer-rate/resume reporting. Other download-failure causes are outside this claim.
+
+The head passed [Rust CI](https://github.com/cjpais/Handy/actions/runs/40189768508) and [Nix quick checks](https://github.com/cjpais/Handy/actions/runs/40189768509); Nix did not run a full application build. The published PR reports an actual Windows MSVC crate check and 19 selected HF tests using loopback HTTP and synthetic data, with an existing official engine runtime reused rather than compiled locally. This is not the full Rust suite or a current production bundle, live-CDN, GUI, installed-app or Mac validation. Maintainer acceptance remains pending.

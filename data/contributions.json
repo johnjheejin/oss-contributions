@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-10-21T12:18:14.587Z",
+  "lastChangedAt": "2026-10-26T11:39:46Z",
   "repositories": [
     {
       "id": "github:cjpais/Handy",
@@ -49,6 +49,33 @@
     }
   ],
   "contributions": [
+    {
+      "id": "github:cjpais/Handy#2318",
+      "repository": "github:cjpais/Handy",
+      "type": "fix",
+      "summary": "Stop oversized Hugging Face downloads and preserve rate reporting while using the existing verified mirror fallback.",
+      "pullRequest": {
+        "number": 2318,
+        "url": "https://github.com/cjpais/Handy/pull/2318",
+        "title": "fix: stop oversized Hugging Face downloads",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-10-23T09:14:19Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-10-26T11:39:46Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions Rust tests: success on published maintenance head 837cbc73596f5a07023ddb46eb0587f601c8b17a: https://github.com/cjpais/Handy/actions/runs/40189768508/job/121158075377",
+          "GitHub Actions Nix quick checks: success on head 837cbc73596f5a07023ddb46eb0587f601c8b17a; full application build was not run: https://github.com/cjpais/Handy/actions/runs/40189768509/job/121158073521",
+          "Published PR validation reports Windows MSVC cargo check and 19 selected HF tests (15 added regressions and four existing cache tests), using loopback HTTP and synthetic data. No current production bundle, GUI/live-CDN, installed-app or Mac pass is claimed: https://github.com/cjpais/Handy/pull/2318"
+        ]
+      }
+    },
     {
       "id": "github:dennykim123/claude-codex-battery#15",
       "repository": "github:dennykim123/claude-codex-battery",
@@ -149,9 +176,10 @@
       "validation": {
         "status": "partial",
         "checks": [
-          "GitHub Actions playwright: success on head 16b7918e7c8cf338af5612fa3885a09489406d81: https://github.com/cjpais/Handy/actions/runs/39275417507/job/118138341810",
-          "GitHub Actions code-quality: success on head 16b7918e7c8cf338af5612fa3885a09489406d81: https://github.com/cjpais/Handy/actions/runs/39275417506/job/118138339383",
-          "GitHub Actions nix-build: success on head 16b7918e7c8cf338af5612fa3885a09489406d81: https://github.com/cjpais/Handy/actions/runs/39275417639/job/118138339120"
+          "GitHub Actions Playwright: success on published maintenance head 7e758f4bc6cbbcfc512fefb539c53161fc744d89; seven new browser regressions plus two existing smoke tests, nine passed: https://github.com/cjpais/Handy/actions/runs/40290255856/job/121463367529",
+          "GitHub Actions code-quality: success on head 7e758f4bc6cbbcfc512fefb539c53161fc744d89: https://github.com/cjpais/Handy/actions/runs/40290255825/job/121463367341",
+          "GitHub Actions Nix quick checks: success on head 7e758f4bc6cbbcfc512fefb539c53161fc744d89; full native build was skipped: https://github.com/cjpais/Handy/actions/runs/40290255840/job/121463368614",
+          "Published PR body records the port to main 73c0958 and the unified ShortcutInput, with 26 locale/placeholder checks. Native-speaker review, real screen-reader behavior and native/installed-app builds remain unverified; maintainer acceptance is pending: https://github.com/cjpais/Handy/pull/2253"
         ]
       }
     },
@@ -285,9 +313,10 @@
       "validation": {
         "status": "passed",
         "checks": [
-          "GitHub Actions code quality passed on head 7b0157c (run 37880902760)",
-          "GitHub Actions nix build check passed on head 7b0157c (run 37880902755)",
-          "GitHub Actions Playwright passed on head 7b0157c (run 37880902783)"
+          "GitHub Actions code-quality: success on published maintenance head 3ab34828a3b587be56225fc866df1a166bc62447: https://github.com/cjpais/Handy/actions/runs/40306515067/job/121516851923",
+          "GitHub Actions Nix quick checks: success on head 3ab34828a3b587be56225fc866df1a166bc62447; full native build was skipped: https://github.com/cjpais/Handy/actions/runs/40306514930/job/121516852154",
+          "GitHub Actions Playwright: success on head 3ab34828a3b587be56225fc866df1a166bc62447; 19 browser regressions plus two existing smoke tests, 21 passed: https://github.com/cjpais/Handy/actions/runs/40306514880/job/121516851838",
+          "Published PR body updated for current input, language-picker and model-table coverage. Browser tests use synthetic composition events and a replaced native settings service; real Windows IME, WebView2/installed-app, Mac and current production/native build behavior remain unverified: https://github.com/cjpais/Handy/pull/2248"
         ]
       }
     },
