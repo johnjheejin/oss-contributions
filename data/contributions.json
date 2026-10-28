@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-10-26T11:39:46Z",
+  "lastChangedAt": "2026-10-28T07:05:51Z",
   "repositories": [
     {
       "id": "github:cjpais/Handy",
@@ -49,6 +49,33 @@
     }
   ],
   "contributions": [
+    {
+      "id": "github:cjpais/Handy#2339",
+      "repository": "github:cjpais/Handy",
+      "type": "test",
+      "summary": "Make HTTP cancellation tests follow download progress instead of fixed timers, covering delayed responses and resumed downloads.",
+      "pullRequest": {
+        "number": 2339,
+        "url": "https://github.com/cjpais/Handy/pull/2339",
+        "title": "fix: avoid timing races in HTTP cancellation tests",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-10-27T09:13:30Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-10-28T07:05:51Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions Rust tests: success on published head 2b07f0852a72433bef0e379e1abcfbedd8facd7a: https://github.com/cjpais/Handy/actions/runs/40479166201/job/122104832550",
+          "GitHub Actions Nix quick checks: success on head 2b07f0852a72433bef0e379e1abcfbedd8facd7a; the full application build step was skipped: https://github.com/cjpais/Handy/actions/runs/40479166210/job/122104832117",
+          "Published PR validation reports 315 Windows Rust tests passed with 18 already ignored, plus 80 cancellation-case executions and a controlled before/after delayed-response reproduction. Only the HTTP cancellation test file changes; no local Linux/macOS execution or installer packaging is claimed: https://github.com/cjpais/Handy/pull/2339"
+        ]
+      }
+    },
     {
       "id": "github:cjpais/Handy#2318",
       "repository": "github:cjpais/Handy",

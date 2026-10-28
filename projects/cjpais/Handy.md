@@ -10,6 +10,7 @@ Handy is an offline speech-to-text desktop app. It runs transcription models loc
 
 | Stable ID | Pull request | Purpose |
 |---|---|---|
+| `github:cjpais/Handy#2339` | [#2339](https://github.com/cjpais/Handy/pull/2339) | Make HTTP cancellation tests independent of response timing |
 | `github:cjpais/Handy#2318` | [#2318](https://github.com/cjpais/Handy/pull/2318) | Stop oversized Hugging Face downloads while preserving transfer-rate reporting |
 | `github:cjpais/Handy#2309` | [#2309](https://github.com/cjpais/Handy/pull/2309) | Release late-loaded audio sources after leaving history |
 | `github:cjpais/Handy#2308` | [#2308](https://github.com/cjpais/Handy/pull/2308) | Ignore stale post-processing model lists after connection changes |
@@ -82,3 +83,9 @@ The browser tests use synthetic composition/keyboard events and a replaced nativ
 Status checked 2026-10-26: [#2318](https://github.com/cjpais/Handy/pull/2318) is open at published maintenance head [837cbc7](https://github.com/johnjheejin/Handy/commit/837cbc73596f5a07023ddb46eb0587f601c8b17a). It addresses oversized Hugging Face responses reported in [#2100](https://github.com/cjpais/Handy/issues/2100): stop the current attempt and use the existing bounded, SHA-256-verified mirror, preserving explicit cancellation and main's transfer-rate/resume reporting. Other download-failure causes are outside this claim.
 
 The head passed [Rust CI](https://github.com/cjpais/Handy/actions/runs/40189768508) and [Nix quick checks](https://github.com/cjpais/Handy/actions/runs/40189768509); Nix did not run a full application build. The published PR reports an actual Windows MSVC crate check and 19 selected HF tests using loopback HTTP and synthetic data, with an existing official engine runtime reused rather than compiled locally. This is not the full Rust suite or a current production bundle, live-CDN, GUI, installed-app or Mac validation. Maintainer acceptance remains pending.
+
+### Reliable HTTP cancellation tests
+
+Status checked 2026-10-28: [#2339](https://github.com/cjpais/Handy/pull/2339) is open at published head [2b07f08](https://github.com/johnjheejin/Handy/commit/2b07f0852a72433bef0e379e1abcfbedd8facd7a). It replaces fixed cancellation timers with checks of the intended request/download phase and covers delayed responses and resumed downloads. Only the HTTP cancellation test file changes; downloader behavior is unchanged.
+
+The head passed [Rust CI](https://github.com/cjpais/Handy/actions/runs/40479166201) and [Nix quick checks](https://github.com/cjpais/Handy/actions/runs/40479166210). The full Nix application build step was skipped. The published PR reports a controlled before/after reproduction on Windows, 315 Rust tests passed with 18 already ignored, and 80 cancellation-case executions across 20 rounds. These are attributed implementation-validation results, not tests rerun by this ledger. Local Linux/macOS execution, installer packaging and maintainer acceptance remain unverified.
