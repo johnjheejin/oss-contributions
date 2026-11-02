@@ -10,10 +10,10 @@ A public ledger of upstream contributions, validation evidence, and their curren
 
 - Tracked contributions: 40
 - Draft: 0
-- Open for review: 20
-- Merged: 17
+- Open for review: 11
+- Merged: 26
 - Closed without merge: 3
-- Registry last changed: 2026-10-28T07:05:51Z
+- Registry last changed: 2026-11-02T09:33:32.206Z
 
 ## Projects
 
@@ -39,19 +39,19 @@ A public ledger of upstream contributions, validation evidence, and their curren
 |---|---|---|---|---|
 | 🟣 Merged | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2235 docs: keep translation contribution guidance aligned with supported locales](https://github.com/cjpais/Handy/pull/2235) | docs | partial · 1 checks |
 | 🟣 Merged | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2238 fix: expose setting names to screen readers](https://github.com/cjpais/Handy/pull/2238) | fix | ✅ 3 checks |
-| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2246 fix: let Escape dismiss dropdown menus](https://github.com/cjpais/Handy/pull/2246) | fix | ✅ 3 checks |
-| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2247 fix: preserve playback position when starting a seek](https://github.com/cjpais/Handy/pull/2247) | fix | ✅ 3 checks |
-| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2248 fix: ignore IME confirmation Enter in text inputs](https://github.com/cjpais/Handy/pull/2248) | fix | ✅ 4 checks |
-| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2251 fix: dismiss focused setting tooltips with Escape](https://github.com/cjpais/Handy/pull/2251) | fix | ✅ 3 checks |
-| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2253 fix: identify the setting each reset button affects](https://github.com/cjpais/Handy/pull/2253) | fix | partial · 4 checks |
-| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2254 fix: name the audio playback position control](https://github.com/cjpais/Handy/pull/2254) | fix | partial · 4 checks |
-| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2255 fix: report failed history deletions to users](https://github.com/cjpais/Handy/pull/2255) | fix | ✅ 3 checks |
+| 🟣 Merged | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2246 fix: let Escape dismiss dropdown menus](https://github.com/cjpais/Handy/pull/2246) | fix | ✅ 3 checks |
+| 🟣 Merged | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2247 fix: preserve playback position when starting a seek](https://github.com/cjpais/Handy/pull/2247) | fix | ✅ 3 checks |
+| 🟣 Merged | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2248 fix: ignore IME confirmation Enter in text inputs](https://github.com/cjpais/Handy/pull/2248) | fix | ✅ 4 checks |
+| 🟣 Merged | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2251 fix: dismiss focused setting tooltips with Escape](https://github.com/cjpais/Handy/pull/2251) | fix | ✅ 3 checks |
+| 🟣 Merged | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2253 fix: identify the setting each reset button affects](https://github.com/cjpais/Handy/pull/2253) | fix | partial · 4 checks |
+| 🟣 Merged | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2254 fix: name the audio playback position control](https://github.com/cjpais/Handy/pull/2254) | fix | partial · 4 checks |
+| 🟣 Merged | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2255 fix: report failed history deletions to users](https://github.com/cjpais/Handy/pull/2255) | fix | ✅ 3 checks |
 | 🟣 Merged | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2256 fix: avoid duplicate history rows during live updates](https://github.com/cjpais/Handy/pull/2256) | fix | ✅ 3 checks |
-| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2290 fix: preserve dictation when post-processing returns blank text](https://github.com/cjpais/Handy/pull/2290) | fix | ✅ 2 checks |
+| 🟣 Merged | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2290 fix: preserve dictation when post-processing returns blank text](https://github.com/cjpais/Handy/pull/2290) | fix | ✅ 2 checks |
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2300 fix: require parameter support for OpenRouter structured output](https://github.com/cjpais/Handy/pull/2300) | fix | ✅ 2 checks |
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2307 fix: preserve unrelated settings when an update fails](https://github.com/cjpais/Handy/pull/2307) | fix | ✅ 3 checks |
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2308 fix: ignore stale post-processing model lists](https://github.com/cjpais/Handy/pull/2308) | fix | ✅ 3 checks |
-| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2309 fix: release late audio sources after leaving history](https://github.com/cjpais/Handy/pull/2309) | fix | ✅ 3 checks |
+| 🟣 Merged | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2309 fix: release late audio sources after leaving history](https://github.com/cjpais/Handy/pull/2309) | fix | ✅ 3 checks |
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2318 fix: stop oversized Hugging Face downloads](https://github.com/cjpais/Handy/pull/2318) | fix | ✅ 3 checks |
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2339 fix: avoid timing races in HTTP cancellation tests](https://github.com/cjpais/Handy/pull/2339) | test | ✅ 3 checks |
 | ⚫ Closed | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#28 fix: interpolate output paths in completion logs](https://github.com/companyjupiter/quarkify/pull/28) | fix | ✅ 4 checks |

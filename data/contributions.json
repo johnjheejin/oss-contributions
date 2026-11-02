@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-10-28T07:05:51Z",
+  "lastChangedAt": "2026-11-02T09:33:32.206Z",
   "repositories": [
     {
       "id": "github:cjpais/Handy",
@@ -192,13 +192,13 @@
         "url": "https://github.com/cjpais/Handy/pull/2253",
         "title": "fix: identify the setting each reset button affects",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "merged",
         "draft": false,
         "base": "main",
         "createdAt": "2026-10-09T16:10:29Z",
-        "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-10-09T23:58:26Z"
+        "mergedAt": "2026-11-02T05:30:02Z",
+        "closedAt": "2026-11-02T05:30:02Z",
+        "lastChangedAt": "2026-11-02T09:33:32.206Z"
       },
       "validation": {
         "status": "partial",
@@ -220,13 +220,13 @@
         "url": "https://github.com/cjpais/Handy/pull/2254",
         "title": "fix: name the audio playback position control",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "merged",
         "draft": false,
         "base": "main",
         "createdAt": "2026-10-09T17:34:15Z",
-        "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-10-09T23:58:26Z"
+        "mergedAt": "2026-11-02T06:53:55Z",
+        "closedAt": "2026-11-02T06:53:55Z",
+        "lastChangedAt": "2026-11-02T09:33:32.206Z"
       },
       "validation": {
         "status": "partial",
@@ -248,13 +248,13 @@
         "url": "https://github.com/cjpais/Handy/pull/2255",
         "title": "fix: report failed history deletions to users",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "merged",
         "draft": false,
         "base": "main",
         "createdAt": "2026-10-09T18:34:15Z",
-        "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-10-09T23:58:26Z"
+        "mergedAt": "2026-11-02T06:50:59Z",
+        "closedAt": "2026-11-02T06:50:59Z",
+        "lastChangedAt": "2026-11-02T09:33:32.206Z"
       },
       "validation": {
         "status": "passed",
@@ -302,13 +302,13 @@
         "url": "https://github.com/cjpais/Handy/pull/2247",
         "title": "fix: preserve playback position when starting a seek",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "merged",
         "draft": false,
         "base": "main",
         "createdAt": "2026-10-09T03:20:56Z",
-        "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-10-09T14:59:46Z"
+        "mergedAt": "2026-11-02T06:55:40Z",
+        "closedAt": "2026-11-02T06:55:40Z",
+        "lastChangedAt": "2026-11-02T09:33:32.206Z"
       },
       "validation": {
         "status": "passed",
@@ -329,13 +329,13 @@
         "url": "https://github.com/cjpais/Handy/pull/2248",
         "title": "fix: ignore IME confirmation Enter in text inputs",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "merged",
         "draft": false,
         "base": "main",
         "createdAt": "2026-10-09T03:21:18Z",
-        "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-10-09T14:59:46Z"
+        "mergedAt": "2026-11-02T06:50:31Z",
+        "closedAt": "2026-11-02T06:50:31Z",
+        "lastChangedAt": "2026-11-02T09:33:32.206Z"
       },
       "validation": {
         "status": "passed",
@@ -357,13 +357,13 @@
         "url": "https://github.com/cjpais/Handy/pull/2251",
         "title": "fix: dismiss focused setting tooltips with Escape",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "merged",
         "draft": false,
         "base": "main",
         "createdAt": "2026-10-09T14:53:27Z",
-        "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-10-09T14:59:46Z"
+        "mergedAt": "2026-11-02T06:59:15Z",
+        "closedAt": "2026-11-02T06:59:15Z",
+        "lastChangedAt": "2026-11-02T09:33:32.206Z"
       },
       "validation": {
         "status": "passed",
@@ -384,13 +384,13 @@
         "url": "https://github.com/cjpais/Handy/pull/2246",
         "title": "fix: let Escape dismiss dropdown menus",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "merged",
         "draft": false,
         "base": "main",
         "createdAt": "2026-10-09T02:48:29Z",
-        "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-10-09T02:50:45Z"
+        "mergedAt": "2026-11-02T05:59:05Z",
+        "closedAt": "2026-11-02T05:59:05Z",
+        "lastChangedAt": "2026-11-02T09:33:32.206Z"
       },
       "validation": {
         "status": "passed",
@@ -1029,14 +1029,14 @@
         "number": 2290,
         "url": "https://github.com/cjpais/Handy/pull/2290",
         "title": "fix: preserve dictation when post-processing returns blank text",
-        "state": "open",
+        "author": "johnjheejin",
+        "state": "merged",
         "draft": false,
         "base": "main",
         "createdAt": "2026-10-16T08:10:26Z",
-        "mergedAt": null,
-        "closedAt": null,
-        "author": "johnjheejin",
-        "lastChangedAt": "2026-10-18T07:28:15.354960+00:00"
+        "mergedAt": "2026-11-02T03:00:24Z",
+        "closedAt": "2026-11-02T03:00:24Z",
+        "lastChangedAt": "2026-11-02T09:33:32.206Z"
       },
       "validation": {
         "status": "passed",
@@ -1136,13 +1136,13 @@
         "url": "https://github.com/cjpais/Handy/pull/2309",
         "title": "fix: release late audio sources after leaving history",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "merged",
         "draft": false,
         "base": "main",
         "createdAt": "2026-10-21T10:16:40Z",
-        "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-10-21T12:18:14.587Z"
+        "mergedAt": "2026-11-02T07:15:58Z",
+        "closedAt": "2026-11-02T07:15:58Z",
+        "lastChangedAt": "2026-11-02T09:33:32.206Z"
       },
       "validation": {
         "status": "passed",
