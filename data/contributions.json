@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-11-02T09:33:32.206Z",
+  "lastChangedAt": "2026-11-04T09:22:30Z",
   "repositories": [
     {
       "id": "github:cjpais/Handy",
@@ -49,6 +49,33 @@
     }
   ],
   "contributions": [
+    {
+      "id": "github:cjpais/Handy#2357",
+      "repository": "github:cjpais/Handy",
+      "type": "fix",
+      "summary": "Keep retried model downloads cancellable when cleanup from a prior attempt finishes late.",
+      "pullRequest": {
+        "number": 2357,
+        "url": "https://github.com/cjpais/Handy/pull/2357",
+        "title": "fix: keep retried model downloads cancellable",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "main",
+        "createdAt": "2026-10-31T11:10:02Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-11-04T09:22:30Z"
+      },
+      "validation": {
+        "status": "passed",
+        "checks": [
+          "GitHub Actions Rust tests: success on published head a674412869b0e5fb260b19c615bfe75cdfc91945: https://github.com/cjpais/Handy/actions/runs/41195725234/job/124521372823",
+          "GitHub Actions Nix quick checks: success on head a674412869b0e5fb260b19c615bfe75cdfc91945; the full application build step was skipped: https://github.com/cjpais/Handy/actions/runs/41195725236/job/124521372668",
+          "Published PR validation reports 322 Windows Rust tests passed with 18 existing ignored, nine added regressions including loopback HTTP, and 340 passed in a local integration with #2318 and #2339. The public PRs remain separate; no installed-app, live-CDN, or Mac validation is claimed: https://github.com/cjpais/Handy/pull/2357"
+        ]
+      }
+    },
     {
       "id": "github:cjpais/Handy#2339",
       "repository": "github:cjpais/Handy",
@@ -1120,9 +1147,9 @@
       "validation": {
         "status": "passed",
         "checks": [
-          "GitHub Actions playwright: success on head a60944b9f907c68751009c93fa9cc186a7f26ee4: https://github.com/cjpais/Handy/actions/runs/39565567986/job/119106886777",
-          "GitHub Actions code-quality: success on head a60944b9f907c68751009c93fa9cc186a7f26ee4: https://github.com/cjpais/Handy/actions/runs/39565568013/job/119106886832",
-          "GitHub Actions nix-build: success on head a60944b9f907c68751009c93fa9cc186a7f26ee4: https://github.com/cjpais/Handy/actions/runs/39565567987/job/119106886493"
+          "GitHub Actions Playwright: two browser smoke tests passed on published maintenance head 923fb3e9baa645ab0cae609690610aea42b99da1: https://github.com/cjpais/Handy/actions/runs/41806071931/job/126493285496",
+          "GitHub Actions code quality: success including all 28 model-list regressions on head 923fb3e9baa645ab0cae609690610aea42b99da1, which resolves the settingsStore.ts conflict while preserving upstream notifications: https://github.com/cjpais/Handy/actions/runs/41806071911/job/126493285982",
+          "GitHub Actions Nix quick checks: success on head 923fb3e9baa645ab0cae609690610aea42b99da1; the full Nix build and separate Rust test workflow did not run under the changed-path conditions: https://github.com/cjpais/Handy/actions/runs/41806071948/job/126493285632"
         ]
       }
     },

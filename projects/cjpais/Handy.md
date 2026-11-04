@@ -10,6 +10,7 @@ Handy is an offline speech-to-text desktop app. It runs transcription models loc
 
 | Stable ID | Pull request | Purpose |
 |---|---|---|
+| `github:cjpais/Handy#2357` | [#2357](https://github.com/cjpais/Handy/pull/2357) | Keep a retried model download cancellable after the previous attempt's cleanup |
 | `github:cjpais/Handy#2339` | [#2339](https://github.com/cjpais/Handy/pull/2339) | Make HTTP cancellation tests independent of response timing |
 | `github:cjpais/Handy#2318` | [#2318](https://github.com/cjpais/Handy/pull/2318) | Stop oversized Hugging Face downloads while preserving transfer-rate reporting |
 | `github:cjpais/Handy#2309` | [#2309](https://github.com/cjpais/Handy/pull/2309) | Release late-loaded audio sources after leaving history |
@@ -61,16 +62,18 @@ That 2026-10-18 check confirmed #2235, #2238 and #2256 as merged, and #2246, #22
 
 ### Request routing and asynchronous settings/history fixes
 
-Status checked 2026-10-21: the following submitted public PRs are open. No submitted reviews were returned for these heads by the GitHub reviews API. CI success records automated evidence; maintainer acceptance remains pending.
+These public PRs were open at the initial 2026-10-21 check. The README tracks their current lifecycle status; the table links automated evidence for each recorded head.
 
-| PR | Purpose and published head | Successful current-head checks |
+| PR | Purpose and published head | Successful checks on the recorded head |
 |---|---|---|
 | [#2300](https://github.com/cjpais/Handy/pull/2300) | Require parameter support when the built-in OpenRouter provider requests a JSON schema; omit the routing object for other requests. [e95cf16](https://github.com/johnjheejin/Handy/commit/e95cf16aa7140b84d77ec4d7840f7694e9ef8a59) | [Rust tests](https://github.com/cjpais/Handy/actions/runs/39396514091), [nix-build](https://github.com/cjpais/Handy/actions/runs/39396514086) |
 | [#2307](https://github.com/cjpais/Handy/pull/2307) | Restore only the failed setting using current state, preserving unrelated updates. [bc9173a](https://github.com/johnjheejin/Handy/commit/bc9173a75606f14d0bef8781b49833e39ad4a24b) | [Playwright](https://github.com/cjpais/Handy/actions/runs/39551872638), [code quality](https://github.com/cjpais/Handy/actions/runs/39551872663), [nix-build](https://github.com/cjpais/Handy/actions/runs/39551872640) |
-| [#2308](https://github.com/cjpais/Handy/pull/2308) | Discard obsolete post-processing model-list completions after connection changes and preserve current loading ownership. [a60944b](https://github.com/johnjheejin/Handy/commit/a60944b9f907c68751009c93fa9cc186a7f26ee4) | [Playwright](https://github.com/cjpais/Handy/actions/runs/39565567986), [code quality](https://github.com/cjpais/Handy/actions/runs/39565568013), [nix-build](https://github.com/cjpais/Handy/actions/runs/39565567987) |
+| [#2308](https://github.com/cjpais/Handy/pull/2308) | Discard obsolete post-processing model-list completions after connection changes and preserve current loading ownership. [923fb3e](https://github.com/cjpais/Handy/pull/2308/commits/923fb3e9baa645ab0cae609690610aea42b99da1) | [Playwright: 2 passed](https://github.com/cjpais/Handy/actions/runs/41806071931), [code quality: 28 model-list regressions passed](https://github.com/cjpais/Handy/actions/runs/41806071911), [Nix quick checks](https://github.com/cjpais/Handy/actions/runs/41806071948) |
 | [#2309](https://github.com/cjpais/Handy/pull/2309) | Release audio Blob URLs that finish loading after their History player is removed. [51e19a1](https://github.com/johnjheejin/Handy/commit/51e19a1c2f50ef012de59831e6c8ace2536b8740) | [Playwright](https://github.com/cjpais/Handy/actions/runs/39583412846), [code quality](https://github.com/cjpais/Handy/actions/runs/39583413035), [nix-build](https://github.com/cjpais/Handy/actions/runs/39583412991) |
 
 The submitted changes include request-serialization regression tests (#2300), settings-store rollback coverage (#2307), model-list request-race coverage (#2308), and browser AudioPlayer lifecycle coverage (#2309). These checks do not establish live OpenRouter/provider routing, native desktop behavior, Linux WebKit memory measurements, or assistive-technology testing. The `nix-build` results above identify successful CI jobs; they do not independently establish that a full native compilation ran.
+
+On 2026-11-04, #2308's maintenance head `923fb3e` incorporated main `82dfab9` and resolved the settings-store conflict. It preserves upstream error notifications and keeps stale model-list requests from replacing newer results or clearing their loading state. GitHub reported the open PR as mergeable and clean. The full Nix build and separate Rust workflow did not run under the changed-path conditions. Installed-app and production-build behavior remain unverified.
 
 ### IME maintenance after the UI refresh
 
@@ -89,3 +92,9 @@ The head passed [Rust CI](https://github.com/cjpais/Handy/actions/runs/401897685
 Status checked 2026-10-28: [#2339](https://github.com/cjpais/Handy/pull/2339) is open at published head [2b07f08](https://github.com/johnjheejin/Handy/commit/2b07f0852a72433bef0e379e1abcfbedd8facd7a). It replaces fixed cancellation timers with checks of the intended request/download phase and covers delayed responses and resumed downloads. Only the HTTP cancellation test file changes; downloader behavior is unchanged.
 
 The head passed [Rust CI](https://github.com/cjpais/Handy/actions/runs/40479166201) and [Nix quick checks](https://github.com/cjpais/Handy/actions/runs/40479166210). The full Nix application build step was skipped. The published PR reports a controlled before/after reproduction on Windows, 315 Rust tests passed with 18 already ignored, and 80 cancellation-case executions across 20 rounds. These are attributed implementation-validation results, not tests rerun by this ledger. Local Linux/macOS execution, installer packaging and maintainer acceptance remain unverified.
+
+### Cancellation after retrying a model download
+
+Status checked 2026-11-04: [#2357](https://github.com/cjpais/Handy/pull/2357) is open at `a674412`. It prevents cleanup or completion from an older download attempt from unregistering a newer attempt for the same model, so the user can still cancel the retry. It is separate from the byte-budget fix in #2318 and the test timing fix in #2339.
+
+The published head passed [Rust CI](https://github.com/cjpais/Handy/actions/runs/41195725234) and [Nix quick checks](https://github.com/cjpais/Handy/actions/runs/41195725236); the full Nix build step was skipped. The published PR reports 322 passing Windows Rust tests with 18 existing ignored and nine added regressions, including a loopback HTTP cancellation check. It also reports 340 passing tests in a local integration with #2318 and #2339. That integration was not a public merge or a live-CDN, installed-app, or Mac validation.
