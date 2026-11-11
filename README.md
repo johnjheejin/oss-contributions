@@ -10,10 +10,10 @@ A public ledger of upstream contributions, validation evidence, and their curren
 
 - Tracked contributions: 41
 - Draft: 0
-- Open for review: 12
+- Open for review: 11
 - Merged: 26
-- Closed without merge: 3
-- Registry last changed: 2026-11-04T09:22:30Z
+- Closed without merge: 4
+- Registry last changed: 2026-11-11T09:29:04.792Z
 
 ## Projects
 
@@ -48,7 +48,7 @@ A public ledger of upstream contributions, validation evidence, and their curren
 | 🟣 Merged | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2255 fix: report failed history deletions to users](https://github.com/cjpais/Handy/pull/2255) | fix | ✅ 3 checks |
 | 🟣 Merged | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2256 fix: avoid duplicate history rows during live updates](https://github.com/cjpais/Handy/pull/2256) | fix | ✅ 3 checks |
 | 🟣 Merged | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2290 fix: preserve dictation when post-processing returns blank text](https://github.com/cjpais/Handy/pull/2290) | fix | ✅ 2 checks |
-| 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2300 fix: require parameter support for OpenRouter structured output](https://github.com/cjpais/Handy/pull/2300) | fix | ✅ 2 checks |
+| ⚫ Closed | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2300 fix: require parameter support for OpenRouter structured output](https://github.com/cjpais/Handy/pull/2300) | fix | ✅ 2 checks |
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2307 fix: preserve unrelated settings when an update fails](https://github.com/cjpais/Handy/pull/2307) | fix | ✅ 3 checks |
 | 🟢 Open | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2308 fix: ignore stale post-processing model lists](https://github.com/cjpais/Handy/pull/2308) | fix | ✅ 3 checks |
 | 🟣 Merged | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2309 fix: release late audio sources after leaving history](https://github.com/cjpais/Handy/pull/2309) | fix | ✅ 3 checks |

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-11-04T09:22:30Z",
+  "lastChangedAt": "2026-11-11T09:29:04.792Z",
   "repositories": [
     {
       "id": "github:cjpais/Handy",
@@ -1083,13 +1083,13 @@
         "url": "https://github.com/cjpais/Handy/pull/2300",
         "title": "fix: require parameter support for OpenRouter structured output",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "base": "main",
         "createdAt": "2026-10-20T08:52:06Z",
         "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-10-21T12:18:14.587Z"
+        "closedAt": "2026-11-11T06:57:30Z",
+        "lastChangedAt": "2026-11-11T09:29:04.792Z"
       },
       "validation": {
         "status": "passed",
