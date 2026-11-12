@@ -150,6 +150,7 @@ test('renders selected work and a separate deterministic history with no duplica
   }
   assert.equal([...history.matchAll(/\[#\d+ fix:/gu)].length, 5);
   assert.match(history, /\[Merged #12\].*\[Maintainer attribution\].*pull\/10#issuecomment-123/u);
+  assert.match(history, /\[Project notes\]\(\.\.\/projects\/example\/project\.md\)/u);
   assert.match(history, /github:companyjupiter\/quarkify#29/u);
   assert.match(history, /\(\.\.\/projects\/example\/project\.md\)/u);
   assert.doesNotMatch(readme + history, /[A-Za-z]:\\/u);

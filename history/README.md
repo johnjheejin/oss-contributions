@@ -2,7 +2,7 @@
 
 [Back to selected work](../README.md#selected-work) · [Public registry](../data/contributions.json)
 
-Tracked authored PRs: **42** across **6** projects. Registry last changed: 2026-11-12T05:53:23.650Z.
+Tracked authored PRs: **42** across **6** projects. Registry last changed: 2026-11-12T06:40:27Z.
 
 Each original PR appears once. A maintainer PR that carries a contribution upstream is evidence of the outcome, not another authored PR.
 
@@ -42,7 +42,7 @@ Each original PR appears once. A maintainer PR that carries a contribution upstr
 
 | Upstream | Original pull request | Type | Validation | Upstream outcome |
 |---|---|---|---|---|
-| [lidge-jun/opencodex](https://github.com/lidge-jun/opencodex) | [#8220 docs(providers): add custom gateway verification checklist](https://github.com/lidge-jun/opencodex/pull/8220) | docs | partial · 3 checks | [Merged #8350](https://github.com/lidge-jun/opencodex/pull/8350) · [Commit](https://github.com/lidge-jun/opencodex/commit/d38d2e316d3afaf6d09caeb2dea916a97228c29b) · [Maintainer attribution](https://github.com/lidge-jun/opencodex/pull/8220#issuecomment-6729481235) |
+| [lidge-jun/opencodex](https://github.com/lidge-jun/opencodex) | [#8220 docs(providers): add custom gateway verification checklist](https://github.com/lidge-jun/opencodex/pull/8220) | docs | partial · 3 checks | [Merged #8412](https://github.com/lidge-jun/opencodex/pull/8412) · [Commit](https://github.com/lidge-jun/opencodex/commit/d079eccaf283c411880fd425f74a9671d66eab1f) · [Maintainer attribution](https://github.com/lidge-jun/opencodex/pull/8220#issuecomment-6729481235) · [Project notes](../projects/lidge-jun/opencodex.md) |
 
 ## Open for review (10)
 

@@ -327,7 +327,7 @@ export function renderHistory(registry) {
       let outcome = '';
       if (contribution.landedVia) {
         const { pullLink, commitUrl, attributionUrl } = landingLinks(contribution, repository);
-        outcome = `${pullLink} · [Commit](${commitUrl}) · [Maintainer attribution](${attributionUrl})`;
+        outcome = `${pullLink} · [Commit](${commitUrl}) · [Maintainer attribution](${attributionUrl}) · [Project notes](../${repository.projectPage})`;
       }
       lines.push(
         `| [${markdownCell(repository.upstream)}](${repository.upstreamUrl}) | [#${pullRequest.number} ${markdownCell(pullRequest.title)}](${pullRequest.url}) | ${contribution.type} | ${checks}${hasLandingEvidence ? ` | ${outcome || '—'}` : ''} |`,

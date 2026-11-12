@@ -27,6 +27,8 @@ The identifier remains stable when a pull request moves from draft to review, me
 
 When upstream lands a contribution through a different PR, the original record may include `landedVia` with the merged PR number in the same upstream repository, the full commit SHA, and the original PR's attribution comment ID as a string. Verify these against public upstream evidence. This does not change the original PR's state or add the maintainer's PR to the authored totals.
 
+If that carry is reverted and later re-landed, point `landedVia` at the latest landing and preserve the initial merge, revert, and re-land evidence on the project page. The attribution comment may refer to the initial carry; the project history must connect it to the current landing.
+
 ## Optional reverse link
 
 A public repository may add `.github/oss-contributions.json`:
