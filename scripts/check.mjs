@@ -1,13 +1,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { renderReadme, validateRegistry } from './lib/registry.mjs';
+import { renderLedgerPages } from './lib/registry.mjs';
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const registryPath = path.join(repoRoot, 'data', 'contributions.json');
-const readmePath = path.join(repoRoot, 'README.md');
 const registryText = fs.readFileSync(registryPath, 'utf8');
-const registry = validateRegistry(JSON.parse(registryText));
+const registry = JSON.parse(registryText);
+const expectedPages = renderLedgerPages(registry);
 const errors = [];
 
 const forbiddenLocalPathPatterns = [
@@ -27,15 +27,18 @@ for (const repository of registry.repositories) {
   }
 }
 
-const expectedReadme = renderReadme(registry);
-const actualReadme = fs.readFileSync(readmePath, 'utf8');
-if (actualReadme !== expectedReadme) {
-  errors.push('README.md is not synchronized with data/contributions.json');
+for (const [relativePath, expected] of Object.entries(expectedPages)) {
+  const pagePath = path.join(repoRoot, relativePath);
+  if (!fs.statSync(pagePath, { throwIfNoEntry: false })?.isFile()) {
+    errors.push(`missing generated page: ${relativePath}`);
+  } else if (fs.readFileSync(pagePath, 'utf8') !== expected) {
+    errors.push(`${relativePath} is not synchronized with data/contributions.json`);
+  }
 }
 
 if (errors.length > 0) {
   throw new Error(`Repository check failed:\n- ${errors.join('\n- ')}`);
 }
 console.log(
-  `Repository check passed: ${registry.repositories.length} project, ${registry.contributions.length} contributions.`,
+  `Repository check passed: ${registry.repositories.length} projects, ${registry.contributions.length} contributions.`,
 );

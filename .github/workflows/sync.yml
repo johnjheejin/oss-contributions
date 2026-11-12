@@ -34,13 +34,13 @@ jobs:
 
       - name: Commit lifecycle changes
         run: |
-          if git diff --quiet -- README.md data/contributions.json; then
+          if git diff --quiet -- README.md history/README.md data/contributions.json; then
             echo "No tracked lifecycle changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md data/contributions.json
+          git add README.md history/README.md data/contributions.json
           git commit -m "chore: sync contribution status"
           git push origin HEAD:main
 

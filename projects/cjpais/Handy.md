@@ -12,7 +12,7 @@ Handy is an offline speech-to-text desktop app. It runs transcription models loc
 |---|---|---|
 | `github:cjpais/Handy#2357` | [#2357](https://github.com/cjpais/Handy/pull/2357) | Keep a retried model download cancellable after the previous attempt's cleanup |
 | `github:cjpais/Handy#2339` | [#2339](https://github.com/cjpais/Handy/pull/2339) | Make HTTP cancellation tests independent of response timing |
-| `github:cjpais/Handy#2318` | [#2318](https://github.com/cjpais/Handy/pull/2318) | Stop oversized Hugging Face downloads while preserving transfer-rate reporting |
+| `github:cjpais/Handy#2318` | [#2318](https://github.com/cjpais/Handy/pull/2318) | Update hf-hub so downloads survive proxies that strip Range headers |
 | `github:cjpais/Handy#2309` | [#2309](https://github.com/cjpais/Handy/pull/2309) | Release late-loaded audio sources after leaving history |
 | `github:cjpais/Handy#2308` | [#2308](https://github.com/cjpais/Handy/pull/2308) | Ignore stale post-processing model lists after connection changes |
 | `github:cjpais/Handy#2307` | [#2307](https://github.com/cjpais/Handy/pull/2307) | Preserve unrelated settings when a setting update fails |
@@ -28,6 +28,14 @@ Handy is an offline speech-to-text desktop app. It runs transcription models loc
 | `github:cjpais/Handy#2247` | [#2247](https://github.com/cjpais/Handy/pull/2247) | Preserve playback position when starting a seek |
 | `github:cjpais/Handy#2248` | [#2248](https://github.com/cjpais/Handy/pull/2248) | Ignore IME confirmation Enter in text inputs |
 | `github:cjpais/Handy#2251` | [#2251](https://github.com/cjpais/Handy/pull/2251) | Dismiss focused setting tooltips with Escape |
+
+## Latest outcomes
+
+Checked 2026-11-12: [#2318](https://github.com/cjpais/Handy/pull/2318) merged on 2026-11-11. The maintainer moved the fix into [hf-hub #2](https://github.com/cjpais/hf-hub/pull/2), reduced this PR to a dependency-pin update, and credited the original work as co-author on the [merged commit](https://github.com/cjpais/Handy/commit/f2483011d60fccab639d3c33f40b3456e92f2940). The original byte-budget guard was not retained. The PR reports real direct and Range-stripping-proxy downloads with matching SHA-256, progress bounded at 100%, a passing regression test, and `cargo check --locked`. These are upstream-reported results, not tests rerun by this ledger.
+
+The maintainer [closed #2300](https://github.com/cjpais/Handy/pull/2300#issuecomment-6789279709) without a merge on 2026-11-11. No detailed reason was provided. [#2357](https://github.com/cjpais/Handy/pull/2357), [#2339](https://github.com/cjpais/Handy/pull/2339), [#2307](https://github.com/cjpais/Handy/pull/2307), and [#2308](https://github.com/cjpais/Handy/pull/2308) remain open. See [the full history](../../history/README.md) for current lifecycle status; the sections below retain dated implementation evidence.
+
+## Historical validation
 
 Status checked 2026-10-14: #2235 was merged on 2026-10-08. #2238 was merged on 2026-10-14 at 00:36:53 UTC; its head 458988d passed the upstream Playwright, code quality, and nix build check workflows. These automated checks do not establish actual desktop-app or screen-reader testing, which remains unverified here.
 
@@ -62,7 +70,7 @@ That 2026-10-18 check confirmed #2235, #2238 and #2256 as merged, and #2246, #22
 
 ### Request routing and asynchronous settings/history fixes
 
-These public PRs were open at the initial 2026-10-21 check. The README tracks their current lifecycle status; the table links automated evidence for each recorded head.
+These public PRs were open at the initial 2026-10-21 check. The full history tracks their current lifecycle status; the table links automated evidence for each recorded head.
 
 | PR | Purpose and published head | Successful checks on the recorded head |
 |---|---|---|

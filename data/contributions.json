@@ -1,7 +1,16 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-11-04T09:22:30Z",
+  "lastChangedAt": "2026-11-12T05:53:23.650Z",
   "repositories": [
+    {
+      "id": "github:lidge-jun/opencodex",
+      "upstream": "lidge-jun/opencodex",
+      "upstreamUrl": "https://github.com/lidge-jun/opencodex",
+      "fork": "johnjheejin/opencodex",
+      "forkUrl": "https://github.com/johnjheejin/opencodex",
+      "projectPage": "projects/lidge-jun/opencodex.md",
+      "visibility": "public"
+    },
     {
       "id": "github:cjpais/Handy",
       "upstream": "cjpais/Handy",
@@ -49,6 +58,38 @@
     }
   ],
   "contributions": [
+    {
+      "id": "github:lidge-jun/opencodex#8220",
+      "repository": "github:lidge-jun/opencodex",
+      "type": "docs",
+      "summary": "Add English and Korean custom gateway verification checklists that distinguish configuration, readiness, discovery, model visibility and actual inference.",
+      "pullRequest": {
+        "number": 8220,
+        "url": "https://github.com/lidge-jun/opencodex/pull/8220",
+        "title": "docs(providers): add custom gateway verification checklist",
+        "author": "johnjheejin",
+        "state": "closed",
+        "draft": false,
+        "base": "dev",
+        "createdAt": "2026-11-06T05:32:52Z",
+        "mergedAt": null,
+        "closedAt": "2026-11-09T00:38:37Z",
+        "lastChangedAt": "2026-11-09T00:38:37Z"
+      },
+      "landedVia": {
+        "number": 8350,
+        "commit": "d38d2e316d3afaf6d09caeb2dea916a97228c29b",
+        "commentId": "6729481235"
+      },
+      "validation": {
+        "status": "partial",
+        "checks": [
+          "Original PR follow-up on 5e9afec645cbfbb1c812622f372474cb728483e9 reports type checking across 2,317 files and 34 passing model-selection/CLI fixtures with mocked HTTP; the full runtime suite and live provider inference were not run: https://github.com/lidge-jun/opencodex/pull/8220#issuecomment-6681162303",
+          "Original PR follow-up reports a documentation build and indexing for 641 pages, 93,164 internal links checked, and passing privacy and diff checks: https://github.com/lidge-jun/opencodex/pull/8220#issuecomment-6681162303",
+          "Historical draft hygiene CI passed on the earlier head 6f5b6376b22290bfaabb2d9db4a3ab219091e90f; not a result for the maintainer carry: https://github.com/lidge-jun/opencodex/actions/runs/42169060530/job/127732343895"
+        ]
+      }
+    },
     {
       "id": "github:cjpais/Handy#2357",
       "repository": "github:cjpais/Handy",
@@ -107,26 +148,26 @@
       "id": "github:cjpais/Handy#2318",
       "repository": "github:cjpais/Handy",
       "type": "fix",
-      "summary": "Stop oversized Hugging Face downloads and preserve rate reporting while using the existing verified mirror fallback.",
+      "summary": "Update the hf-hub pin so model downloads survive proxies that strip Range headers; upstream replaced the original byte-budget guard with a library-level fix.",
       "pullRequest": {
         "number": 2318,
         "url": "https://github.com/cjpais/Handy/pull/2318",
-        "title": "fix: stop oversized Hugging Face downloads",
+        "title": "fix: bump hf-hub so downloads survive proxies that strip Range",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "merged",
         "draft": false,
         "base": "main",
         "createdAt": "2026-10-23T09:14:19Z",
-        "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-10-26T11:39:46Z"
+        "mergedAt": "2026-11-11T10:11:32Z",
+        "closedAt": "2026-11-11T10:11:32Z",
+        "lastChangedAt": "2026-11-12T05:53:23.650Z"
       },
       "validation": {
         "status": "passed",
         "checks": [
-          "GitHub Actions Rust tests: success on published maintenance head 837cbc73596f5a07023ddb46eb0587f601c8b17a: https://github.com/cjpais/Handy/actions/runs/40189768508/job/121158075377",
-          "GitHub Actions Nix quick checks: success on head 837cbc73596f5a07023ddb46eb0587f601c8b17a; full application build was not run: https://github.com/cjpais/Handy/actions/runs/40189768509/job/121158073521",
-          "Published PR validation reports Windows MSVC cargo check and 19 selected HF tests (15 added regressions and four existing cache tests), using loopback HTTP and synthetic data. No current production bundle, GUI/live-CDN, installed-app or Mac pass is claimed: https://github.com/cjpais/Handy/pull/2318"
+          "The merged PR reports matching SHA-256 and progress bounded at 100% for a real 35 MB model download, both directly and through a local proxy stripping Range; the original dependency reproduced 400% progress: https://github.com/cjpais/Handy/pull/2318",
+          "The maintainer reports a passing hf-hub regression and cargo check --locked for the reduced dependency-pin change; these are upstream-attributed results, not rerun by this ledger: https://github.com/cjpais/Handy/pull/2318",
+          "Historical Rust CI passed on the original byte-budget implementation head 837cbc73596f5a07023ddb46eb0587f601c8b17a, not the final dependency-pin change: https://github.com/cjpais/Handy/actions/runs/40189768508/job/121158075377"
         ]
       }
     },
@@ -1083,13 +1124,13 @@
         "url": "https://github.com/cjpais/Handy/pull/2300",
         "title": "fix: require parameter support for OpenRouter structured output",
         "author": "johnjheejin",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "base": "main",
         "createdAt": "2026-10-20T08:52:06Z",
         "mergedAt": null,
-        "closedAt": null,
-        "lastChangedAt": "2026-10-21T12:18:14.587Z"
+        "closedAt": "2026-11-11T06:57:30Z",
+        "lastChangedAt": "2026-11-11T09:29:04.792Z"
       },
       "validation": {
         "status": "passed",

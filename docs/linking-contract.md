@@ -21,9 +21,11 @@ The identifier remains stable when a pull request moves from draft to review, me
 ## Canonical direction
 
 - `data/contributions.json` is the public canonical registry.
-- The generated `README.md` is the human-readable dashboard.
+- The generated `README.md` showcases work that landed upstream. The generated `history/README.md` lists all tracked authored PRs by lifecycle status.
 - Upstream repositories and contribution forks remain authoritative for code and review discussion.
 - Project pages provide context but do not override GitHub state.
+
+When upstream lands a contribution through a different PR, the original record may include `landedVia` with the merged PR number in the same upstream repository, the full commit SHA, and the original PR's attribution comment ID as a string. Verify these against public upstream evidence. This does not change the original PR's state or add the maintainer's PR to the authored totals.
 
 ## Optional reverse link
 
@@ -45,7 +47,7 @@ Private repositories may reference the same stable IDs internally, but this publ
 
 ## Synchronization
 
-The scheduled workflow reads public pull-request state from GitHub. It updates the registry and dashboard only when tracked lifecycle fields change:
+The scheduled workflow reads public pull-request state from GitHub. It updates these tracked lifecycle fields in the registry and keeps both generated pages in sync:
 
 - title
 - author

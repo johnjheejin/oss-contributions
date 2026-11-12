@@ -146,6 +146,22 @@ export function validateRegistry(registry) {
       errors.push(`${prefix}.pullRequest.closedAt is invalid`);
     }
     if (!isTimestamp(pullRequest.lastChangedAt)) errors.push(`${prefix}.pullRequest.lastChangedAt is invalid`);
+    if (contribution.landedVia !== undefined) {
+      const { landedVia } = contribution;
+      if (!isObject(landedVia)) {
+        errors.push(`${prefix}.landedVia must be an object`);
+      } else {
+        if (!Number.isInteger(landedVia.number) || landedVia.number <= 0 || landedVia.number === pullRequest.number) {
+          errors.push(`${prefix}.landedVia.number must identify a different upstream pull request`);
+        }
+        if (typeof landedVia.commit !== 'string' || !/^[0-9a-f]{40}$/u.test(landedVia.commit)) {
+          errors.push(`${prefix}.landedVia.commit must be a full Git commit SHA`);
+        }
+        if (typeof landedVia.commentId !== 'string' || !/^[1-9][0-9]*$/u.test(landedVia.commentId)) {
+          errors.push(`${prefix}.landedVia.commentId must identify an attribution comment on the original PR`);
+        }
+      }
+    }
     if (!isObject(contribution.validation) || !VALIDATION_STATES.has(contribution.validation?.status)) {
       errors.push(`${prefix}.validation.status is unsupported`);
     }
@@ -212,25 +228,8 @@ export function mergePullRequest(contribution, observedPullRequest, changedAt) {
   };
 }
 
-export function statusLabel(pullRequest) {
-  if (pullRequest.state === 'merged') return '🟣 Merged';
-  if (pullRequest.state === 'closed') return '⚫ Closed';
-  if (pullRequest.draft) return '🟡 Draft';
-  return '🟢 Open';
-}
-
 export function renderReadme(registry) {
   validateRegistry(registry);
-  const contributions = [...registry.contributions].sort((left, right) => {
-    const repositoryOrder = left.repository.localeCompare(right.repository);
-    return repositoryOrder || left.pullRequest.number - right.pullRequest.number;
-  });
-  const repositories = new Map(registry.repositories.map((repository) => [repository.id, repository]));
-  const draftCount = contributions.filter((item) => item.pullRequest.state === 'open' && item.pullRequest.draft).length;
-  const openCount = contributions.filter((item) => item.pullRequest.state === 'open' && !item.pullRequest.draft).length;
-  const mergedCount = contributions.filter((item) => item.pullRequest.state === 'merged').length;
-  const closedCount = contributions.filter((item) => item.pullRequest.state === 'closed').length;
-
   const lines = [
     '# Open-source contributions',
     '',
@@ -240,52 +239,112 @@ export function renderReadme(registry) {
     '',
     '> Public metadata only. Source code remains in upstream repositories and forks.',
     '',
-    '## Snapshot',
-    '',
-    `- Tracked contributions: ${contributions.length}`,
-    `- Draft: ${draftCount}`,
-    `- Open for review: ${openCount}`,
-    `- Merged: ${mergedCount}`,
-    `- Closed without merge: ${closedCount}`,
-    `- Registry last changed: ${registry.lastChangedAt}`,
-    '',
-    '## Projects',
-    '',
-    '- [Handy](projects/cjpais/Handy.md): An offline speech-to-text desktop app that transcribes speech locally and pastes text into other applications.',
-    '- [Battery](projects/dennykim123/claude-codex-battery.md): A menu-bar and system-tray widget for remaining Claude Code and Codex usage limits.',
-    '- [Porta](projects/L1M80/porta.md): A mobile-friendly web interface for accessing local Antigravity agent sessions remotely.',
-    '- [Codex-lb](projects/Soju06/codex-lb.md): A proxy and load balancer for multiple ChatGPT accounts, with usage tracking and a management dashboard.',
-    '- [Quarkify](projects/companyjupiter/quarkify.md): A local static-analysis tool that turns source-code structure into navigable directories and a visual code map.',
-    '',
     '## Selected work',
     '',
     '| Project | Contribution | Upstream reference |',
     '|---|---|---|',
-    '| [Handy](projects/cjpais/Handy.md) | Nine fixes in v0.10.0 covering IME input, accessibility, audio history, and post-processing | [v0.10.0 release notes and contributor credit](https://github.com/cjpais/Handy/releases/tag/v0.10.0) |',
+    '| [Handy](projects/cjpais/Handy.md) | Nine fixes in v0.10.0 and a later model-download fix for proxies that strip Range | [v0.10.0 release notes and contributor credit](https://github.com/cjpais/Handy/releases/tag/v0.10.0) · [Merged download fix #2318](https://github.com/cjpais/Handy/pull/2318) |',
     '| [Battery](projects/dennykim123/claude-codex-battery.md) | Native Windows tray app with build and install support | [Merged Windows port #5](https://github.com/dennykim123/claude-codex-battery/pull/5) · [README credit](https://github.com/dennykim123/claude-codex-battery#readme) |',
     '| [Porta](projects/L1M80/porta.md) | Conversation and subagent UI, named tunnel setup docs, and target-selector regression tests | [Conversation UI #99](https://github.com/L1M80/porta/pull/99) · [Subagent UI #122](https://github.com/L1M80/porta/pull/122) · [v0.16.1 release notes](https://github.com/L1M80/porta/releases/tag/v0.16.1) |',
     '| [Codex-lb](projects/Soju06/codex-lb.md) | Windows SQLite backup and recovery safety, and public Responses stream compatibility | [README credit](https://github.com/Soju06/codex-lb#contributors-) · [SQLite fix in v1.23.0](https://github.com/Soju06/codex-lb/releases/tag/v1.23.0) · [Stream fix in v1.25.0-beta.6](https://github.com/Soju06/codex-lb/releases/tag/v1.25.0-beta.6) |',
     '| [Quarkify](projects/companyjupiter/quarkify.md) | HTML project-name escaping, scoped test discovery, and unused Puppeteer removal | [HTML escaping #29](https://github.com/companyjupiter/quarkify/pull/29) · [Test scope #30](https://github.com/companyjupiter/quarkify/pull/30) · [Dependency cleanup #31](https://github.com/companyjupiter/quarkify/pull/31) |',
+  ];
+  const opencodex = registry.contributions.find((item) => item.id === 'github:lidge-jun/opencodex#8220');
+  if (opencodex?.landedVia) {
+    const repository = registry.repositories.find((item) => item.id === opencodex.repository);
+    const { pullLink, commitUrl } = landingLinks(opencodex, repository);
+    lines.push(
+      `| [OpenCodex](${repository.projectPage}) | English and Korean custom gateway verification guide | ${pullLink} · [Co-authored commit](${commitUrl}) |`,
+    );
+  }
+  const mergedCount = registry.contributions.filter((item) => item.pullRequest.state === 'merged').length;
+  lines.push(
     '',
-    '## Contributions',
+    `**PRs merged directly: ${mergedCount}.** [Full contribution history](history/README.md) includes projects, open work, and closed PRs.`,
     '',
-    '| Status | Upstream | Pull request | Type | Validation |',
-    '|---|---|---|---|---|',
+    '<!-- This file is rendered from data/contributions.json. -->',
+    '',
+  );
+  return lines.join('\n');
+}
+
+function landingLinks(contribution, repository) {
+  const { number, commit, commentId } = contribution.landedVia;
+  return {
+    pullLink: `[Merged #${number}](${repository.upstreamUrl}/pull/${number})`,
+    commitUrl: `${repository.upstreamUrl}/commit/${commit}`,
+    attributionUrl: `${contribution.pullRequest.url}#issuecomment-${commentId}`,
+  };
+}
+
+export function renderHistory(registry) {
+  validateRegistry(registry);
+  const contributions = [...registry.contributions].sort((left, right) => {
+    const repositoryOrder = left.repository.localeCompare(right.repository);
+    return repositoryOrder || left.pullRequest.number - right.pullRequest.number;
+  });
+  const repositories = new Map(registry.repositories.map((repository) => [repository.id, repository]));
+  const groups = {
+    merged: { heading: 'Merged directly', items: [] },
+    landed: { heading: 'Closed — landed through another PR', items: [] },
+    open: { heading: 'Open for review', items: [] },
+    draft: { heading: 'Draft', items: [] },
+    closed: { heading: 'Other closed PRs', items: [] },
+  };
+  for (const item of contributions) {
+    const { state, draft } = item.pullRequest;
+    let group = state;
+    if (state === 'closed' && item.landedVia) group = 'landed';
+    if (state === 'open' && draft) group = 'draft';
+    groups[group].items.push(item);
+  }
+  const lines = [
+    '# Contribution history',
+    '',
+    '[Back to selected work](../README.md#selected-work) · [Public registry](../data/contributions.json)',
+    '',
+    `Tracked authored PRs: **${contributions.length}** across **${repositories.size}** projects. Registry last changed: ${registry.lastChangedAt}.`,
+    '',
+    'Each original PR appears once. A maintainer PR that carries a contribution upstream is evidence of the outcome, not another authored PR.',
+    '',
   ];
 
-  for (const contribution of contributions) {
-    const repository = repositories.get(contribution.repository);
-    const validation = contribution.validation.status === 'passed'
-      ? `✅ ${contribution.validation.checks.length} checks`
-      : `${contribution.validation.status} · ${contribution.validation.checks.length} checks`;
+  for (const { heading, items } of Object.values(groups)) {
+    lines.push(`## ${heading} (${items.length})`, '');
+    if (items.length === 0) {
+      lines.push('None.', '');
+      continue;
+    }
+    const hasLandingEvidence = items.some((item) => item.landedVia);
     lines.push(
-      `| ${statusLabel(contribution.pullRequest)} | [${markdownCell(repository.upstream)}](${repository.upstreamUrl}) | [#${contribution.pullRequest.number} ${markdownCell(contribution.pullRequest.title)}](${contribution.pullRequest.url}) | ${contribution.type} | ${validation} |`,
+      `| Upstream | Original pull request | Type | Validation${hasLandingEvidence ? ' | Upstream outcome' : ''} |`,
+      `|---|---|---|---|${hasLandingEvidence ? '---|' : ''}`,
     );
+    for (const contribution of items) {
+      const repository = repositories.get(contribution.repository);
+      const { pullRequest, validation } = contribution;
+      const checks = `${validation.status === 'passed' ? '✅' : validation.status + ' ·'} ${validation.checks.length} checks`;
+      let outcome = '';
+      if (contribution.landedVia) {
+        const { pullLink, commitUrl, attributionUrl } = landingLinks(contribution, repository);
+        outcome = `${pullLink} · [Commit](${commitUrl}) · [Maintainer attribution](${attributionUrl})`;
+      }
+      lines.push(
+        `| [${markdownCell(repository.upstream)}](${repository.upstreamUrl}) | [#${pullRequest.number} ${markdownCell(pullRequest.title)}](${pullRequest.url}) | ${contribution.type} | ${checks}${hasLandingEvidence ? ` | ${outcome || '—'}` : ''} |`,
+      );
+    }
+    lines.push('');
   }
 
   lines.push(
+    '## Projects',
     '',
-    '## Connected projects',
+    '- [Handy](../projects/cjpais/Handy.md): An offline speech-to-text desktop app that transcribes speech locally and pastes text into other applications.',
+    '- [Battery](../projects/dennykim123/claude-codex-battery.md): A menu-bar and system-tray widget for remaining Claude Code and Codex usage limits.',
+    '- [Porta](../projects/L1M80/porta.md): A mobile-friendly web interface for accessing local Antigravity agent sessions remotely.',
+    '- [Codex-lb](../projects/Soju06/codex-lb.md): A proxy and load balancer for multiple ChatGPT accounts, with usage tracking and a management dashboard.',
+    '- [Quarkify](../projects/companyjupiter/quarkify.md): A local static-analysis tool that turns source-code structure into navigable directories and a visual code map.',
+    '- [OpenCodex](../projects/lidge-jun/opencodex.md): A provider proxy for using Codex and Claude Code with alternative models and OpenAI-compatible gateways.',
     '',
     '| Upstream | Contribution fork | Records |',
     '|---|---|---|',
@@ -293,7 +352,7 @@ export function renderReadme(registry) {
   for (const repository of registry.repositories) {
     const recordCount = contributions.filter((item) => item.repository === repository.id).length;
     lines.push(
-      `| [${repository.upstream}](${repository.upstreamUrl}) | [${repository.fork}](${repository.forkUrl}) | [${recordCount}](${repository.projectPage}) |`,
+      `| [${repository.upstream}](${repository.upstreamUrl}) | [${repository.fork}](${repository.forkUrl}) | [${recordCount}](../${repository.projectPage}) |`,
     );
   }
 
@@ -306,10 +365,17 @@ export function renderReadme(registry) {
     '- Private repositories may keep reverse references internally; private names and paths are never published here.',
     '- The scheduled workflow checks GitHub, commits tracked lifecycle changes, and flags untracked external pull requests within the public ledger scope.',
     '',
-    'See [the linking contract](docs/linking-contract.md) and [contribution guide](CONTRIBUTING.md).',
+    'See [the linking contract](../docs/linking-contract.md) and [contribution guide](../CONTRIBUTING.md).',
     '',
     '<!-- This file is rendered from data/contributions.json. -->',
     '',
   );
   return lines.join('\n');
+}
+
+export function renderLedgerPages(registry) {
+  return {
+    'README.md': renderReadme(registry),
+    'history/README.md': renderHistory(registry),
+  };
 }

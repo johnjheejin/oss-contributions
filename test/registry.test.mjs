@@ -4,7 +4,7 @@ import {
   findUntrackedExternalPullRequests,
   mergePullRequest,
   normalizePullRequest,
-  renderReadme,
+  renderLedgerPages,
   validateRegistry,
 } from '../scripts/lib/registry.mjs';
 
@@ -114,13 +114,58 @@ test('updates lifecycle state only when tracked pull-request fields change', () 
   assert.equal(ready.contribution.pullRequest.lastChangedAt, '2026-07-27T00:00:00Z');
 });
 
-test('renders a deterministic public dashboard', () => {
-  const readme = renderReadme(fixture());
-  assert.match(readme, /Tracked contributions: 1/u);
-  assert.match(readme, /🟡 Draft/u);
-  assert.match(readme, /github:companyjupiter\/quarkify#29/u);
+test('renders selected work and a separate deterministic history with no duplicated PRs', () => {
+  const registry = fixture();
+  const source = registry.contributions[0];
+  for (const [number, state] of [[8, 'open'], [9, 'merged'], [10, 'closed'], [11, 'closed']]) {
+    const record = structuredClone(source);
+    record.id = `github:example/project#${number}`;
+    Object.assign(record.pullRequest, {
+      number,
+      url: `https://github.com/example/project/pull/${number}`,
+      draft: false,
+      state,
+      mergedAt: state === 'merged' ? '2026-07-27T00:00:00Z' : null,
+      closedAt: state === 'open' ? null : '2026-07-27T00:00:00Z',
+    });
+    if (number === 10) record.landedVia = { number: 12, commit: 'a'.repeat(40), commentId: '123' };
+    registry.contributions.push(record);
+  }
+  const pages = renderLedgerPages(registry);
+  const { 'README.md': readme, 'history/README.md': history } = pages;
+  assert.deepEqual(renderLedgerPages(registry), pages);
   assert.match(readme, /v1\.25\.0-beta\.6/u);
-  assert.doesNotMatch(readme, /[A-Za-z]:\\/u);
+  assert.match(readme, /PRs merged directly: 1\..*\(history\/README\.md\)/u);
+  assert.doesNotMatch(readme, /example\/project\/pull\//u);
+  assert.match(history, /Tracked authored PRs: \*\*5\*\*/u);
+  for (const [heading, number] of [
+    ['Merged directly', 9],
+    ['Closed — landed through another PR', 10],
+    ['Open for review', 8],
+    ['Draft', 7],
+    ['Other closed PRs', 11],
+  ]) {
+    const section = history.split(`## ${heading} (1)\n`)[1]?.split('\n## ')[0];
+    assert.ok(section?.includes(`[#${number} fix:`), `Expected PR #${number} in ${heading}`);
+  }
+  assert.equal([...history.matchAll(/\[#\d+ fix:/gu)].length, 5);
+  assert.match(history, /\[Merged #12\].*\[Maintainer attribution\].*pull\/10#issuecomment-123/u);
+  assert.match(history, /github:companyjupiter\/quarkify#29/u);
+  assert.match(history, /\(\.\.\/projects\/example\/project\.md\)/u);
+  assert.doesNotMatch(readme + history, /[A-Za-z]:\\/u);
+});
+
+test('rejects a landing reference to the original PR or an invalid commit and comment ID', () => {
+  const registry = fixture();
+  registry.contributions[0].landedVia = {
+    number: 7,
+    commit: 'deadbeef',
+    commentId: 'https://example.com',
+  };
+  assert.throws(
+    () => validateRegistry(registry),
+    /landedVia\.number[\s\S]*landedVia\.commit[\s\S]*landedVia\.commentId/u,
+  );
 });
 
 test('finds authored external pull requests that are missing from the registry', () => {

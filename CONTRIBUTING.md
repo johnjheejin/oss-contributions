@@ -16,6 +16,8 @@ This repository tracks public upstream contributions. It does not mirror upstrea
    npm run check
    ```
 
+Commit both generated pages (`README.md` and `history/README.md`) when the registry changes. Keep selected work on the front page limited to changes that landed upstream; draft, open, and closed records remain in the full history.
+
 The scheduled workflow also runs `npm run discover`. It searches public pull requests authored by `johnjheejin`, excludes repositories owned by the same account, and fails when an in-scope external pull request has no stable registry record.
 
 Personal work may be excluded from the public ledger with the `DISCOVERY_EXCLUDED_REPOSITORIES` Actions secret (comma- or whitespace-separated upstream `owner/repo` values). Set the same environment variable for local discovery. Excluded names are not stored in the registry or printed by discovery; all other external contributions remain audited.
