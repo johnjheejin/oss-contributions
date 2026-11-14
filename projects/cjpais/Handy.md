@@ -5,6 +5,7 @@ Handy is an offline speech-to-text desktop app. It runs transcription models loc
 - Upstream: [cjpais/Handy](https://github.com/cjpais/Handy)
 - Contribution fork: [johnjheejin/Handy](https://github.com/johnjheejin/Handy)
 - Public registry: [`data/contributions.json`](../../data/contributions.json)
+- Related library contribution: [hf-hub download cancellation](hf-hub.md), submitted separately as [cjpais/hf-hub #3](https://github.com/cjpais/hf-hub/pull/3)
 
 ## Tracked contributions
 

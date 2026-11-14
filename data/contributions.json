@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChangedAt": "2026-11-12T06:40:27Z",
+  "lastChangedAt": "2026-11-14T05:49:13Z",
   "repositories": [
     {
       "id": "github:lidge-jun/opencodex",
@@ -18,6 +18,15 @@
       "fork": "johnjheejin/Handy",
       "forkUrl": "https://github.com/johnjheejin/Handy",
       "projectPage": "projects/cjpais/Handy.md",
+      "visibility": "public"
+    },
+    {
+      "id": "github:cjpais/hf-hub",
+      "upstream": "cjpais/hf-hub",
+      "upstreamUrl": "https://github.com/cjpais/hf-hub",
+      "fork": "johnjheejin/hf-hub",
+      "forkUrl": "https://github.com/johnjheejin/hf-hub",
+      "projectPage": "projects/cjpais/hf-hub.md",
       "visibility": "public"
     },
     {
@@ -58,6 +67,33 @@
     }
   ],
   "contributions": [
+    {
+      "id": "github:cjpais/hf-hub#3",
+      "repository": "github:cjpais/hf-hub",
+      "type": "fix",
+      "summary": "Observe cancellation while a sequential fallback GET waits for response headers, preserving partial files and fresh-token retry.",
+      "pullRequest": {
+        "number": 3,
+        "url": "https://github.com/cjpais/hf-hub/pull/3",
+        "title": "fix(tokio): cancel sequential fallback while waiting for headers",
+        "author": "johnjheejin",
+        "state": "open",
+        "draft": false,
+        "base": "cancellable-downloads",
+        "createdAt": "2026-11-14T05:43:23Z",
+        "mergedAt": null,
+        "closedAt": null,
+        "lastChangedAt": "2026-11-14T05:44:44Z"
+      },
+      "validation": {
+        "status": "partial",
+        "checks": [
+          "Published PR reports one native library regression passed, with 17 tests filtered out, on Windows MSVC Rust 1.99.0 using tokio-only features and a retained local lockfile; the submitted source matches the reviewed candidate: https://github.com/cjpais/hf-hub/pull/3",
+          "The same new regression failed against unmodified fc273554a88ce5f5372c84386a9adf535ba71a1c; six fixed-candidate localhost checks passed for cancellation, partial/cache preservation, fresh-token retry and ownership. Full suite, TLS, live Hub, installed Handy and Linux/macOS execution were not tested: https://github.com/cjpais/hf-hub/pull/3",
+          "At 2026-11-14 05:49 UTC, published head 4cee548f87cd86a35dc1b769d0e39e86dd731991 had zero workflow runs and zero check runs; the repository Actions API listed zero registered workflows. CI is not run, not a pass or failure; no fork-run approval wait was established: https://github.com/cjpais/hf-hub/pull/3/checks"
+        ]
+      }
+    },
     {
       "id": "github:lidge-jun/opencodex#8220",
       "repository": "github:lidge-jun/opencodex",

@@ -340,6 +340,9 @@ export function renderHistory(registry) {
     '## Projects',
     '',
     '- [Handy](../projects/cjpais/Handy.md): An offline speech-to-text desktop app that transcribes speech locally and pastes text into other applications.',
+    ...(registry.repositories.some((repository) => repository.upstream === 'cjpais/hf-hub')
+      ? ['- [hf-hub (Handy dependency)](../projects/cjpais/hf-hub.md): Handy\'s fork of the Rust Hugging Face Hub client, used to download model files.']
+      : []),
     '- [Battery](../projects/dennykim123/claude-codex-battery.md): A menu-bar and system-tray widget for remaining Claude Code and Codex usage limits.',
     '- [Porta](../projects/L1M80/porta.md): A mobile-friendly web interface for accessing local Antigravity agent sessions remotely.',
     '- [Codex-lb](../projects/Soju06/codex-lb.md): A proxy and load balancer for multiple ChatGPT accounts, with usage tracking and a management dashboard.',

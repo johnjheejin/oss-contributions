@@ -169,6 +169,29 @@ test('rejects a landing reference to the original PR or an invalid commit and co
   );
 });
 
+test('describes registered hf-hub work as a Handy dependency without showcasing an unmerged PR', () => {
+  const registry = fixture();
+  registry.repositories.push({
+    id: 'github:cjpais/hf-hub',
+    upstream: 'cjpais/hf-hub',
+    upstreamUrl: 'https://github.com/cjpais/hf-hub',
+    fork: 'contributor/hf-hub',
+    forkUrl: 'https://github.com/contributor/hf-hub',
+    projectPage: 'projects/cjpais/hf-hub.md',
+    visibility: 'public',
+  });
+  const contribution = structuredClone(registry.contributions[0]);
+  contribution.repository = 'github:cjpais/hf-hub';
+  contribution.id = 'github:cjpais/hf-hub#7';
+  contribution.pullRequest.url = 'https://github.com/cjpais/hf-hub/pull/7';
+  contribution.pullRequest.draft = false;
+  registry.contributions.push(contribution);
+  const pages = renderLedgerPages(registry);
+  assert.match(pages['history/README.md'], /\[hf-hub \(Handy dependency\)\]\(\.\.\/projects\/cjpais\/hf-hub\.md\)/u);
+  assert.match(pages['history/README.md'], /https:\/\/github\.com\/cjpais\/hf-hub\/pull\/7/u);
+  assert.doesNotMatch(pages['README.md'], /hf-hub\.md|hf-hub\/pull\/7/u);
+});
+
 test('finds authored external pull requests that are missing from the registry', () => {
   const registry = fixture();
   const missing = findUntrackedExternalPullRequests(

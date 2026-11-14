@@ -2,7 +2,7 @@
 
 [Back to selected work](../README.md#selected-work) · [Public registry](../data/contributions.json)
 
-Tracked authored PRs: **42** across **6** projects. Registry last changed: 2026-11-12T06:40:27Z.
+Tracked authored PRs: **43** across **7** projects. Registry last changed: 2026-11-14T05:49:13Z.
 
 Each original PR appears once. A maintainer PR that carries a contribution upstream is evidence of the outcome, not another authored PR.
 
@@ -44,7 +44,7 @@ Each original PR appears once. A maintainer PR that carries a contribution upstr
 |---|---|---|---|---|
 | [lidge-jun/opencodex](https://github.com/lidge-jun/opencodex) | [#8220 docs(providers): add custom gateway verification checklist](https://github.com/lidge-jun/opencodex/pull/8220) | docs | partial · 3 checks | [Merged #8412](https://github.com/lidge-jun/opencodex/pull/8412) · [Commit](https://github.com/lidge-jun/opencodex/commit/d079eccaf283c411880fd425f74a9671d66eab1f) · [Maintainer attribution](https://github.com/lidge-jun/opencodex/pull/8220#issuecomment-6729481235) · [Project notes](../projects/lidge-jun/opencodex.md) |
 
-## Open for review (10)
+## Open for review (11)
 
 | Upstream | Original pull request | Type | Validation |
 |---|---|---|---|
@@ -52,6 +52,7 @@ Each original PR appears once. A maintainer PR that carries a contribution upstr
 | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2308 fix: ignore stale post-processing model lists](https://github.com/cjpais/Handy/pull/2308) | fix | ✅ 3 checks |
 | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2339 fix: avoid timing races in HTTP cancellation tests](https://github.com/cjpais/Handy/pull/2339) | test | ✅ 3 checks |
 | [cjpais/Handy](https://github.com/cjpais/Handy) | [#2357 fix: keep retried model downloads cancellable](https://github.com/cjpais/Handy/pull/2357) | fix | ✅ 3 checks |
+| [cjpais/hf-hub](https://github.com/cjpais/hf-hub) | [#3 fix(tokio): cancel sequential fallback while waiting for headers](https://github.com/cjpais/hf-hub/pull/3) | fix | partial · 3 checks |
 | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#46 fix: restore package entrypoint metadata on main](https://github.com/companyjupiter/quarkify/pull/46) | fix | ✅ 6 checks |
 | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#47 test: keep plugin versions aligned with package](https://github.com/companyjupiter/quarkify/pull/47) | test | ✅ 6 checks |
 | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [#59 fix: include JSX and TSX in symbol coverage audits](https://github.com/companyjupiter/quarkify/pull/59) | fix | ✅ 1 checks |
@@ -75,6 +76,7 @@ None.
 ## Projects
 
 - [Handy](../projects/cjpais/Handy.md): An offline speech-to-text desktop app that transcribes speech locally and pastes text into other applications.
+- [hf-hub (Handy dependency)](../projects/cjpais/hf-hub.md): Handy's fork of the Rust Hugging Face Hub client, used to download model files.
 - [Battery](../projects/dennykim123/claude-codex-battery.md): A menu-bar and system-tray widget for remaining Claude Code and Codex usage limits.
 - [Porta](../projects/L1M80/porta.md): A mobile-friendly web interface for accessing local Antigravity agent sessions remotely.
 - [Codex-lb](../projects/Soju06/codex-lb.md): A proxy and load balancer for multiple ChatGPT accounts, with usage tracking and a management dashboard.
@@ -85,6 +87,7 @@ None.
 |---|---|---|
 | [lidge-jun/opencodex](https://github.com/lidge-jun/opencodex) | [johnjheejin/opencodex](https://github.com/johnjheejin/opencodex) | [1](../projects/lidge-jun/opencodex.md) |
 | [cjpais/Handy](https://github.com/cjpais/Handy) | [johnjheejin/Handy](https://github.com/johnjheejin/Handy) | [18](../projects/cjpais/Handy.md) |
+| [cjpais/hf-hub](https://github.com/cjpais/hf-hub) | [johnjheejin/hf-hub](https://github.com/johnjheejin/hf-hub) | [1](../projects/cjpais/hf-hub.md) |
 | [companyjupiter/quarkify](https://github.com/companyjupiter/quarkify) | [johnjheejin/quarkify](https://github.com/johnjheejin/quarkify) | [7](../projects/companyjupiter/quarkify.md) |
 | [Soju06/codex-lb](https://github.com/Soju06/codex-lb) | [johnjheejin/codex-lb](https://github.com/johnjheejin/codex-lb) | [3](../projects/Soju06/codex-lb.md) |
 | [L1M80/porta](https://github.com/L1M80/porta) | [johnjheejin/porta](https://github.com/johnjheejin/porta) | [9](../projects/L1M80/porta.md) |
